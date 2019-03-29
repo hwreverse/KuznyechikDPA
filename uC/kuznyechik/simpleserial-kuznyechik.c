@@ -34,16 +34,6 @@ uint8_t reset(uint8_t* x)
 	return 0x00;
 }
 
-uint8_t fubar(uint8_t* x)
-{
-    putch('f');
-    putch('u');
-    putch('b');
-    putch('a');
-    putch('r');
-    putch('\n');
-	return 0x00;
-}
 int main(void)
 {
 	uint8_t tmp[32] = {0x88, 0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff, 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0xfe, 0xdc, 0xba, 0x98, 0x76, 0x54, 0x32, 0x10, 0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef}; //Default key
@@ -69,7 +59,6 @@ int main(void)
     simpleserial_addcmd('p', 16,  get_pt);
     simpleserial_addcmd('d', 16,  get_dc);
     simpleserial_addcmd('x',  0,   reset);
-    simpleserial_addcmd('f',  0,   fubar); //here was alexx
     //simpleserial_addcmd('m', 18, get_mask);
     while(1)
         simpleserial_get();

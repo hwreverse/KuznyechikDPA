@@ -1,4 +1,4 @@
-/* This Grasshopper implementation was based on https://github.com/gostru/grasshopper */
+/* This Grasshopper implementation is based on https://github.com/gostru/grasshopper */
 
 /*
 

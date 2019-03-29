@@ -1,0 +1,4703 @@
+
+simpleserial-kuznyechik_masked-CW303.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001b50  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000cd4  00802000  00001b50  00001be4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000528  00802cd4  00802cd4  000028b8  2**0
+                  ALLOC
+  3 .stab         000000c0  00000000  00000000  000028b8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      0000005c  00000000  00000000  00002978  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .comment      00000030  00000000  00000000  000029d4  2**0
+                  CONTENTS, READONLY
+  6 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00002a04  2**2
+                  CONTENTS, READONLY
+  7 .debug_aranges 00000160  00000000  00000000  00002a44  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info   00004f5e  00000000  00000000  00002ba4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 00002f1b  00000000  00000000  00007b02  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line   000010ae  00000000  00000000  0000aa1d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_frame  000006ac  00000000  00000000  0000bacc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_str    00002225  00000000  00000000  0000c178  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_loc    00001db9  00000000  00000000  0000e39d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 000000a8  00000000  00000000  00010156  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 73 01 	jmp	0x2e6	; 0x2e6 <__ctors_end>
+       4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+       8:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+       c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      10:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      14:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      18:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      1c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      20:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      24:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      28:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      2c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      30:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      34:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      38:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      3c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      40:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      44:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      48:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      4c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      50:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      54:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      58:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      5c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      60:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      64:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      68:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      6c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      70:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      74:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      78:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      7c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      80:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      84:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      88:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      8c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      90:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      94:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      98:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      9c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      a0:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      a4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      a8:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      ac:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      b0:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      b4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      b8:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      bc:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      c0:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      c4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      c8:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      cc:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      d0:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      d4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      d8:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      dc:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      e0:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      e4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      e8:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      ec:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      f0:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      f4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      f8:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+      fc:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     100:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     104:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     108:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     10c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     110:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     114:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     118:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     11c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     120:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     124:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     128:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     12c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     130:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     134:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     138:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     13c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     140:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     144:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     148:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     14c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     150:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     154:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     158:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     15c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     160:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     164:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     168:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     16c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     170:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     174:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     178:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     17c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     180:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     184:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     188:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     18c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     190:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     194:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     198:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     19c:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1a0:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1a4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1a8:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1ac:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1b0:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1b4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1b8:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1bc:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1c0:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+     1c4:	0c 94 94 01 	jmp	0x328	; 0x328 <__bad_interrupt>
+
+000001c8 <__trampolines_start>:
+     1c8:	0c 94 96 01 	jmp	0x32c	; 0x32c <reset>
+     1cc:	0c 94 b9 01 	jmp	0x372	; 0x372 <get_dc>
+     1d0:	0c 94 54 08 	jmp	0x10a8	; 0x10a8 <check_version>
+     1d4:	0c 94 9c 01 	jmp	0x338	; 0x338 <get_pt>
+     1d8:	0c 94 98 01 	jmp	0x330	; 0x330 <get_key>
+
+000001dc <__trampolines_end>:
+     1dc:	01 02       	muls	r16, r17
+     1de:	04 08       	sbc	r0, r4
+     1e0:	10 20       	and	r1, r0
+     1e2:	40 80       	ld	r4, Z
+     1e4:	1b 36       	cpi	r17, 0x6B	; 107
+
+000001e6 <aes_sbox>:
+     1e6:	63 7c 77 7b f2 6b 6f c5 30 01 67 2b fe d7 ab 76     c|w{.ko.0.g+...v
+     1f6:	ca 82 c9 7d fa 59 47 f0 ad d4 a2 af 9c a4 72 c0     ...}.YG.......r.
+     206:	b7 fd 93 26 36 3f f7 cc 34 a5 e5 f1 71 d8 31 15     ...&6?..4...q.1.
+     216:	04 c7 23 c3 18 96 05 9a 07 12 80 e2 eb 27 b2 75     ..#..........'.u
+     226:	09 83 2c 1a 1b 6e 5a a0 52 3b d6 b3 29 e3 2f 84     ..,..nZ.R;..)./.
+     236:	53 d1 00 ed 20 fc b1 5b 6a cb be 39 4a 4c 58 cf     S... ..[j..9JLX.
+     246:	d0 ef aa fb 43 4d 33 85 45 f9 02 7f 50 3c 9f a8     ....CM3.E...P<..
+     256:	51 a3 40 8f 92 9d 38 f5 bc b6 da 21 10 ff f3 d2     Q.@...8....!....
+     266:	cd 0c 13 ec 5f 97 44 17 c4 a7 7e 3d 64 5d 19 73     ...._.D...~=d].s
+     276:	60 81 4f dc 22 2a 90 88 46 ee b8 14 de 5e 0b db     `.O."*..F....^..
+     286:	e0 32 3a 0a 49 06 24 5c c2 d3 ac 62 91 95 e4 79     .2:.I.$\...b...y
+     296:	e7 c8 37 6d 8d d5 4e a9 6c 56 f4 ea 65 7a ae 08     ..7m..N.lV..ez..
+     2a6:	ba 78 25 2e 1c a6 b4 c6 e8 dd 74 1f 4b bd 8b 8a     .x%.......t.K...
+     2b6:	70 3e b5 66 48 03 f6 0e 61 35 57 b9 86 c1 1d 9e     p>.fH...a5W.....
+     2c6:	e1 f8 98 11 69 d9 8e 94 9b 1e 87 e9 ce 55 28 df     ....i........U(.
+     2d6:	8c a1 89 0d bf e6 42 68 41 99 2d 0f b0 54 bb 16     ......BhA.-..T..
+
+000002e6 <__ctors_end>:
+     2e6:	11 24       	eor	r1, r1
+     2e8:	1f be       	out	0x3f, r1	; 63
+     2ea:	cf ef       	ldi	r28, 0xFF	; 255
+     2ec:	cd bf       	out	0x3d, r28	; 61
+     2ee:	df e3       	ldi	r29, 0x3F	; 63
+     2f0:	de bf       	out	0x3e, r29	; 62
+     2f2:	00 e0       	ldi	r16, 0x00	; 0
+     2f4:	0c bf       	out	0x3c, r16	; 60
+
+000002f6 <__do_copy_data>:
+     2f6:	1c e2       	ldi	r17, 0x2C	; 44
+     2f8:	a0 e0       	ldi	r26, 0x00	; 0
+     2fa:	b0 e2       	ldi	r27, 0x20	; 32
+     2fc:	e0 e5       	ldi	r30, 0x50	; 80
+     2fe:	fb e1       	ldi	r31, 0x1B	; 27
+     300:	00 e0       	ldi	r16, 0x00	; 0
+     302:	0b bf       	out	0x3b, r16	; 59
+     304:	02 c0       	rjmp	.+4      	; 0x30a <__do_copy_data+0x14>
+     306:	07 90       	elpm	r0, Z+
+     308:	0d 92       	st	X+, r0
+     30a:	a4 3d       	cpi	r26, 0xD4	; 212
+     30c:	b1 07       	cpc	r27, r17
+     30e:	d9 f7       	brne	.-10     	; 0x306 <__do_copy_data+0x10>
+
+00000310 <__do_clear_bss>:
+     310:	21 e3       	ldi	r18, 0x31	; 49
+     312:	a4 ed       	ldi	r26, 0xD4	; 212
+     314:	bc e2       	ldi	r27, 0x2C	; 44
+     316:	01 c0       	rjmp	.+2      	; 0x31a <.do_clear_bss_start>
+
+00000318 <.do_clear_bss_loop>:
+     318:	1d 92       	st	X+, r1
+
+0000031a <.do_clear_bss_start>:
+     31a:	ac 3f       	cpi	r26, 0xFC	; 252
+     31c:	b2 07       	cpc	r27, r18
+     31e:	e1 f7       	brne	.-8      	; 0x318 <.do_clear_bss_loop>
+     320:	0e 94 92 0c 	call	0x1924	; 0x1924 <main>
+     324:	0c 94 a6 0d 	jmp	0x1b4c	; 0x1b4c <_exit>
+
+00000328 <__bad_interrupt>:
+     328:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000032c <reset>:
+
+uint8_t reset(uint8_t* x)
+{
+    // Reset key here if needed
+	return 0x00;
+}
+     32c:	80 e0       	ldi	r24, 0x00	; 0
+     32e:	08 95       	ret
+
+00000330 <get_key>:
+#include <stdint.h>
+#include <stdlib.h>
+
+uint8_t get_key(uint8_t* k)
+{
+	kuznyechik_setkey(k);
+     330:	0e 94 1a 02 	call	0x434	; 0x434 <kuznyechik_setkey>
+	return 0x00;
+}
+     334:	80 e0       	ldi	r24, 0x00	; 0
+     336:	08 95       	ret
+
+00000338 <get_pt>:
+
+uint8_t get_pt(uint8_t* pt)
+{
+     338:	ff 92       	push	r15
+     33a:	0f 93       	push	r16
+     33c:	1f 93       	push	r17
+     33e:	cf 93       	push	r28
+     340:	df 93       	push	r29
+     342:	ec 01       	movw	r28, r24
+	trigger_high();
+     344:	00 e0       	ldi	r16, 0x00	; 0
+     346:	16 e0       	ldi	r17, 0x06	; 6
+     348:	ff 24       	eor	r15, r15
+     34a:	f3 94       	inc	r15
+     34c:	f8 01       	movw	r30, r16
+     34e:	f5 82       	std	Z+5, r15	; 0x05
+	masked_kuznyechik_crypto(pt); /* encrypting the data block */
+     350:	0e 94 28 04 	call	0x850	; 0x850 <masked_kuznyechik_crypto>
+	trigger_low();
+     354:	f8 01       	movw	r30, r16
+     356:	f6 82       	std	Z+6, r15	; 0x06
+	simpleserial_put('r', 16, pt);
+     358:	ae 01       	movw	r20, r28
+     35a:	60 e1       	ldi	r22, 0x10	; 16
+     35c:	70 e0       	ldi	r23, 0x00	; 0
+     35e:	82 e7       	ldi	r24, 0x72	; 114
+     360:	0e 94 c5 08 	call	0x118a	; 0x118a <simpleserial_put>
+	return 0x00;
+}
+     364:	80 e0       	ldi	r24, 0x00	; 0
+     366:	df 91       	pop	r29
+     368:	cf 91       	pop	r28
+     36a:	1f 91       	pop	r17
+     36c:	0f 91       	pop	r16
+     36e:	ff 90       	pop	r15
+     370:	08 95       	ret
+
+00000372 <get_dc>:
+
+uint8_t get_dc(uint8_t* pt)
+{
+     372:	ff 92       	push	r15
+     374:	0f 93       	push	r16
+     376:	1f 93       	push	r17
+     378:	cf 93       	push	r28
+     37a:	df 93       	push	r29
+     37c:	ec 01       	movw	r28, r24
+    trigger_high();
+     37e:	00 e0       	ldi	r16, 0x00	; 0
+     380:	16 e0       	ldi	r17, 0x06	; 6
+     382:	ff 24       	eor	r15, r15
+     384:	f3 94       	inc	r15
+     386:	f8 01       	movw	r30, r16
+     388:	f5 82       	std	Z+5, r15	; 0x05
+    masked_kuznyechik_decrypto(pt);
+     38a:	0e 94 47 06 	call	0xc8e	; 0xc8e <masked_kuznyechik_decrypto>
+    trigger_low();
+     38e:	f8 01       	movw	r30, r16
+     390:	f6 82       	std	Z+6, r15	; 0x06
+    simpleserial_put('r', 16, pt);
+     392:	ae 01       	movw	r20, r28
+     394:	60 e1       	ldi	r22, 0x10	; 16
+     396:	70 e0       	ldi	r23, 0x00	; 0
+     398:	82 e7       	ldi	r24, 0x72	; 114
+     39a:	0e 94 c5 08 	call	0x118a	; 0x118a <simpleserial_put>
+    return 0x00;
+}
+     39e:	80 e0       	ldi	r24, 0x00	; 0
+     3a0:	df 91       	pop	r29
+     3a2:	cf 91       	pop	r28
+     3a4:	1f 91       	pop	r17
+     3a6:	0f 91       	pop	r16
+     3a8:	ff 90       	pop	r15
+     3aa:	08 95       	ret
+
+000003ac <maskState>:
+      mask[i] = rand(); //this is a test
+  }
+}
+
+static void maskState(void)
+{
+     3ac:	a6 ef       	ldi	r26, 0xF6	; 246
+     3ae:	b0 e3       	ldi	r27, 0x30	; 48
+     3b0:	e0 91 16 31 	lds	r30, 0x3116	; 0x803116 <state>
+     3b4:	f0 91 17 31 	lds	r31, 0x3117	; 0x803117 <state+0x1>
+     3b8:	9f 01       	movw	r18, r30
+     3ba:	20 5f       	subi	r18, 0xF0	; 240
+     3bc:	3f 4f       	sbci	r19, 0xFF	; 255
+  int i;
+  for(i=0; i<16; ++i)
+  {
+    (*state)[i] ^= mask[i];
+     3be:	8d 91       	ld	r24, X+
+     3c0:	90 81       	ld	r25, Z
+     3c2:	89 27       	eor	r24, r25
+     3c4:	81 93       	st	Z+, r24
+}
+
+static void maskState(void)
+{
+  int i;
+  for(i=0; i<16; ++i)
+     3c6:	e2 17       	cp	r30, r18
+     3c8:	f3 07       	cpc	r31, r19
+     3ca:	c9 f7       	brne	.-14     	; 0x3be <maskState+0x12>
+  {
+    (*state)[i] ^= mask[i];
+  }
+}
+     3cc:	08 95       	ret
+
+000003ce <AddRoundKey>:
+/*****************************************************************************/
+
+// This function adds the round key to state.
+// The round key is added to the state by an XOR function.
+static void AddRoundKey(uint8_t round)
+{
+     3ce:	e0 91 16 31 	lds	r30, 0x3116	; 0x803116 <state>
+     3d2:	f0 91 17 31 	lds	r31, 0x3117	; 0x803117 <state+0x1>
+     3d6:	90 e1       	ldi	r25, 0x10	; 16
+     3d8:	89 9f       	mul	r24, r25
+     3da:	b0 01       	movw	r22, r0
+     3dc:	11 24       	eor	r1, r1
+  uint8_t i;
+  for(i=0;i<16;++i)
+  {
+    (*state)[i] ^= trueRoundKey[round][i];
+     3de:	20 e0       	ldi	r18, 0x00	; 0
+     3e0:	30 e0       	ldi	r19, 0x00	; 0
+     3e2:	d9 01       	movw	r26, r18
+     3e4:	a6 0f       	add	r26, r22
+     3e6:	b7 1f       	adc	r27, r23
+     3e8:	a0 50       	subi	r26, 0x00	; 0
+     3ea:	be 4d       	sbci	r27, 0xDE	; 222
+     3ec:	40 81       	ld	r20, Z
+     3ee:	9c 91       	ld	r25, X
+     3f0:	94 27       	eor	r25, r20
+     3f2:	91 93       	st	Z+, r25
+     3f4:	2f 5f       	subi	r18, 0xFF	; 255
+     3f6:	3f 4f       	sbci	r19, 0xFF	; 255
+// This function adds the round key to state.
+// The round key is added to the state by an XOR function.
+static void AddRoundKey(uint8_t round)
+{
+  uint8_t i;
+  for(i=0;i<16;++i)
+     3f8:	20 31       	cpi	r18, 0x10	; 16
+     3fa:	31 05       	cpc	r19, r1
+     3fc:	91 f7       	brne	.-28     	; 0x3e2 <AddRoundKey+0x14>
+  {
+    (*state)[i] ^= trueRoundKey[round][i];
+  }
+}
+     3fe:	08 95       	ret
+
+00000400 <genMask>:
+/*****************************************************************************/
+/* Mask generation                                                           */
+/*****************************************************************************/
+
+static void genMask(void)
+{
+     400:	cf 93       	push	r28
+     402:	df 93       	push	r29
+  int i = 0;
+  srand((*state)[10] ^ (*state)[11] ^ (*state)[14]);
+     404:	e0 91 16 31 	lds	r30, 0x3116	; 0x803116 <state>
+     408:	f0 91 17 31 	lds	r31, 0x3117	; 0x803117 <state+0x1>
+     40c:	92 85       	ldd	r25, Z+10	; 0x0a
+     40e:	83 85       	ldd	r24, Z+11	; 0x0b
+     410:	89 27       	eor	r24, r25
+     412:	96 85       	ldd	r25, Z+14	; 0x0e
+     414:	89 27       	eor	r24, r25
+     416:	90 e0       	ldi	r25, 0x00	; 0
+     418:	0e 94 2f 0d 	call	0x1a5e	; 0x1a5e <srand>
+     41c:	c6 ef       	ldi	r28, 0xF6	; 246
+     41e:	d0 e3       	ldi	r29, 0x30	; 48
+
+  for(i = 0; i<16; i++){
+      mask[i] = rand(); //this is a test
+     420:	0e 94 2b 0d 	call	0x1a56	; 0x1a56 <rand>
+     424:	89 93       	st	Y+, r24
+static void genMask(void)
+{
+  int i = 0;
+  srand((*state)[10] ^ (*state)[11] ^ (*state)[14]);
+
+  for(i = 0; i<16; i++){
+     426:	81 e3       	ldi	r24, 0x31	; 49
+     428:	c6 30       	cpi	r28, 0x06	; 6
+     42a:	d8 07       	cpc	r29, r24
+     42c:	c9 f7       	brne	.-14     	; 0x420 <genMask+0x20>
+      mask[i] = rand(); //this is a test
+  }
+}
+     42e:	df 91       	pop	r29
+     430:	cf 91       	pop	r28
+     432:	08 95       	ret
+
+00000434 <kuznyechik_setkey>:
+/*****************************************************************************/
+/* Public functions:                                                         */
+/*****************************************************************************/
+
+void kuznyechik_setkey(uint8_t* key)
+{
+     434:	2f 92       	push	r2
+     436:	3f 92       	push	r3
+     438:	4f 92       	push	r4
+     43a:	5f 92       	push	r5
+     43c:	6f 92       	push	r6
+     43e:	7f 92       	push	r7
+     440:	8f 92       	push	r8
+     442:	9f 92       	push	r9
+     444:	af 92       	push	r10
+     446:	bf 92       	push	r11
+     448:	cf 92       	push	r12
+     44a:	df 92       	push	r13
+     44c:	ef 92       	push	r14
+     44e:	ff 92       	push	r15
+     450:	0f 93       	push	r16
+     452:	1f 93       	push	r17
+     454:	cf 93       	push	r28
+     456:	df 93       	push	r29
+     458:	cd b7       	in	r28, 0x3d	; 61
+     45a:	de b7       	in	r29, 0x3e	; 62
+     45c:	c1 54       	subi	r28, 0x41	; 65
+     45e:	d1 09       	sbc	r29, r1
+     460:	cd bf       	out	0x3d, r28	; 61
+     462:	de bf       	out	0x3e, r29	; 62
+  Key = key;
+     464:	80 93 d4 2c 	sts	0x2CD4, r24	; 0x802cd4 <__data_end>
+     468:	90 93 d5 2c 	sts	0x2CD5, r25	; 0x802cd5 <__data_end+0x1>
+     46c:	ac 01       	movw	r20, r24
+     46e:	26 ed       	ldi	r18, 0xD6	; 214
+     470:	3c e2       	ldi	r19, 0x2C	; 44
+     472:	22 96       	adiw	r28, 0x02	; 2
+     474:	2e af       	std	Y+62, r18	; 0x3e
+     476:	3f af       	std	Y+63, r19	; 0x3f
+     478:	22 97       	sbiw	r28, 0x02	; 2
+     47a:	26 ee       	ldi	r18, 0xE6	; 230
+     47c:	3c e2       	ldi	r19, 0x2C	; 44
+     47e:	e6 ed       	ldi	r30, 0xD6	; 214
+     480:	fc e2       	ldi	r31, 0x2C	; 44
+  state_t tempState2;
+
+  // The first two round keys are the first and second half of the key.
+  for(i=0;i<16;i++)
+  {
+    RoundKey[0][i] = Key[i];
+     482:	da 01       	movw	r26, r20
+     484:	6d 91       	ld	r22, X+
+     486:	ad 01       	movw	r20, r26
+     488:	61 93       	st	Z+, r22
+  uint8_t i,j;
+  uint8_t div = 0x2;
+  state_t tempState2;
+
+  // The first two round keys are the first and second half of the key.
+  for(i=0;i<16;i++)
+     48a:	bc e2       	ldi	r27, 0x2C	; 44
+     48c:	e6 3e       	cpi	r30, 0xE6	; 230
+     48e:	fb 07       	cpc	r31, r27
+     490:	c1 f7       	brne	.-16     	; 0x482 <kuznyechik_setkey+0x4e>
+     492:	fc 01       	movw	r30, r24
+     494:	70 96       	adiw	r30, 0x10	; 16
+     496:	80 96       	adiw	r24, 0x20	; 32
+    RoundKey[0][i] = Key[i];
+  }
+  
+  for(i=0;i<16;i++)
+  {
+    RoundKey[1][i] = Key[i+16];  
+     498:	41 91       	ld	r20, Z+
+     49a:	d9 01       	movw	r26, r18
+     49c:	4d 93       	st	X+, r20
+     49e:	9d 01       	movw	r18, r26
+  for(i=0;i<16;i++)
+  {
+    RoundKey[0][i] = Key[i];
+  }
+  
+  for(i=0;i<16;i++)
+     4a0:	8e 17       	cp	r24, r30
+     4a2:	9f 07       	cpc	r25, r31
+     4a4:	c9 f7       	brne	.-14     	; 0x498 <kuznyechik_setkey+0x64>
+     4a6:	36 ed       	ldi	r19, 0xD6	; 214
+     4a8:	23 2e       	mov	r2, r19
+     4aa:	3c e2       	ldi	r19, 0x2C	; 44
+     4ac:	33 2e       	mov	r3, r19
+     4ae:	42 e0       	ldi	r20, 0x02	; 2
+     4b0:	54 2e       	mov	r5, r20
+     4b2:	26 e0       	ldi	r18, 0x06	; 6
+     4b4:	31 e3       	ldi	r19, 0x31	; 49
+     4b6:	2c a3       	std	Y+36, r18	; 0x24
+     4b8:	3d a3       	std	Y+37, r19	; 0x25
+     4ba:	5e 01       	movw	r10, r28
+     4bc:	31 e1       	ldi	r19, 0x11	; 17
+     4be:	a3 0e       	add	r10, r19
+     4c0:	b1 1c       	adc	r11, r1
+/* Public functions:                                                         */
+/*****************************************************************************/
+
+void kuznyechik_setkey(uint8_t* key)
+{
+  Key = key;
+     4c2:	95 01       	movw	r18, r10
+     4c4:	86 e0       	ldi	r24, 0x06	; 6
+     4c6:	91 e3       	ldi	r25, 0x31	; 49
+     4c8:	f1 01       	movw	r30, r2
+
+  for(i=2;i<65;i=i+2)
+  {
+    for(j=0; j<16; j++)
+    {
+      stateDuringKS[j] = RoundKey[i-2][j];
+     4ca:	41 91       	ld	r20, Z+
+     4cc:	dc 01       	movw	r26, r24
+     4ce:	4d 93       	st	X+, r20
+     4d0:	cd 01       	movw	r24, r26
+      tempState2[j] = RoundKey[i-1][j];
+     4d2:	57 85       	ldd	r21, Z+15	; 0x0f
+     4d4:	d9 01       	movw	r26, r18
+     4d6:	5d 93       	st	X+, r21
+     4d8:	9d 01       	movw	r18, r26
+      RoundKey[i+1][j] = stateDuringKS[j];
+     4da:	47 a7       	std	Z+47, r20	; 0x2f
+    RoundKey[1][i] = Key[i+16];  
+  }
+
+  for(i=2;i<65;i=i+2)
+  {
+    for(j=0; j<16; j++)
+     4dc:	b1 e3       	ldi	r27, 0x31	; 49
+     4de:	86 31       	cpi	r24, 0x16	; 22
+     4e0:	9b 07       	cpc	r25, r27
+     4e2:	99 f7       	brne	.-26     	; 0x4ca <kuznyechik_setkey+0x96>
+    {
+      stateDuringKS[j] = RoundKey[i-2][j];
+      tempState2[j] = RoundKey[i-1][j];
+      RoundKey[i+1][j] = stateDuringKS[j];
+    }
+    uint8_t k = (uint8_t)((i/div)-1);
+     4e4:	85 2d       	mov	r24, r5
+     4e6:	86 95       	lsr	r24
+     4e8:	81 50       	subi	r24, 0x01	; 1
+     4ea:	e0 e1       	ldi	r30, 0x10	; 16
+     4ec:	8e 9f       	mul	r24, r30
+     4ee:	c0 01       	movw	r24, r0
+     4f0:	11 24       	eor	r1, r1
+     4f2:	e6 e0       	ldi	r30, 0x06	; 6
+     4f4:	f1 e3       	ldi	r31, 0x31	; 49
+     4f6:	20 e0       	ldi	r18, 0x00	; 0
+     4f8:	30 e0       	ldi	r19, 0x00	; 0
+static void AddRoundKey_KS(uint8_t round)
+{
+    uint8_t i;
+    for(i=0;i<16;++i)
+  {
+    stateDuringKS[i] ^= C[round][i];
+     4fa:	b9 01       	movw	r22, r18
+     4fc:	68 0f       	add	r22, r24
+     4fe:	79 1f       	adc	r23, r25
+     500:	6c 53       	subi	r22, 0x3C	; 60
+     502:	7d 4d       	sbci	r23, 0xDD	; 221
+     504:	50 81       	ld	r21, Z
+     506:	db 01       	movw	r26, r22
+     508:	4c 91       	ld	r20, X
+     50a:	45 27       	eor	r20, r21
+     50c:	41 93       	st	Z+, r20
+     50e:	2f 5f       	subi	r18, 0xFF	; 255
+     510:	3f 4f       	sbci	r19, 0xFF	; 255
+    {0x5e, 0xa7, 0xd8, 0x58, 0x1e, 0x14, 0x9b, 0x61, 0xf1, 0x6a, 0xc1, 0x45, 0x9c, 0xed, 0xa8, 0x20}};
+
+static void AddRoundKey_KS(uint8_t round)
+{
+    uint8_t i;
+    for(i=0;i<16;++i)
+     512:	20 31       	cpi	r18, 0x10	; 16
+     514:	31 05       	cpc	r19, r1
+     516:	89 f7       	brne	.-30     	; 0x4fa <kuznyechik_setkey+0xc6>
+     518:	86 e0       	ldi	r24, 0x06	; 6
+     51a:	91 e3       	ldi	r25, 0x31	; 49
+/*****************************************************************************/
+
+
+static uint8_t getSBoxValue(uint8_t num)
+{
+  return sbox[num];
+     51c:	fc 01       	movw	r30, r24
+     51e:	20 81       	ld	r18, Z
+     520:	a2 2f       	mov	r26, r18
+     522:	b0 e0       	ldi	r27, 0x00	; 0
+     524:	a0 50       	subi	r26, 0x00	; 0
+     526:	bf 4d       	sbci	r27, 0xDF	; 223
+static void Sstep_KS(void)
+{
+    uint8_t i;
+    for(i = 0; i < 16; ++i)
+  {
+    stateDuringKS[i] = getSBoxValue(stateDuringKS[i]);
+     528:	2c 91       	ld	r18, X
+     52a:	dc 01       	movw	r26, r24
+     52c:	2d 93       	st	X+, r18
+     52e:	cd 01       	movw	r24, r26
+
+
+static void Sstep_KS(void)
+{
+    uint8_t i;
+    for(i = 0; i < 16; ++i)
+     530:	b1 e3       	ldi	r27, 0x31	; 49
+     532:	86 31       	cpi	r24, 0x16	; 22
+     534:	9b 07       	cpc	r25, r27
+     536:	91 f7       	brne	.-28     	; 0x51c <kuznyechik_setkey+0xe8>
+     538:	e0 e1       	ldi	r30, 0x10	; 16
+     53a:	e9 a3       	std	Y+33, r30	; 0x21
+     53c:	ce 01       	movw	r24, r28
+     53e:	01 96       	adiw	r24, 0x01	; 1
+    {0x5e, 0xa7, 0xd8, 0x58, 0x1e, 0x14, 0x9b, 0x61, 0xf1, 0x6a, 0xc1, 0x45, 0x9c, 0xed, 0xa8, 0x20}};
+
+static void AddRoundKey_KS(uint8_t round)
+{
+    uint8_t i;
+    for(i=0;i<16;++i)
+     540:	e6 e0       	ldi	r30, 0x06	; 6
+     542:	f1 e3       	ldi	r31, 0x31	; 49
+{
+    uint8_t i;
+    state_t stateCopy;
+    for(i=0;i<16;i++)
+    {
+      stateCopy[i] = stateDuringKS[i];
+     544:	21 91       	ld	r18, Z+
+     546:	dc 01       	movw	r26, r24
+     548:	2d 93       	st	X+, r18
+     54a:	cd 01       	movw	r24, r26
+
+static void Rstep_KS(void)
+{
+    uint8_t i;
+    state_t stateCopy;
+    for(i=0;i<16;i++)
+     54c:	b1 e3       	ldi	r27, 0x31	; 49
+     54e:	e6 31       	cpi	r30, 0x16	; 22
+     550:	fb 07       	cpc	r31, r27
+     552:	c1 f7       	brne	.-16     	; 0x544 <kuznyechik_setkey+0x110>
+    }
+    for(i=0;i<16;i++)
+    {
+        if(i==0)
+        {
+            stateDuringKS[i] = mult_mod_poly[4][stateCopy[0]] ^ mult_mod_poly[2][stateCopy[1]] ^ mult_mod_poly[3][stateCopy[2]] ^ mult_mod_poly[1][stateCopy[3]] ^ mult_mod_poly[6][stateCopy[4]] ^ mult_mod_poly[5][stateCopy[5]] ^ mult_mod_poly[0][stateCopy[6]] ^ mult_mod_poly[7][stateCopy[7]] ^ mult_mod_poly[0][stateCopy[8]] ^ mult_mod_poly[5][stateCopy[9]] ^ mult_mod_poly[6][stateCopy[10]] ^ mult_mod_poly[1][stateCopy[11]] ^ mult_mod_poly[3][stateCopy[12]] ^ mult_mod_poly[2][stateCopy[13]] ^ mult_mod_poly[4][stateCopy[14]] ^ mult_mod_poly[0][stateCopy[15]];
+     554:	c9 80       	ldd	r12, Y+1	; 0x01
+     556:	ec 2d       	mov	r30, r12
+     558:	f0 e0       	ldi	r31, 0x00	; 0
+     55a:	ea 80       	ldd	r14, Y+2	; 0x02
+     55c:	f1 2c       	mov	r15, r1
+     55e:	0b 81       	ldd	r16, Y+3	; 0x03
+     560:	10 e0       	ldi	r17, 0x00	; 0
+     562:	ac 81       	ldd	r26, Y+4	; 0x04
+     564:	b0 e0       	ldi	r27, 0x00	; 0
+     566:	6d 81       	ldd	r22, Y+5	; 0x05
+     568:	70 e0       	ldi	r23, 0x00	; 0
+     56a:	4e 81       	ldd	r20, Y+6	; 0x06
+     56c:	50 e0       	ldi	r21, 0x00	; 0
+     56e:	2f 81       	ldd	r18, Y+7	; 0x07
+     570:	c2 2e       	mov	r12, r18
+     572:	d1 2c       	mov	r13, r1
+     574:	ce ae       	std	Y+62, r12	; 0x3e
+     576:	df ae       	std	Y+63, r13	; 0x3f
+     578:	88 84       	ldd	r8, Y+8	; 0x08
+     57a:	91 2c       	mov	r9, r1
+     57c:	89 85       	ldd	r24, Y+9	; 0x09
+     57e:	28 2f       	mov	r18, r24
+     580:	30 e0       	ldi	r19, 0x00	; 0
+     582:	2e a3       	std	Y+38, r18	; 0x26
+     584:	3f a3       	std	Y+39, r19	; 0x27
+     586:	8a 85       	ldd	r24, Y+10	; 0x0a
+     588:	c8 2e       	mov	r12, r24
+     58a:	d1 2c       	mov	r13, r1
+     58c:	c8 a6       	std	Y+40, r12	; 0x28
+     58e:	d9 a6       	std	Y+41, r13	; 0x29
+     590:	8b 85       	ldd	r24, Y+11	; 0x0b
+     592:	28 2f       	mov	r18, r24
+     594:	30 e0       	ldi	r19, 0x00	; 0
+     596:	2a a7       	std	Y+42, r18	; 0x2a
+     598:	3b a7       	std	Y+43, r19	; 0x2b
+     59a:	6c 84       	ldd	r6, Y+12	; 0x0c
+     59c:	86 2d       	mov	r24, r6
+     59e:	90 e0       	ldi	r25, 0x00	; 0
+     5a0:	8c a7       	std	Y+44, r24	; 0x2c
+     5a2:	9d a7       	std	Y+45, r25	; 0x2d
+     5a4:	8d 85       	ldd	r24, Y+13	; 0x0d
+     5a6:	c8 2e       	mov	r12, r24
+     5a8:	d1 2c       	mov	r13, r1
+     5aa:	ce a6       	std	Y+46, r12	; 0x2e
+     5ac:	df a6       	std	Y+47, r13	; 0x2f
+     5ae:	8e 85       	ldd	r24, Y+14	; 0x0e
+     5b0:	90 e0       	ldi	r25, 0x00	; 0
+     5b2:	4f 84       	ldd	r4, Y+15	; 0x0f
+     5b4:	24 2d       	mov	r18, r4
+     5b6:	30 e0       	ldi	r19, 0x00	; 0
+     5b8:	28 ab       	std	Y+48, r18	; 0x30
+     5ba:	39 ab       	std	Y+49, r19	; 0x31
+     5bc:	48 88       	ldd	r4, Y+16	; 0x10
+     5be:	c4 2c       	mov	r12, r4
+     5c0:	d1 2c       	mov	r13, r1
+     5c2:	ca aa       	std	Y+50, r12	; 0x32
+     5c4:	db aa       	std	Y+51, r13	; 0x33
+     5c6:	6e 01       	movw	r12, r28
+     5c8:	26 e0       	ldi	r18, 0x06	; 6
+     5ca:	62 2e       	mov	r6, r18
+     5cc:	21 e3       	ldi	r18, 0x31	; 49
+     5ce:	72 2e       	mov	r7, r18
+     5d0:	41 2c       	mov	r4, r1
+     5d2:	9f 01       	movw	r18, r30
+     5d4:	2c 53       	subi	r18, 0x3C	; 60
+     5d6:	37 4d       	sbci	r19, 0xD7	; 215
+     5d8:	2a a3       	std	Y+34, r18	; 0x22
+     5da:	3b a3       	std	Y+35, r19	; 0x23
+     5dc:	f7 01       	movw	r30, r14
+     5de:	ec 53       	subi	r30, 0x3C	; 60
+     5e0:	f9 4d       	sbci	r31, 0xD9	; 217
+     5e2:	ec ab       	std	Y+52, r30	; 0x34
+     5e4:	fd ab       	std	Y+53, r31	; 0x35
+     5e6:	98 01       	movw	r18, r16
+     5e8:	2c 53       	subi	r18, 0x3C	; 60
+     5ea:	38 4d       	sbci	r19, 0xD8	; 216
+     5ec:	2e ab       	std	Y+54, r18	; 0x36
+     5ee:	3f ab       	std	Y+55, r19	; 0x37
+     5f0:	fd 01       	movw	r30, r26
+     5f2:	ec 53       	subi	r30, 0x3C	; 60
+     5f4:	fa 4d       	sbci	r31, 0xDA	; 218
+     5f6:	e8 af       	std	Y+56, r30	; 0x38
+     5f8:	f9 af       	std	Y+57, r31	; 0x39
+     5fa:	9b 01       	movw	r18, r22
+     5fc:	2c 53       	subi	r18, 0x3C	; 60
+     5fe:	35 4d       	sbci	r19, 0xD5	; 213
+     600:	2a af       	std	Y+58, r18	; 0x3a
+     602:	3b af       	std	Y+59, r19	; 0x3b
+     604:	da 01       	movw	r26, r20
+     606:	ac 53       	subi	r26, 0x3C	; 60
+     608:	b6 4d       	sbci	r27, 0xD6	; 214
+     60a:	ac af       	std	Y+60, r26	; 0x3c
+     60c:	bd af       	std	Y+61, r27	; 0x3d
+     60e:	ee ad       	ldd	r30, Y+62	; 0x3e
+     610:	ff ad       	ldd	r31, Y+63	; 0x3f
+     612:	ec 53       	subi	r30, 0x3C	; 60
+     614:	fb 4d       	sbci	r31, 0xDB	; 219
+     616:	ee af       	std	Y+62, r30	; 0x3e
+     618:	ff af       	std	Y+63, r31	; 0x3f
+     61a:	94 01       	movw	r18, r8
+     61c:	2c 53       	subi	r18, 0x3C	; 60
+     61e:	34 4d       	sbci	r19, 0xD4	; 212
+     620:	49 01       	movw	r8, r18
+     622:	08 a5       	ldd	r16, Y+40	; 0x28
+     624:	19 a5       	ldd	r17, Y+41	; 0x29
+     626:	0c 53       	subi	r16, 0x3C	; 60
+     628:	16 4d       	sbci	r17, 0xD6	; 214
+     62a:	6a a5       	ldd	r22, Y+42	; 0x2a
+     62c:	7b a5       	ldd	r23, Y+43	; 0x2b
+     62e:	6c 53       	subi	r22, 0x3C	; 60
+     630:	75 4d       	sbci	r23, 0xD5	; 213
+     632:	4c a5       	ldd	r20, Y+44	; 0x2c
+     634:	5d a5       	ldd	r21, Y+45	; 0x2d
+     636:	4c 53       	subi	r20, 0x3C	; 60
+     638:	5a 4d       	sbci	r21, 0xDA	; 218
+     63a:	2e a5       	ldd	r18, Y+46	; 0x2e
+     63c:	3f a5       	ldd	r19, Y+47	; 0x2f
+     63e:	2c 53       	subi	r18, 0x3C	; 60
+     640:	38 4d       	sbci	r19, 0xD8	; 216
+     642:	8c 53       	subi	r24, 0x3C	; 60
+     644:	99 4d       	sbci	r25, 0xD9	; 217
+    {
+      stateCopy[i] = stateDuringKS[i];
+    }
+    for(i=0;i<16;i++)
+    {
+        if(i==0)
+     646:	41 10       	cpse	r4, r1
+     648:	42 c0       	rjmp	.+132    	; 0x6ce <kuznyechik_setkey+0x29a>
+        {
+            stateDuringKS[i] = mult_mod_poly[4][stateCopy[0]] ^ mult_mod_poly[2][stateCopy[1]] ^ mult_mod_poly[3][stateCopy[2]] ^ mult_mod_poly[1][stateCopy[3]] ^ mult_mod_poly[6][stateCopy[4]] ^ mult_mod_poly[5][stateCopy[5]] ^ mult_mod_poly[0][stateCopy[6]] ^ mult_mod_poly[7][stateCopy[7]] ^ mult_mod_poly[0][stateCopy[8]] ^ mult_mod_poly[5][stateCopy[9]] ^ mult_mod_poly[6][stateCopy[10]] ^ mult_mod_poly[1][stateCopy[11]] ^ mult_mod_poly[3][stateCopy[12]] ^ mult_mod_poly[2][stateCopy[13]] ^ mult_mod_poly[4][stateCopy[14]] ^ mult_mod_poly[0][stateCopy[15]];
+     64a:	aa a1       	ldd	r26, Y+34	; 0x22
+     64c:	bb a1       	ldd	r27, Y+35	; 0x23
+     64e:	fc 91       	ld	r31, X
+     650:	ac a9       	ldd	r26, Y+52	; 0x34
+     652:	bd a9       	ldd	r27, Y+53	; 0x35
+     654:	ec 91       	ld	r30, X
+     656:	ef 27       	eor	r30, r31
+     658:	ae a9       	ldd	r26, Y+54	; 0x36
+     65a:	bf a9       	ldd	r27, Y+55	; 0x37
+     65c:	fc 90       	ld	r15, X
+     65e:	fe 26       	eor	r15, r30
+     660:	a8 ad       	ldd	r26, Y+56	; 0x38
+     662:	b9 ad       	ldd	r27, Y+57	; 0x39
+     664:	ec 91       	ld	r30, X
+     666:	fe 26       	eor	r15, r30
+     668:	aa ad       	ldd	r26, Y+58	; 0x3a
+     66a:	bb ad       	ldd	r27, Y+59	; 0x3b
+     66c:	ec 91       	ld	r30, X
+     66e:	fe 26       	eor	r15, r30
+     670:	ac ad       	ldd	r26, Y+60	; 0x3c
+     672:	bd ad       	ldd	r27, Y+61	; 0x3d
+     674:	ec 91       	ld	r30, X
+     676:	fe 26       	eor	r15, r30
+     678:	ae ad       	ldd	r26, Y+62	; 0x3e
+     67a:	bf ad       	ldd	r27, Y+63	; 0x3f
+     67c:	ec 91       	ld	r30, X
+     67e:	fe 26       	eor	r15, r30
+     680:	d4 01       	movw	r26, r8
+     682:	ec 91       	ld	r30, X
+     684:	fe 26       	eor	r15, r30
+     686:	ae a1       	ldd	r26, Y+38	; 0x26
+     688:	bf a1       	ldd	r27, Y+39	; 0x27
+     68a:	ac 53       	subi	r26, 0x3C	; 60
+     68c:	bb 4d       	sbci	r27, 0xDB	; 219
+     68e:	ac 91       	ld	r26, X
+     690:	fa 26       	eor	r15, r26
+     692:	d8 01       	movw	r26, r16
+     694:	ec 91       	ld	r30, X
+     696:	fe 26       	eor	r15, r30
+     698:	db 01       	movw	r26, r22
+     69a:	ec 91       	ld	r30, X
+     69c:	fe 26       	eor	r15, r30
+     69e:	da 01       	movw	r26, r20
+     6a0:	ec 91       	ld	r30, X
+     6a2:	fe 26       	eor	r15, r30
+     6a4:	d9 01       	movw	r26, r18
+     6a6:	ec 91       	ld	r30, X
+     6a8:	fe 26       	eor	r15, r30
+     6aa:	dc 01       	movw	r26, r24
+     6ac:	ec 91       	ld	r30, X
+     6ae:	fe 26       	eor	r15, r30
+     6b0:	a8 a9       	ldd	r26, Y+48	; 0x30
+     6b2:	b9 a9       	ldd	r27, Y+49	; 0x31
+     6b4:	ac 53       	subi	r26, 0x3C	; 60
+     6b6:	b7 4d       	sbci	r27, 0xD7	; 215
+     6b8:	ac 91       	ld	r26, X
+     6ba:	fa 26       	eor	r15, r26
+     6bc:	aa a9       	ldd	r26, Y+50	; 0x32
+     6be:	bb a9       	ldd	r27, Y+51	; 0x33
+     6c0:	ac 53       	subi	r26, 0x3C	; 60
+     6c2:	bb 4d       	sbci	r27, 0xDB	; 219
+     6c4:	ac 91       	ld	r26, X
+     6c6:	fa 26       	eor	r15, r26
+     6c8:	f0 92 06 31 	sts	0x3106, r15	; 0x803106 <stateDuringKS>
+     6cc:	04 c0       	rjmp	.+8      	; 0x6d6 <kuznyechik_setkey+0x2a2>
+        }
+        else
+        {
+            stateDuringKS[i] = stateCopy[i-1];
+     6ce:	d6 01       	movw	r26, r12
+     6d0:	ec 91       	ld	r30, X
+     6d2:	d3 01       	movw	r26, r6
+     6d4:	ec 93       	st	X, r30
+    state_t stateCopy;
+    for(i=0;i<16;i++)
+    {
+      stateCopy[i] = stateDuringKS[i];
+    }
+    for(i=0;i<16;i++)
+     6d6:	43 94       	inc	r4
+     6d8:	bf ef       	ldi	r27, 0xFF	; 255
+     6da:	cb 1a       	sub	r12, r27
+     6dc:	db 0a       	sbc	r13, r27
+     6de:	ef ef       	ldi	r30, 0xFF	; 255
+     6e0:	6e 1a       	sub	r6, r30
+     6e2:	7e 0a       	sbc	r7, r30
+     6e4:	f0 e1       	ldi	r31, 0x10	; 16
+     6e6:	4f 12       	cpse	r4, r31
+     6e8:	ae cf       	rjmp	.-164    	; 0x646 <kuznyechik_setkey+0x212>
+     6ea:	29 a1       	ldd	r18, Y+33	; 0x21
+     6ec:	21 50       	subi	r18, 0x01	; 1
+     6ee:	29 a3       	std	Y+33, r18	; 0x21
+
+
+static void Lstep_KS(void)
+{
+    uint8_t i;
+    for(i=0;i<16;i++)
+     6f0:	21 11       	cpse	r18, r1
+     6f2:	24 cf       	rjmp	.-440    	; 0x53c <kuznyechik_setkey+0x108>
+     6f4:	e6 e0       	ldi	r30, 0x06	; 6
+     6f6:	f1 e3       	ldi	r31, 0x31	; 49
+    Sstep_KS();
+    Lstep_KS();
+
+    for(j=0; j<16; j++)
+    {
+        stateDuringKS[j] ^= tempState2[j];
+     6f8:	d5 01       	movw	r26, r10
+     6fa:	8d 91       	ld	r24, X+
+     6fc:	5d 01       	movw	r10, r26
+     6fe:	90 81       	ld	r25, Z
+     700:	89 27       	eor	r24, r25
+     702:	81 93       	st	Z+, r24
+    uint8_t k = (uint8_t)((i/div)-1);
+    AddRoundKey_KS(k);
+    Sstep_KS();
+    Lstep_KS();
+
+    for(j=0; j<16; j++)
+     704:	b1 e3       	ldi	r27, 0x31	; 49
+     706:	e6 31       	cpi	r30, 0x16	; 22
+     708:	fb 07       	cpc	r31, r27
+     70a:	b1 f7       	brne	.-20     	; 0x6f8 <kuznyechik_setkey+0x2c4>
+     70c:	80 e0       	ldi	r24, 0x00	; 0
+     70e:	90 e0       	ldi	r25, 0x00	; 0
+     710:	91 01       	movw	r18, r2
+     712:	20 5e       	subi	r18, 0xE0	; 224
+     714:	3f 4f       	sbci	r19, 0xFF	; 255
+    {
+        stateDuringKS[j] ^= tempState2[j];
+    }
+    for(j=0; j<16; j++)
+    {
+      RoundKey[i][j] = stateDuringKS[j];
+     716:	ec a1       	ldd	r30, Y+36	; 0x24
+     718:	fd a1       	ldd	r31, Y+37	; 0x25
+     71a:	41 91       	ld	r20, Z+
+     71c:	ec a3       	std	Y+36, r30	; 0x24
+     71e:	fd a3       	std	Y+37, r31	; 0x25
+     720:	d9 01       	movw	r26, r18
+     722:	a8 0f       	add	r26, r24
+     724:	b9 1f       	adc	r27, r25
+     726:	4c 93       	st	X, r20
+     728:	01 96       	adiw	r24, 0x01	; 1
+
+    for(j=0; j<16; j++)
+    {
+        stateDuringKS[j] ^= tempState2[j];
+    }
+    for(j=0; j<16; j++)
+     72a:	80 31       	cpi	r24, 0x10	; 16
+     72c:	91 05       	cpc	r25, r1
+     72e:	99 f7       	brne	.-26     	; 0x716 <kuznyechik_setkey+0x2e2>
+  for(i=0;i<16;i++)
+  {
+    RoundKey[1][i] = Key[i+16];  
+  }
+
+  for(i=2;i<65;i=i+2)
+     730:	53 94       	inc	r5
+     732:	53 94       	inc	r5
+     734:	19 01       	movw	r2, r18
+     736:	f2 e4       	ldi	r31, 0x42	; 66
+     738:	5f 12       	cpse	r5, r31
+     73a:	bb ce       	rjmp	.-650    	; 0x4b2 <kuznyechik_setkey+0x7e>
+     73c:	a0 e0       	ldi	r26, 0x00	; 0
+     73e:	b2 e2       	ldi	r27, 0x22	; 34
+     740:	80 e1       	ldi	r24, 0x10	; 16
+    }
+  }
+  
+  for(j=0; j<16; j++)
+  {
+    trueRoundKey[0][j] = RoundKey[0][j];
+     742:	22 96       	adiw	r28, 0x02	; 2
+     744:	ee ad       	ldd	r30, Y+62	; 0x3e
+     746:	ff ad       	ldd	r31, Y+63	; 0x3f
+     748:	22 97       	sbiw	r28, 0x02	; 2
+     74a:	90 81       	ld	r25, Z
+     74c:	9c 93       	st	X, r25
+    trueRoundKey[1][j] = RoundKey[1][j];
+     74e:	90 89       	ldd	r25, Z+16	; 0x10
+     750:	50 96       	adiw	r26, 0x10	; 16
+     752:	9c 93       	st	X, r25
+     754:	50 97       	sbiw	r26, 0x10	; 16
+    trueRoundKey[2][j] = RoundKey[16][j];
+     756:	9f 01       	movw	r18, r30
+     758:	33 95       	inc	r19
+     75a:	f9 01       	movw	r30, r18
+     75c:	90 81       	ld	r25, Z
+     75e:	90 96       	adiw	r26, 0x20	; 32
+     760:	9c 93       	st	X, r25
+     762:	90 97       	sbiw	r26, 0x20	; 32
+    trueRoundKey[3][j] = RoundKey[17][j];
+     764:	22 96       	adiw	r28, 0x02	; 2
+     766:	2e ad       	ldd	r18, Y+62	; 0x3e
+     768:	3f ad       	ldd	r19, Y+63	; 0x3f
+     76a:	22 97       	sbiw	r28, 0x02	; 2
+     76c:	20 5f       	subi	r18, 0xF0	; 240
+     76e:	3e 4f       	sbci	r19, 0xFE	; 254
+     770:	f9 01       	movw	r30, r18
+     772:	90 81       	ld	r25, Z
+     774:	d0 96       	adiw	r26, 0x30	; 48
+     776:	9c 93       	st	X, r25
+     778:	d0 97       	sbiw	r26, 0x30	; 48
+    trueRoundKey[4][j] = RoundKey[32][j];
+     77a:	9d 01       	movw	r18, r26
+     77c:	20 5c       	subi	r18, 0xC0	; 192
+     77e:	3f 4f       	sbci	r19, 0xFF	; 255
+     780:	22 96       	adiw	r28, 0x02	; 2
+     782:	4e ad       	ldd	r20, Y+62	; 0x3e
+     784:	5f ad       	ldd	r21, Y+63	; 0x3f
+     786:	22 97       	sbiw	r28, 0x02	; 2
+     788:	5e 5f       	subi	r21, 0xFE	; 254
+     78a:	fa 01       	movw	r30, r20
+     78c:	90 81       	ld	r25, Z
+     78e:	f9 01       	movw	r30, r18
+     790:	90 83       	st	Z, r25
+    trueRoundKey[5][j] = RoundKey[33][j];
+     792:	20 5f       	subi	r18, 0xF0	; 240
+     794:	3f 4f       	sbci	r19, 0xFF	; 255
+     796:	22 96       	adiw	r28, 0x02	; 2
+     798:	4e ad       	ldd	r20, Y+62	; 0x3e
+     79a:	5f ad       	ldd	r21, Y+63	; 0x3f
+     79c:	22 97       	sbiw	r28, 0x02	; 2
+     79e:	40 5f       	subi	r20, 0xF0	; 240
+     7a0:	5d 4f       	sbci	r21, 0xFD	; 253
+     7a2:	fa 01       	movw	r30, r20
+     7a4:	90 81       	ld	r25, Z
+     7a6:	f9 01       	movw	r30, r18
+     7a8:	90 83       	st	Z, r25
+    trueRoundKey[6][j] = RoundKey[48][j];
+     7aa:	20 5f       	subi	r18, 0xF0	; 240
+     7ac:	3f 4f       	sbci	r19, 0xFF	; 255
+     7ae:	22 96       	adiw	r28, 0x02	; 2
+     7b0:	4e ad       	ldd	r20, Y+62	; 0x3e
+     7b2:	5f ad       	ldd	r21, Y+63	; 0x3f
+     7b4:	22 97       	sbiw	r28, 0x02	; 2
+     7b6:	5d 5f       	subi	r21, 0xFD	; 253
+     7b8:	fa 01       	movw	r30, r20
+     7ba:	90 81       	ld	r25, Z
+     7bc:	f9 01       	movw	r30, r18
+     7be:	90 83       	st	Z, r25
+    trueRoundKey[7][j] = RoundKey[49][j];
+     7c0:	20 5f       	subi	r18, 0xF0	; 240
+     7c2:	3f 4f       	sbci	r19, 0xFF	; 255
+     7c4:	22 96       	adiw	r28, 0x02	; 2
+     7c6:	4e ad       	ldd	r20, Y+62	; 0x3e
+     7c8:	5f ad       	ldd	r21, Y+63	; 0x3f
+     7ca:	22 97       	sbiw	r28, 0x02	; 2
+     7cc:	40 5f       	subi	r20, 0xF0	; 240
+     7ce:	5c 4f       	sbci	r21, 0xFC	; 252
+     7d0:	fa 01       	movw	r30, r20
+     7d2:	90 81       	ld	r25, Z
+     7d4:	f9 01       	movw	r30, r18
+     7d6:	90 83       	st	Z, r25
+    trueRoundKey[8][j] = RoundKey[64][j];
+     7d8:	20 5f       	subi	r18, 0xF0	; 240
+     7da:	3f 4f       	sbci	r19, 0xFF	; 255
+     7dc:	22 96       	adiw	r28, 0x02	; 2
+     7de:	4e ad       	ldd	r20, Y+62	; 0x3e
+     7e0:	5f ad       	ldd	r21, Y+63	; 0x3f
+     7e2:	22 97       	sbiw	r28, 0x02	; 2
+     7e4:	5c 5f       	subi	r21, 0xFC	; 252
+     7e6:	fa 01       	movw	r30, r20
+     7e8:	90 81       	ld	r25, Z
+     7ea:	f9 01       	movw	r30, r18
+     7ec:	90 83       	st	Z, r25
+    trueRoundKey[9][j] = RoundKey[65][j];
+     7ee:	20 5f       	subi	r18, 0xF0	; 240
+     7f0:	3f 4f       	sbci	r19, 0xFF	; 255
+     7f2:	22 96       	adiw	r28, 0x02	; 2
+     7f4:	4e ad       	ldd	r20, Y+62	; 0x3e
+     7f6:	5f ad       	ldd	r21, Y+63	; 0x3f
+     7f8:	22 97       	sbiw	r28, 0x02	; 2
+     7fa:	40 5f       	subi	r20, 0xF0	; 240
+     7fc:	5b 4f       	sbci	r21, 0xFB	; 251
+     7fe:	fa 01       	movw	r30, r20
+     800:	90 81       	ld	r25, Z
+     802:	f9 01       	movw	r30, r18
+     804:	90 83       	st	Z, r25
+     806:	81 50       	subi	r24, 0x01	; 1
+     808:	22 96       	adiw	r28, 0x02	; 2
+     80a:	2e ad       	ldd	r18, Y+62	; 0x3e
+     80c:	3f ad       	ldd	r19, Y+63	; 0x3f
+     80e:	22 97       	sbiw	r28, 0x02	; 2
+     810:	2f 5f       	subi	r18, 0xFF	; 255
+     812:	3f 4f       	sbci	r19, 0xFF	; 255
+     814:	22 96       	adiw	r28, 0x02	; 2
+     816:	2e af       	std	Y+62, r18	; 0x3e
+     818:	3f af       	std	Y+63, r19	; 0x3f
+     81a:	22 97       	sbiw	r28, 0x02	; 2
+     81c:	11 96       	adiw	r26, 0x01	; 1
+    {
+      RoundKey[i][j] = stateDuringKS[j];
+    }
+  }
+  
+  for(j=0; j<16; j++)
+     81e:	81 11       	cpse	r24, r1
+     820:	90 cf       	rjmp	.-224    	; 0x742 <kuznyechik_setkey+0x30e>
+void kuznyechik_setkey(uint8_t* key)
+{
+  Key = key;
+
+  KeyExpansion();
+}
+     822:	cf 5b       	subi	r28, 0xBF	; 191
+     824:	df 4f       	sbci	r29, 0xFF	; 255
+     826:	cd bf       	out	0x3d, r28	; 61
+     828:	de bf       	out	0x3e, r29	; 62
+     82a:	df 91       	pop	r29
+     82c:	cf 91       	pop	r28
+     82e:	1f 91       	pop	r17
+     830:	0f 91       	pop	r16
+     832:	ff 90       	pop	r15
+     834:	ef 90       	pop	r14
+     836:	df 90       	pop	r13
+     838:	cf 90       	pop	r12
+     83a:	bf 90       	pop	r11
+     83c:	af 90       	pop	r10
+     83e:	9f 90       	pop	r9
+     840:	8f 90       	pop	r8
+     842:	7f 90       	pop	r7
+     844:	6f 90       	pop	r6
+     846:	5f 90       	pop	r5
+     848:	4f 90       	pop	r4
+     84a:	3f 90       	pop	r3
+     84c:	2f 90       	pop	r2
+     84e:	08 95       	ret
+
+00000850 <masked_kuznyechik_crypto>:
+
+void masked_kuznyechik_crypto(uint8_t* input)
+{
+     850:	2f 92       	push	r2
+     852:	3f 92       	push	r3
+     854:	4f 92       	push	r4
+     856:	5f 92       	push	r5
+     858:	6f 92       	push	r6
+     85a:	7f 92       	push	r7
+     85c:	8f 92       	push	r8
+     85e:	9f 92       	push	r9
+     860:	af 92       	push	r10
+     862:	bf 92       	push	r11
+     864:	cf 92       	push	r12
+     866:	df 92       	push	r13
+     868:	ef 92       	push	r14
+     86a:	ff 92       	push	r15
+     86c:	0f 93       	push	r16
+     86e:	1f 93       	push	r17
+     870:	cf 93       	push	r28
+     872:	df 93       	push	r29
+     874:	cd b7       	in	r28, 0x3d	; 61
+     876:	de b7       	in	r29, 0x3e	; 62
+     878:	af 97       	sbiw	r28, 0x2f	; 47
+     87a:	cd bf       	out	0x3d, r28	; 61
+     87c:	de bf       	out	0x3e, r29	; 62
+  state = (state_t*)input;
+     87e:	80 93 16 31 	sts	0x3116, r24	; 0x803116 <state>
+     882:	90 93 17 31 	sts	0x3117, r25	; 0x803117 <state+0x1>
+
+  genMask();
+     886:	0e 94 00 02 	call	0x400	; 0x400 <genMask>
+
+  maskState();
+     88a:	0e 94 d6 01 	call	0x3ac	; 0x3ac <maskState>
+// Cipher is the main function that encrypts the PlainText.
+static void Cipher(void)
+{
+  uint8_t round;
+
+  for(round = 0; round < 9; round++)
+     88e:	1b 8a       	std	Y+19, r1	; 0x13
+     890:	ce 01       	movw	r24, r28
+     892:	41 96       	adiw	r24, 0x11	; 17
+     894:	89 8b       	std	Y+17, r24	; 0x11
+     896:	9a 8b       	std	Y+18, r25	; 0x12
+  {
+    AddRoundKey(round);
+     898:	8b 89       	ldd	r24, Y+19	; 0x13
+     89a:	0e 94 e7 01 	call	0x3ce	; 0x3ce <AddRoundKey>
+static void masked_Sstep(void)
+{
+  uint8_t i;
+  for(i = 0; i<16; i++)
+  {
+    (*state)[i] = getMaskedSBoxValue((*state)[i], mask[i]);
+     89e:	a0 90 16 31 	lds	r10, 0x3116	; 0x803116 <state>
+     8a2:	b0 90 17 31 	lds	r11, 0x3117	; 0x803117 <state+0x1>
+     8a6:	95 01       	movw	r18, r10
+     8a8:	20 5f       	subi	r18, 0xF0	; 240
+     8aa:	3f 4f       	sbci	r19, 0xFF	; 255
+     8ac:	d5 01       	movw	r26, r10
+     8ae:	86 ef       	ldi	r24, 0xF6	; 246
+     8b0:	90 e3       	ldi	r25, 0x30	; 48
+     8b2:	fc 01       	movw	r30, r24
+     8b4:	41 91       	ld	r20, Z+
+     8b6:	cf 01       	movw	r24, r30
+}
+*/
+
+static uint8_t getMaskedSBoxValue(uint8_t num, uint8_t mas)
+{
+  return (sbox[num ^ mas] ^ mas);
+     8b8:	ec 91       	ld	r30, X
+     8ba:	e4 27       	eor	r30, r20
+     8bc:	f0 e0       	ldi	r31, 0x00	; 0
+     8be:	e0 50       	subi	r30, 0x00	; 0
+     8c0:	ff 4d       	sbci	r31, 0xDF	; 223
+static void masked_Sstep(void)
+{
+  uint8_t i;
+  for(i = 0; i<16; i++)
+  {
+    (*state)[i] = getMaskedSBoxValue((*state)[i], mask[i]);
+     8c2:	50 81       	ld	r21, Z
+     8c4:	45 27       	eor	r20, r21
+     8c6:	4d 93       	st	X+, r20
+}
+*/
+static void masked_Sstep(void)
+{
+  uint8_t i;
+  for(i = 0; i<16; i++)
+     8c8:	a2 17       	cp	r26, r18
+     8ca:	b3 07       	cpc	r27, r19
+     8cc:	91 f7       	brne	.-28     	; 0x8b2 <masked_kuznyechik_crypto+0x62>
+     8ce:	30 e1       	ldi	r19, 0x10	; 16
+     8d0:	33 2e       	mov	r3, r19
+     8d2:	fe 01       	movw	r30, r28
+     8d4:	31 96       	adiw	r30, 0x01	; 1
+  {
+    (*state)[i] = getMaskedSBoxValue((*state)[i], mask[i]);
+     8d6:	d5 01       	movw	r26, r10
+static void Rstep(void)
+{
+    state_t stateCopy;
+    for(int j=0; j<16; j++)
+    {
+      stateCopy[j] = (*state)[j];
+     8d8:	8d 91       	ld	r24, X+
+     8da:	81 93       	st	Z+, r24
+/*****************************************************************************/
+
+static void Rstep(void)
+{
+    state_t stateCopy;
+    for(int j=0; j<16; j++)
+     8dc:	69 88       	ldd	r6, Y+17	; 0x11
+     8de:	7a 88       	ldd	r7, Y+18	; 0x12
+     8e0:	e6 15       	cp	r30, r6
+     8e2:	f7 05       	cpc	r31, r7
+     8e4:	c9 f7       	brne	.-14     	; 0x8d8 <masked_kuznyechik_crypto+0x88>
+    }
+    for(int i=0;i<16;i++)
+    {
+        if(i==0)
+        {
+            (*state)[i] = mult_mod_poly[4][stateCopy[0]] ^ mult_mod_poly[2][stateCopy[1]] ^ mult_mod_poly[3][stateCopy[2]] ^ mult_mod_poly[1][stateCopy[3]] ^ mult_mod_poly[6][stateCopy[4]] ^ mult_mod_poly[5][stateCopy[5]] ^ mult_mod_poly[0][stateCopy[6]] ^ mult_mod_poly[7][stateCopy[7]] ^ mult_mod_poly[0][stateCopy[8]] ^ mult_mod_poly[5][stateCopy[9]] ^ mult_mod_poly[6][stateCopy[10]] ^ mult_mod_poly[1][stateCopy[11]] ^ mult_mod_poly[3][stateCopy[12]] ^ mult_mod_poly[2][stateCopy[13]] ^ mult_mod_poly[4][stateCopy[14]] ^ mult_mod_poly[0][stateCopy[15]];
+     8e6:	c9 80       	ldd	r12, Y+1	; 0x01
+     8e8:	d1 2c       	mov	r13, r1
+     8ea:	ea 80       	ldd	r14, Y+2	; 0x02
+     8ec:	f1 2c       	mov	r15, r1
+     8ee:	0b 81       	ldd	r16, Y+3	; 0x03
+     8f0:	10 e0       	ldi	r17, 0x00	; 0
+     8f2:	ac 81       	ldd	r26, Y+4	; 0x04
+     8f4:	b0 e0       	ldi	r27, 0x00	; 0
+     8f6:	ed 81       	ldd	r30, Y+5	; 0x05
+     8f8:	f0 e0       	ldi	r31, 0x00	; 0
+     8fa:	6e 81       	ldd	r22, Y+6	; 0x06
+     8fc:	70 e0       	ldi	r23, 0x00	; 0
+     8fe:	4f 81       	ldd	r20, Y+7	; 0x07
+     900:	50 e0       	ldi	r21, 0x00	; 0
+     902:	28 85       	ldd	r18, Y+8	; 0x08
+     904:	30 e0       	ldi	r19, 0x00	; 0
+     906:	89 85       	ldd	r24, Y+9	; 0x09
+     908:	88 2e       	mov	r8, r24
+     90a:	91 2c       	mov	r9, r1
+     90c:	8c 8a       	std	Y+20, r8	; 0x14
+     90e:	9d 8a       	std	Y+21, r9	; 0x15
+     910:	8a 85       	ldd	r24, Y+10	; 0x0a
+     912:	68 2e       	mov	r6, r24
+     914:	71 2c       	mov	r7, r1
+     916:	6e 8a       	std	Y+22, r6	; 0x16
+     918:	7f 8a       	std	Y+23, r7	; 0x17
+     91a:	6b 84       	ldd	r6, Y+11	; 0x0b
+     91c:	86 2c       	mov	r8, r6
+     91e:	91 2c       	mov	r9, r1
+     920:	88 8e       	std	Y+24, r8	; 0x18
+     922:	99 8e       	std	Y+25, r9	; 0x19
+     924:	4c 84       	ldd	r4, Y+12	; 0x0c
+     926:	84 2d       	mov	r24, r4
+     928:	90 e0       	ldi	r25, 0x00	; 0
+     92a:	8a 8f       	std	Y+26, r24	; 0x1a
+     92c:	9b 8f       	std	Y+27, r25	; 0x1b
+     92e:	8d 84       	ldd	r8, Y+13	; 0x0d
+     930:	68 2c       	mov	r6, r8
+     932:	71 2c       	mov	r7, r1
+     934:	6c 8e       	std	Y+28, r6	; 0x1c
+     936:	7d 8e       	std	Y+29, r7	; 0x1d
+     938:	8e 85       	ldd	r24, Y+14	; 0x0e
+     93a:	88 2e       	mov	r8, r24
+     93c:	91 2c       	mov	r9, r1
+     93e:	8e a6       	std	Y+46, r8	; 0x2e
+     940:	9f a6       	std	Y+47, r9	; 0x2f
+     942:	2f 84       	ldd	r2, Y+15	; 0x0f
+     944:	82 2d       	mov	r24, r2
+     946:	90 e0       	ldi	r25, 0x00	; 0
+     948:	8e 8f       	std	Y+30, r24	; 0x1e
+     94a:	9f 8f       	std	Y+31, r25	; 0x1f
+     94c:	28 88       	ldd	r2, Y+16	; 0x10
+     94e:	62 2c       	mov	r6, r2
+     950:	71 2c       	mov	r7, r1
+     952:	68 a2       	std	Y+32, r6	; 0x20
+     954:	79 a2       	std	Y+33, r7	; 0x21
+     956:	2e 01       	movw	r4, r28
+     958:	35 01       	movw	r6, r10
+     95a:	81 2c       	mov	r8, r1
+     95c:	91 2c       	mov	r9, r1
+     95e:	c6 01       	movw	r24, r12
+     960:	8c 53       	subi	r24, 0x3C	; 60
+     962:	97 4d       	sbci	r25, 0xD7	; 215
+     964:	8a a3       	std	Y+34, r24	; 0x22
+     966:	9b a3       	std	Y+35, r25	; 0x23
+     968:	c7 01       	movw	r24, r14
+     96a:	8c 53       	subi	r24, 0x3C	; 60
+     96c:	99 4d       	sbci	r25, 0xD9	; 217
+     96e:	8c a3       	std	Y+36, r24	; 0x24
+     970:	9d a3       	std	Y+37, r25	; 0x25
+     972:	c8 01       	movw	r24, r16
+     974:	8c 53       	subi	r24, 0x3C	; 60
+     976:	98 4d       	sbci	r25, 0xD8	; 216
+     978:	8e a3       	std	Y+38, r24	; 0x26
+     97a:	9f a3       	std	Y+39, r25	; 0x27
+     97c:	cd 01       	movw	r24, r26
+     97e:	8c 53       	subi	r24, 0x3C	; 60
+     980:	9a 4d       	sbci	r25, 0xDA	; 218
+     982:	88 a7       	std	Y+40, r24	; 0x28
+     984:	99 a7       	std	Y+41, r25	; 0x29
+     986:	cf 01       	movw	r24, r30
+     988:	8c 53       	subi	r24, 0x3C	; 60
+     98a:	95 4d       	sbci	r25, 0xD5	; 213
+     98c:	8a a7       	std	Y+42, r24	; 0x2a
+     98e:	9b a7       	std	Y+43, r25	; 0x2b
+     990:	fb 01       	movw	r30, r22
+     992:	ec 53       	subi	r30, 0x3C	; 60
+     994:	f6 4d       	sbci	r31, 0xD6	; 214
+     996:	ec a7       	std	Y+44, r30	; 0x2c
+     998:	fd a7       	std	Y+45, r31	; 0x2d
+     99a:	ca 01       	movw	r24, r20
+     99c:	8c 53       	subi	r24, 0x3C	; 60
+     99e:	9b 4d       	sbci	r25, 0xDB	; 219
+     9a0:	7c 01       	movw	r14, r24
+     9a2:	89 01       	movw	r16, r18
+     9a4:	0c 53       	subi	r16, 0x3C	; 60
+     9a6:	14 4d       	sbci	r17, 0xD4	; 212
+     9a8:	6e 89       	ldd	r22, Y+22	; 0x16
+     9aa:	7f 89       	ldd	r23, Y+23	; 0x17
+     9ac:	6c 53       	subi	r22, 0x3C	; 60
+     9ae:	76 4d       	sbci	r23, 0xD6	; 214
+     9b0:	48 8d       	ldd	r20, Y+24	; 0x18
+     9b2:	59 8d       	ldd	r21, Y+25	; 0x19
+     9b4:	4c 53       	subi	r20, 0x3C	; 60
+     9b6:	55 4d       	sbci	r21, 0xD5	; 213
+     9b8:	ea 8d       	ldd	r30, Y+26	; 0x1a
+     9ba:	fb 8d       	ldd	r31, Y+27	; 0x1b
+     9bc:	ec 53       	subi	r30, 0x3C	; 60
+     9be:	fa 4d       	sbci	r31, 0xDA	; 218
+     9c0:	ee 8b       	std	Y+22, r30	; 0x16
+     9c2:	ff 8b       	std	Y+23, r31	; 0x17
+     9c4:	ac 8d       	ldd	r26, Y+28	; 0x1c
+     9c6:	bd 8d       	ldd	r27, Y+29	; 0x1d
+     9c8:	ac 53       	subi	r26, 0x3C	; 60
+     9ca:	b8 4d       	sbci	r27, 0xD8	; 216
+     9cc:	8e a5       	ldd	r24, Y+46	; 0x2e
+     9ce:	9f a5       	ldd	r25, Y+47	; 0x2f
+     9d0:	8c 53       	subi	r24, 0x3C	; 60
+     9d2:	99 4d       	sbci	r25, 0xD9	; 217
+    {
+      stateCopy[j] = (*state)[j];
+    }
+    for(int i=0;i<16;i++)
+    {
+        if(i==0)
+     9d4:	81 14       	cp	r8, r1
+     9d6:	91 04       	cpc	r9, r1
+     9d8:	09 f0       	breq	.+2      	; 0x9dc <masked_kuznyechik_crypto+0x18c>
+     9da:	44 c0       	rjmp	.+136    	; 0xa64 <masked_kuznyechik_crypto+0x214>
+        {
+            (*state)[i] = mult_mod_poly[4][stateCopy[0]] ^ mult_mod_poly[2][stateCopy[1]] ^ mult_mod_poly[3][stateCopy[2]] ^ mult_mod_poly[1][stateCopy[3]] ^ mult_mod_poly[6][stateCopy[4]] ^ mult_mod_poly[5][stateCopy[5]] ^ mult_mod_poly[0][stateCopy[6]] ^ mult_mod_poly[7][stateCopy[7]] ^ mult_mod_poly[0][stateCopy[8]] ^ mult_mod_poly[5][stateCopy[9]] ^ mult_mod_poly[6][stateCopy[10]] ^ mult_mod_poly[1][stateCopy[11]] ^ mult_mod_poly[3][stateCopy[12]] ^ mult_mod_poly[2][stateCopy[13]] ^ mult_mod_poly[4][stateCopy[14]] ^ mult_mod_poly[0][stateCopy[15]];
+     9dc:	ea a1       	ldd	r30, Y+34	; 0x22
+     9de:	fb a1       	ldd	r31, Y+35	; 0x23
+     9e0:	20 81       	ld	r18, Z
+     9e2:	ec a1       	ldd	r30, Y+36	; 0x24
+     9e4:	fd a1       	ldd	r31, Y+37	; 0x25
+     9e6:	d0 80       	ld	r13, Z
+     9e8:	2d 25       	eor	r18, r13
+     9ea:	ee a1       	ldd	r30, Y+38	; 0x26
+     9ec:	ff a1       	ldd	r31, Y+39	; 0x27
+     9ee:	d0 80       	ld	r13, Z
+     9f0:	d2 26       	eor	r13, r18
+     9f2:	e8 a5       	ldd	r30, Y+40	; 0x28
+     9f4:	f9 a5       	ldd	r31, Y+41	; 0x29
+     9f6:	30 81       	ld	r19, Z
+     9f8:	d3 26       	eor	r13, r19
+     9fa:	ea a5       	ldd	r30, Y+42	; 0x2a
+     9fc:	fb a5       	ldd	r31, Y+43	; 0x2b
+     9fe:	30 81       	ld	r19, Z
+     a00:	d3 26       	eor	r13, r19
+     a02:	ec a5       	ldd	r30, Y+44	; 0x2c
+     a04:	fd a5       	ldd	r31, Y+45	; 0x2d
+     a06:	30 81       	ld	r19, Z
+     a08:	d3 26       	eor	r13, r19
+     a0a:	f7 01       	movw	r30, r14
+     a0c:	30 81       	ld	r19, Z
+     a0e:	d3 26       	eor	r13, r19
+     a10:	f8 01       	movw	r30, r16
+     a12:	20 81       	ld	r18, Z
+     a14:	d2 26       	eor	r13, r18
+     a16:	2c 89       	ldd	r18, Y+20	; 0x14
+     a18:	3d 89       	ldd	r19, Y+21	; 0x15
+     a1a:	2c 53       	subi	r18, 0x3C	; 60
+     a1c:	3b 4d       	sbci	r19, 0xDB	; 219
+     a1e:	f9 01       	movw	r30, r18
+     a20:	20 81       	ld	r18, Z
+     a22:	d2 26       	eor	r13, r18
+     a24:	fb 01       	movw	r30, r22
+     a26:	20 81       	ld	r18, Z
+     a28:	d2 26       	eor	r13, r18
+     a2a:	fa 01       	movw	r30, r20
+     a2c:	20 81       	ld	r18, Z
+     a2e:	d2 26       	eor	r13, r18
+     a30:	ee 89       	ldd	r30, Y+22	; 0x16
+     a32:	ff 89       	ldd	r31, Y+23	; 0x17
+     a34:	20 81       	ld	r18, Z
+     a36:	d2 26       	eor	r13, r18
+     a38:	2c 91       	ld	r18, X
+     a3a:	d2 26       	eor	r13, r18
+     a3c:	fc 01       	movw	r30, r24
+     a3e:	20 81       	ld	r18, Z
+     a40:	d2 26       	eor	r13, r18
+     a42:	2e 8d       	ldd	r18, Y+30	; 0x1e
+     a44:	3f 8d       	ldd	r19, Y+31	; 0x1f
+     a46:	2c 53       	subi	r18, 0x3C	; 60
+     a48:	37 4d       	sbci	r19, 0xD7	; 215
+     a4a:	f9 01       	movw	r30, r18
+     a4c:	20 81       	ld	r18, Z
+     a4e:	d2 26       	eor	r13, r18
+     a50:	28 a1       	ldd	r18, Y+32	; 0x20
+     a52:	39 a1       	ldd	r19, Y+33	; 0x21
+     a54:	2c 53       	subi	r18, 0x3C	; 60
+     a56:	3b 4d       	sbci	r19, 0xDB	; 219
+     a58:	f9 01       	movw	r30, r18
+     a5a:	20 81       	ld	r18, Z
+     a5c:	d2 26       	eor	r13, r18
+     a5e:	f5 01       	movw	r30, r10
+     a60:	d0 82       	st	Z, r13
+     a62:	04 c0       	rjmp	.+8      	; 0xa6c <masked_kuznyechik_crypto+0x21c>
+        }
+        else
+        {
+            (*state)[i] = stateCopy[i-1];
+     a64:	f2 01       	movw	r30, r4
+     a66:	20 81       	ld	r18, Z
+     a68:	f3 01       	movw	r30, r6
+     a6a:	20 83       	st	Z, r18
+    state_t stateCopy;
+    for(int j=0; j<16; j++)
+    {
+      stateCopy[j] = (*state)[j];
+    }
+    for(int i=0;i<16;i++)
+     a6c:	ff ef       	ldi	r31, 0xFF	; 255
+     a6e:	8f 1a       	sub	r8, r31
+     a70:	9f 0a       	sbc	r9, r31
+     a72:	2f ef       	ldi	r18, 0xFF	; 255
+     a74:	42 1a       	sub	r4, r18
+     a76:	52 0a       	sbc	r5, r18
+     a78:	ef ef       	ldi	r30, 0xFF	; 255
+     a7a:	6e 1a       	sub	r6, r30
+     a7c:	7e 0a       	sbc	r7, r30
+     a7e:	f0 e1       	ldi	r31, 0x10	; 16
+     a80:	8f 16       	cp	r8, r31
+     a82:	91 04       	cpc	r9, r1
+     a84:	09 f0       	breq	.+2      	; 0xa88 <masked_kuznyechik_crypto+0x238>
+     a86:	a6 cf       	rjmp	.-180    	; 0x9d4 <masked_kuznyechik_crypto+0x184>
+     a88:	3a 94       	dec	r3
+/*****************************************************************************/
+
+static void Lstep(void)
+{
+    uint8_t i;
+    for(i=0;i<16;i++)
+     a8a:	31 10       	cpse	r3, r1
+     a8c:	22 cf       	rjmp	.-444    	; 0x8d2 <masked_kuznyechik_crypto+0x82>
+     a8e:	20 e1       	ldi	r18, 0x10	; 16
+     a90:	32 2e       	mov	r3, r18
+     a92:	de 01       	movw	r26, r28
+     a94:	11 96       	adiw	r26, 0x01	; 1
+}
+*/
+static void masked_Sstep(void)
+{
+  uint8_t i;
+  for(i = 0; i<16; i++)
+     a96:	e6 ef       	ldi	r30, 0xF6	; 246
+     a98:	f0 e3       	ldi	r31, 0x30	; 48
+static void maskRstep(void)
+{
+    state_t maskCopy;
+    for(int j=0; j<16; j++)
+    {
+      maskCopy[j] = mask[j];
+     a9a:	81 91       	ld	r24, Z+
+     a9c:	8d 93       	st	X+, r24
+}
+
+static void maskRstep(void)
+{
+    state_t maskCopy;
+    for(int j=0; j<16; j++)
+     a9e:	96 e0       	ldi	r25, 0x06	; 6
+     aa0:	69 2e       	mov	r6, r25
+     aa2:	91 e3       	ldi	r25, 0x31	; 49
+     aa4:	79 2e       	mov	r7, r25
+     aa6:	6e 16       	cp	r6, r30
+     aa8:	7f 06       	cpc	r7, r31
+     aaa:	b9 f7       	brne	.-18     	; 0xa9a <masked_kuznyechik_crypto+0x24a>
+    }
+    for(int i=0;i<16;i++)
+    {
+        if(i==0)
+        {
+            mask[i] = mult_mod_poly[4][maskCopy[0]] ^ mult_mod_poly[2][maskCopy[1]] ^ mult_mod_poly[3][maskCopy[2]] ^ mult_mod_poly[1][maskCopy[3]] ^ mult_mod_poly[6][maskCopy[4]] ^ mult_mod_poly[5][maskCopy[5]] ^ mult_mod_poly[0][maskCopy[6]] ^ mult_mod_poly[7][maskCopy[7]] ^ mult_mod_poly[0][maskCopy[8]] ^ mult_mod_poly[5][maskCopy[9]] ^ mult_mod_poly[6][maskCopy[10]] ^ mult_mod_poly[1][maskCopy[11]] ^ mult_mod_poly[3][maskCopy[12]] ^ mult_mod_poly[2][maskCopy[13]] ^ mult_mod_poly[4][maskCopy[14]] ^ mult_mod_poly[0][maskCopy[15]];
+     aac:	c9 80       	ldd	r12, Y+1	; 0x01
+     aae:	d1 2c       	mov	r13, r1
+     ab0:	ea 80       	ldd	r14, Y+2	; 0x02
+     ab2:	f1 2c       	mov	r15, r1
+     ab4:	0b 81       	ldd	r16, Y+3	; 0x03
+     ab6:	10 e0       	ldi	r17, 0x00	; 0
+     ab8:	ac 81       	ldd	r26, Y+4	; 0x04
+     aba:	b0 e0       	ldi	r27, 0x00	; 0
+     abc:	ed 81       	ldd	r30, Y+5	; 0x05
+     abe:	f0 e0       	ldi	r31, 0x00	; 0
+     ac0:	6e 81       	ldd	r22, Y+6	; 0x06
+     ac2:	70 e0       	ldi	r23, 0x00	; 0
+     ac4:	4f 81       	ldd	r20, Y+7	; 0x07
+     ac6:	50 e0       	ldi	r21, 0x00	; 0
+     ac8:	28 85       	ldd	r18, Y+8	; 0x08
+     aca:	30 e0       	ldi	r19, 0x00	; 0
+     acc:	89 85       	ldd	r24, Y+9	; 0x09
+     ace:	88 2e       	mov	r8, r24
+     ad0:	91 2c       	mov	r9, r1
+     ad2:	8c 8a       	std	Y+20, r8	; 0x14
+     ad4:	9d 8a       	std	Y+21, r9	; 0x15
+     ad6:	8a 85       	ldd	r24, Y+10	; 0x0a
+     ad8:	a8 2e       	mov	r10, r24
+     ada:	b1 2c       	mov	r11, r1
+     adc:	aa a6       	std	Y+42, r10	; 0x2a
+     ade:	bb a6       	std	Y+43, r11	; 0x2b
+     ae0:	ab 84       	ldd	r10, Y+11	; 0x0b
+     ae2:	b1 2c       	mov	r11, r1
+     ae4:	6c 84       	ldd	r6, Y+12	; 0x0c
+     ae6:	86 2d       	mov	r24, r6
+     ae8:	90 e0       	ldi	r25, 0x00	; 0
+     aea:	8e 8b       	std	Y+22, r24	; 0x16
+     aec:	9f 8b       	std	Y+23, r25	; 0x17
+     aee:	4d 84       	ldd	r4, Y+13	; 0x0d
+     af0:	64 2c       	mov	r6, r4
+     af2:	71 2c       	mov	r7, r1
+     af4:	68 8e       	std	Y+24, r6	; 0x18
+     af6:	79 8e       	std	Y+25, r7	; 0x19
+     af8:	8e 84       	ldd	r8, Y+14	; 0x0e
+     afa:	88 2d       	mov	r24, r8
+     afc:	90 e0       	ldi	r25, 0x00	; 0
+     afe:	8a 8f       	std	Y+26, r24	; 0x1a
+     b00:	9b 8f       	std	Y+27, r25	; 0x1b
+     b02:	2f 84       	ldd	r2, Y+15	; 0x0f
+     b04:	62 2c       	mov	r6, r2
+     b06:	71 2c       	mov	r7, r1
+     b08:	6c 8e       	std	Y+28, r6	; 0x1c
+     b0a:	7d 8e       	std	Y+29, r7	; 0x1d
+     b0c:	28 88       	ldd	r2, Y+16	; 0x10
+     b0e:	82 2c       	mov	r8, r2
+     b10:	91 2c       	mov	r9, r1
+     b12:	8e 8e       	std	Y+30, r8	; 0x1e
+     b14:	9f 8e       	std	Y+31, r9	; 0x1f
+     b16:	2e 01       	movw	r4, r28
+     b18:	86 ef       	ldi	r24, 0xF6	; 246
+     b1a:	68 2e       	mov	r6, r24
+     b1c:	80 e3       	ldi	r24, 0x30	; 48
+     b1e:	78 2e       	mov	r7, r24
+     b20:	81 2c       	mov	r8, r1
+     b22:	91 2c       	mov	r9, r1
+     b24:	c6 01       	movw	r24, r12
+     b26:	8c 53       	subi	r24, 0x3C	; 60
+     b28:	97 4d       	sbci	r25, 0xD7	; 215
+     b2a:	88 a3       	std	Y+32, r24	; 0x20
+     b2c:	99 a3       	std	Y+33, r25	; 0x21
+     b2e:	c7 01       	movw	r24, r14
+     b30:	8c 53       	subi	r24, 0x3C	; 60
+     b32:	99 4d       	sbci	r25, 0xD9	; 217
+     b34:	8a a3       	std	Y+34, r24	; 0x22
+     b36:	9b a3       	std	Y+35, r25	; 0x23
+     b38:	c8 01       	movw	r24, r16
+     b3a:	8c 53       	subi	r24, 0x3C	; 60
+     b3c:	98 4d       	sbci	r25, 0xD8	; 216
+     b3e:	8c a3       	std	Y+36, r24	; 0x24
+     b40:	9d a3       	std	Y+37, r25	; 0x25
+     b42:	cd 01       	movw	r24, r26
+     b44:	8c 53       	subi	r24, 0x3C	; 60
+     b46:	9a 4d       	sbci	r25, 0xDA	; 218
+     b48:	8e a3       	std	Y+38, r24	; 0x26
+     b4a:	9f a3       	std	Y+39, r25	; 0x27
+     b4c:	cf 01       	movw	r24, r30
+     b4e:	8c 53       	subi	r24, 0x3C	; 60
+     b50:	95 4d       	sbci	r25, 0xD5	; 213
+     b52:	88 a7       	std	Y+40, r24	; 0x28
+     b54:	99 a7       	std	Y+41, r25	; 0x29
+     b56:	fb 01       	movw	r30, r22
+     b58:	ec 53       	subi	r30, 0x3C	; 60
+     b5a:	f6 4d       	sbci	r31, 0xD6	; 214
+     b5c:	6f 01       	movw	r12, r30
+     b5e:	ca 01       	movw	r24, r20
+     b60:	8c 53       	subi	r24, 0x3C	; 60
+     b62:	9b 4d       	sbci	r25, 0xDB	; 219
+     b64:	7c 01       	movw	r14, r24
+     b66:	89 01       	movw	r16, r18
+     b68:	0c 53       	subi	r16, 0x3C	; 60
+     b6a:	14 4d       	sbci	r17, 0xD4	; 212
+     b6c:	6a a5       	ldd	r22, Y+42	; 0x2a
+     b6e:	7b a5       	ldd	r23, Y+43	; 0x2b
+     b70:	6c 53       	subi	r22, 0x3C	; 60
+     b72:	76 4d       	sbci	r23, 0xD6	; 214
+     b74:	f5 01       	movw	r30, r10
+     b76:	ec 53       	subi	r30, 0x3C	; 60
+     b78:	f5 4d       	sbci	r31, 0xD5	; 213
+     b7a:	ea a7       	std	Y+42, r30	; 0x2a
+     b7c:	fb a7       	std	Y+43, r31	; 0x2b
+     b7e:	ae 89       	ldd	r26, Y+22	; 0x16
+     b80:	bf 89       	ldd	r27, Y+23	; 0x17
+     b82:	ac 53       	subi	r26, 0x3C	; 60
+     b84:	ba 4d       	sbci	r27, 0xDA	; 218
+     b86:	88 8d       	ldd	r24, Y+24	; 0x18
+     b88:	99 8d       	ldd	r25, Y+25	; 0x19
+     b8a:	8c 53       	subi	r24, 0x3C	; 60
+     b8c:	98 4d       	sbci	r25, 0xD8	; 216
+     b8e:	2a 8d       	ldd	r18, Y+26	; 0x1a
+     b90:	3b 8d       	ldd	r19, Y+27	; 0x1b
+     b92:	2c 53       	subi	r18, 0x3C	; 60
+     b94:	39 4d       	sbci	r19, 0xD9	; 217
+    {
+      maskCopy[j] = mask[j];
+    }
+    for(int i=0;i<16;i++)
+    {
+        if(i==0)
+     b96:	81 14       	cp	r8, r1
+     b98:	91 04       	cpc	r9, r1
+     b9a:	09 f0       	breq	.+2      	; 0xb9e <masked_kuznyechik_crypto+0x34e>
+     b9c:	43 c0       	rjmp	.+134    	; 0xc24 <masked_kuznyechik_crypto+0x3d4>
+        {
+            mask[i] = mult_mod_poly[4][maskCopy[0]] ^ mult_mod_poly[2][maskCopy[1]] ^ mult_mod_poly[3][maskCopy[2]] ^ mult_mod_poly[1][maskCopy[3]] ^ mult_mod_poly[6][maskCopy[4]] ^ mult_mod_poly[5][maskCopy[5]] ^ mult_mod_poly[0][maskCopy[6]] ^ mult_mod_poly[7][maskCopy[7]] ^ mult_mod_poly[0][maskCopy[8]] ^ mult_mod_poly[5][maskCopy[9]] ^ mult_mod_poly[6][maskCopy[10]] ^ mult_mod_poly[1][maskCopy[11]] ^ mult_mod_poly[3][maskCopy[12]] ^ mult_mod_poly[2][maskCopy[13]] ^ mult_mod_poly[4][maskCopy[14]] ^ mult_mod_poly[0][maskCopy[15]];
+     b9e:	e8 a1       	ldd	r30, Y+32	; 0x20
+     ba0:	f9 a1       	ldd	r31, Y+33	; 0x21
+     ba2:	40 81       	ld	r20, Z
+     ba4:	ea a1       	ldd	r30, Y+34	; 0x22
+     ba6:	fb a1       	ldd	r31, Y+35	; 0x23
+     ba8:	b0 80       	ld	r11, Z
+     baa:	4b 25       	eor	r20, r11
+     bac:	ec a1       	ldd	r30, Y+36	; 0x24
+     bae:	fd a1       	ldd	r31, Y+37	; 0x25
+     bb0:	b0 80       	ld	r11, Z
+     bb2:	b4 26       	eor	r11, r20
+     bb4:	ee a1       	ldd	r30, Y+38	; 0x26
+     bb6:	ff a1       	ldd	r31, Y+39	; 0x27
+     bb8:	50 81       	ld	r21, Z
+     bba:	b5 26       	eor	r11, r21
+     bbc:	e8 a5       	ldd	r30, Y+40	; 0x28
+     bbe:	f9 a5       	ldd	r31, Y+41	; 0x29
+     bc0:	50 81       	ld	r21, Z
+     bc2:	b5 26       	eor	r11, r21
+     bc4:	f6 01       	movw	r30, r12
+     bc6:	50 81       	ld	r21, Z
+     bc8:	b5 26       	eor	r11, r21
+     bca:	f7 01       	movw	r30, r14
+     bcc:	50 81       	ld	r21, Z
+     bce:	b5 26       	eor	r11, r21
+     bd0:	f8 01       	movw	r30, r16
+     bd2:	40 81       	ld	r20, Z
+     bd4:	b4 26       	eor	r11, r20
+     bd6:	4c 89       	ldd	r20, Y+20	; 0x14
+     bd8:	5d 89       	ldd	r21, Y+21	; 0x15
+     bda:	4c 53       	subi	r20, 0x3C	; 60
+     bdc:	5b 4d       	sbci	r21, 0xDB	; 219
+     bde:	fa 01       	movw	r30, r20
+     be0:	40 81       	ld	r20, Z
+     be2:	b4 26       	eor	r11, r20
+     be4:	fb 01       	movw	r30, r22
+     be6:	40 81       	ld	r20, Z
+     be8:	b4 26       	eor	r11, r20
+     bea:	ea a5       	ldd	r30, Y+42	; 0x2a
+     bec:	fb a5       	ldd	r31, Y+43	; 0x2b
+     bee:	40 81       	ld	r20, Z
+     bf0:	b4 26       	eor	r11, r20
+     bf2:	4c 91       	ld	r20, X
+     bf4:	b4 26       	eor	r11, r20
+     bf6:	fc 01       	movw	r30, r24
+     bf8:	40 81       	ld	r20, Z
+     bfa:	b4 26       	eor	r11, r20
+     bfc:	f9 01       	movw	r30, r18
+     bfe:	40 81       	ld	r20, Z
+     c00:	b4 26       	eor	r11, r20
+     c02:	4c 8d       	ldd	r20, Y+28	; 0x1c
+     c04:	5d 8d       	ldd	r21, Y+29	; 0x1d
+     c06:	4c 53       	subi	r20, 0x3C	; 60
+     c08:	57 4d       	sbci	r21, 0xD7	; 215
+     c0a:	fa 01       	movw	r30, r20
+     c0c:	40 81       	ld	r20, Z
+     c0e:	b4 26       	eor	r11, r20
+     c10:	4e 8d       	ldd	r20, Y+30	; 0x1e
+     c12:	5f 8d       	ldd	r21, Y+31	; 0x1f
+     c14:	4c 53       	subi	r20, 0x3C	; 60
+     c16:	5b 4d       	sbci	r21, 0xDB	; 219
+     c18:	fa 01       	movw	r30, r20
+     c1a:	40 81       	ld	r20, Z
+     c1c:	b4 26       	eor	r11, r20
+     c1e:	b0 92 f6 30 	sts	0x30F6, r11	; 0x8030f6 <mask>
+     c22:	04 c0       	rjmp	.+8      	; 0xc2c <masked_kuznyechik_crypto+0x3dc>
+        }
+        else
+        {
+            mask[i] = maskCopy[i-1];
+     c24:	f2 01       	movw	r30, r4
+     c26:	40 81       	ld	r20, Z
+     c28:	f3 01       	movw	r30, r6
+     c2a:	40 83       	st	Z, r20
+    state_t maskCopy;
+    for(int j=0; j<16; j++)
+    {
+      maskCopy[j] = mask[j];
+    }
+    for(int i=0;i<16;i++)
+     c2c:	ff ef       	ldi	r31, 0xFF	; 255
+     c2e:	8f 1a       	sub	r8, r31
+     c30:	9f 0a       	sbc	r9, r31
+     c32:	4f ef       	ldi	r20, 0xFF	; 255
+     c34:	44 1a       	sub	r4, r20
+     c36:	54 0a       	sbc	r5, r20
+     c38:	ef ef       	ldi	r30, 0xFF	; 255
+     c3a:	6e 1a       	sub	r6, r30
+     c3c:	7e 0a       	sbc	r7, r30
+     c3e:	f0 e1       	ldi	r31, 0x10	; 16
+     c40:	8f 16       	cp	r8, r31
+     c42:	91 04       	cpc	r9, r1
+     c44:	09 f0       	breq	.+2      	; 0xc48 <masked_kuznyechik_crypto+0x3f8>
+     c46:	a7 cf       	rjmp	.-178    	; 0xb96 <masked_kuznyechik_crypto+0x346>
+     c48:	3a 94       	dec	r3
+}
+
+static void mask_Lstep(void)
+{
+    uint8_t i;
+    for(i=0;i<16;i++)
+     c4a:	31 10       	cpse	r3, r1
+     c4c:	22 cf       	rjmp	.-444    	; 0xa92 <masked_kuznyechik_crypto+0x242>
+// Cipher is the main function that encrypts the PlainText.
+static void Cipher(void)
+{
+  uint8_t round;
+
+  for(round = 0; round < 9; round++)
+     c4e:	2b 89       	ldd	r18, Y+19	; 0x13
+     c50:	2f 5f       	subi	r18, 0xFF	; 255
+     c52:	2b 8b       	std	Y+19, r18	; 0x13
+     c54:	29 30       	cpi	r18, 0x09	; 9
+     c56:	09 f0       	breq	.+2      	; 0xc5a <masked_kuznyechik_crypto+0x40a>
+     c58:	1f ce       	rjmp	.-962    	; 0x898 <masked_kuznyechik_crypto+0x48>
+    masked_Sstep();
+    Lstep();
+    mask_Lstep();
+  }
+  
+  AddRoundKey(9);
+     c5a:	89 e0       	ldi	r24, 0x09	; 9
+     c5c:	0e 94 e7 01 	call	0x3ce	; 0x3ce <AddRoundKey>
+  maskState();
+
+  Cipher();
+
+  maskState();
+}
+     c60:	af 96       	adiw	r28, 0x2f	; 47
+     c62:	cd bf       	out	0x3d, r28	; 61
+     c64:	de bf       	out	0x3e, r29	; 62
+     c66:	df 91       	pop	r29
+     c68:	cf 91       	pop	r28
+     c6a:	1f 91       	pop	r17
+     c6c:	0f 91       	pop	r16
+     c6e:	ff 90       	pop	r15
+     c70:	ef 90       	pop	r14
+     c72:	df 90       	pop	r13
+     c74:	cf 90       	pop	r12
+     c76:	bf 90       	pop	r11
+     c78:	af 90       	pop	r10
+     c7a:	9f 90       	pop	r9
+     c7c:	8f 90       	pop	r8
+     c7e:	7f 90       	pop	r7
+     c80:	6f 90       	pop	r6
+     c82:	5f 90       	pop	r5
+     c84:	4f 90       	pop	r4
+     c86:	3f 90       	pop	r3
+     c88:	2f 90       	pop	r2
+
+  maskState();
+
+  Cipher();
+
+  maskState();
+     c8a:	0c 94 d6 01 	jmp	0x3ac	; 0x3ac <maskState>
+
+00000c8e <masked_kuznyechik_decrypto>:
+}
+
+void masked_kuznyechik_decrypto(uint8_t* input)
+{
+     c8e:	2f 92       	push	r2
+     c90:	3f 92       	push	r3
+     c92:	4f 92       	push	r4
+     c94:	5f 92       	push	r5
+     c96:	6f 92       	push	r6
+     c98:	7f 92       	push	r7
+     c9a:	8f 92       	push	r8
+     c9c:	9f 92       	push	r9
+     c9e:	af 92       	push	r10
+     ca0:	bf 92       	push	r11
+     ca2:	cf 92       	push	r12
+     ca4:	df 92       	push	r13
+     ca6:	ef 92       	push	r14
+     ca8:	ff 92       	push	r15
+     caa:	0f 93       	push	r16
+     cac:	1f 93       	push	r17
+     cae:	cf 93       	push	r28
+     cb0:	df 93       	push	r29
+     cb2:	cd b7       	in	r28, 0x3d	; 61
+     cb4:	de b7       	in	r29, 0x3e	; 62
+     cb6:	af 97       	sbiw	r28, 0x2f	; 47
+     cb8:	cd bf       	out	0x3d, r28	; 61
+     cba:	de bf       	out	0x3e, r29	; 62
+  state = (state_t*)input;
+     cbc:	80 93 16 31 	sts	0x3116, r24	; 0x803116 <state>
+     cc0:	90 93 17 31 	sts	0x3117, r25	; 0x803117 <state+0x1>
+
+  genMask();
+     cc4:	0e 94 00 02 	call	0x400	; 0x400 <genMask>
+
+  maskState();
+     cc8:	0e 94 d6 01 	call	0x3ac	; 0x3ac <maskState>
+     ccc:	29 e0       	ldi	r18, 0x09	; 9
+     cce:	2d 8b       	std	Y+21, r18	; 0x15
+     cd0:	ae 01       	movw	r20, r28
+     cd2:	4f 5e       	subi	r20, 0xEF	; 239
+     cd4:	5f 4f       	sbci	r21, 0xFF	; 255
+     cd6:	49 8b       	std	Y+17, r20	; 0x11
+     cd8:	5a 8b       	std	Y+18, r21	; 0x12
+    }
+    for(i=0;i<16;i++)
+    {
+        if(i==15)
+        {
+            mask[i] = mult_mod_poly[4][maskCopy[1]] ^ mult_mod_poly[2][maskCopy[2]] ^ mult_mod_poly[3][maskCopy[3]] ^ mult_mod_poly[1][maskCopy[4]] ^ mult_mod_poly[6][maskCopy[5]] ^ mult_mod_poly[5][maskCopy[6]] ^ mult_mod_poly[0][maskCopy[7]] ^ mult_mod_poly[7][maskCopy[8]] ^ mult_mod_poly[0][maskCopy[9]] ^ mult_mod_poly[5][maskCopy[10]] ^ mult_mod_poly[6][maskCopy[11]] ^ mult_mod_poly[1][maskCopy[12]] ^ mult_mod_poly[3][maskCopy[13]] ^ mult_mod_poly[2][maskCopy[14]] ^ mult_mod_poly[4][maskCopy[15]] ^ mult_mod_poly[0][maskCopy[0]];
+     cda:	80 e1       	ldi	r24, 0x10	; 16
+     cdc:	28 2e       	mov	r2, r24
+     cde:	86 ef       	ldi	r24, 0xF6	; 246
+     ce0:	90 e3       	ldi	r25, 0x30	; 48
+     ce2:	88 a7       	std	Y+40, r24	; 0x28
+     ce4:	99 a7       	std	Y+41, r25	; 0x29
+     ce6:	de 01       	movw	r26, r28
+     ce8:	11 96       	adiw	r26, 0x01	; 1
+     cea:	4d 01       	movw	r8, r26
+
+  maskState();
+}
+
+void masked_kuznyechik_decrypto(uint8_t* input)
+{
+     cec:	fc 01       	movw	r30, r24
+{
+    uint8_t i;
+    state_t maskCopy;
+    for(int j=0; j<16; j++)
+    {
+      maskCopy[j] = mask[j];
+     cee:	81 91       	ld	r24, Z+
+     cf0:	8d 93       	st	X+, r24
+
+static void maskInvRstep(void)
+{
+    uint8_t i;
+    state_t maskCopy;
+    for(int j=0; j<16; j++)
+     cf2:	51 e3       	ldi	r21, 0x31	; 49
+     cf4:	e6 30       	cpi	r30, 0x06	; 6
+     cf6:	f5 07       	cpc	r31, r21
+     cf8:	d1 f7       	brne	.-12     	; 0xcee <masked_kuznyechik_decrypto+0x60>
+    }
+    for(i=0;i<16;i++)
+    {
+        if(i==15)
+        {
+            mask[i] = mult_mod_poly[4][maskCopy[1]] ^ mult_mod_poly[2][maskCopy[2]] ^ mult_mod_poly[3][maskCopy[3]] ^ mult_mod_poly[1][maskCopy[4]] ^ mult_mod_poly[6][maskCopy[5]] ^ mult_mod_poly[5][maskCopy[6]] ^ mult_mod_poly[0][maskCopy[7]] ^ mult_mod_poly[7][maskCopy[8]] ^ mult_mod_poly[0][maskCopy[9]] ^ mult_mod_poly[5][maskCopy[10]] ^ mult_mod_poly[6][maskCopy[11]] ^ mult_mod_poly[1][maskCopy[12]] ^ mult_mod_poly[3][maskCopy[13]] ^ mult_mod_poly[2][maskCopy[14]] ^ mult_mod_poly[4][maskCopy[15]] ^ mult_mod_poly[0][maskCopy[0]];
+     cfa:	ca 80       	ldd	r12, Y+2	; 0x02
+     cfc:	d1 2c       	mov	r13, r1
+     cfe:	eb 80       	ldd	r14, Y+3	; 0x03
+     d00:	f1 2c       	mov	r15, r1
+     d02:	0c 81       	ldd	r16, Y+4	; 0x04
+     d04:	10 e0       	ldi	r17, 0x00	; 0
+     d06:	ad 81       	ldd	r26, Y+5	; 0x05
+     d08:	b0 e0       	ldi	r27, 0x00	; 0
+     d0a:	ee 81       	ldd	r30, Y+6	; 0x06
+     d0c:	f0 e0       	ldi	r31, 0x00	; 0
+     d0e:	6f 81       	ldd	r22, Y+7	; 0x07
+     d10:	70 e0       	ldi	r23, 0x00	; 0
+     d12:	48 85       	ldd	r20, Y+8	; 0x08
+     d14:	50 e0       	ldi	r21, 0x00	; 0
+     d16:	29 85       	ldd	r18, Y+9	; 0x09
+     d18:	30 e0       	ldi	r19, 0x00	; 0
+     d1a:	8a 85       	ldd	r24, Y+10	; 0x0a
+     d1c:	68 2e       	mov	r6, r24
+     d1e:	71 2c       	mov	r7, r1
+     d20:	6b 8a       	std	Y+19, r6	; 0x13
+     d22:	7c 8a       	std	Y+20, r7	; 0x14
+     d24:	ab 84       	ldd	r10, Y+11	; 0x0b
+     d26:	b1 2c       	mov	r11, r1
+     d28:	6c 84       	ldd	r6, Y+12	; 0x0c
+     d2a:	86 2d       	mov	r24, r6
+     d2c:	90 e0       	ldi	r25, 0x00	; 0
+     d2e:	8e 8b       	std	Y+22, r24	; 0x16
+     d30:	9f 8b       	std	Y+23, r25	; 0x17
+     d32:	4d 84       	ldd	r4, Y+13	; 0x0d
+     d34:	51 2c       	mov	r5, r1
+     d36:	8e 85       	ldd	r24, Y+14	; 0x0e
+     d38:	68 2e       	mov	r6, r24
+     d3a:	71 2c       	mov	r7, r1
+     d3c:	68 8e       	std	Y+24, r6	; 0x18
+     d3e:	79 8e       	std	Y+25, r7	; 0x19
+     d40:	8f 85       	ldd	r24, Y+15	; 0x0f
+     d42:	68 2e       	mov	r6, r24
+     d44:	71 2c       	mov	r7, r1
+     d46:	6a a6       	std	Y+42, r6	; 0x2a
+     d48:	7b a6       	std	Y+43, r7	; 0x2b
+     d4a:	38 88       	ldd	r3, Y+16	; 0x10
+     d4c:	83 2d       	mov	r24, r3
+     d4e:	90 e0       	ldi	r25, 0x00	; 0
+     d50:	8a 8f       	std	Y+26, r24	; 0x1a
+     d52:	9b 8f       	std	Y+27, r25	; 0x1b
+     d54:	39 80       	ldd	r3, Y+1	; 0x01
+     d56:	63 2c       	mov	r6, r3
+     d58:	71 2c       	mov	r7, r1
+     d5a:	6c 8e       	std	Y+28, r6	; 0x1c
+     d5c:	7d 8e       	std	Y+29, r7	; 0x1d
+     d5e:	86 ef       	ldi	r24, 0xF6	; 246
+     d60:	68 2e       	mov	r6, r24
+     d62:	80 e3       	ldi	r24, 0x30	; 48
+     d64:	78 2e       	mov	r7, r24
+     d66:	31 2c       	mov	r3, r1
+     d68:	c6 01       	movw	r24, r12
+     d6a:	8c 53       	subi	r24, 0x3C	; 60
+     d6c:	97 4d       	sbci	r25, 0xD7	; 215
+     d6e:	8e 8f       	std	Y+30, r24	; 0x1e
+     d70:	9f 8f       	std	Y+31, r25	; 0x1f
+     d72:	c7 01       	movw	r24, r14
+     d74:	8c 53       	subi	r24, 0x3C	; 60
+     d76:	99 4d       	sbci	r25, 0xD9	; 217
+     d78:	88 a3       	std	Y+32, r24	; 0x20
+     d7a:	99 a3       	std	Y+33, r25	; 0x21
+     d7c:	c8 01       	movw	r24, r16
+     d7e:	8c 53       	subi	r24, 0x3C	; 60
+     d80:	98 4d       	sbci	r25, 0xD8	; 216
+     d82:	8a a3       	std	Y+34, r24	; 0x22
+     d84:	9b a3       	std	Y+35, r25	; 0x23
+     d86:	cd 01       	movw	r24, r26
+     d88:	8c 53       	subi	r24, 0x3C	; 60
+     d8a:	9a 4d       	sbci	r25, 0xDA	; 218
+     d8c:	8c a3       	std	Y+36, r24	; 0x24
+     d8e:	9d a3       	std	Y+37, r25	; 0x25
+     d90:	df 01       	movw	r26, r30
+     d92:	ac 53       	subi	r26, 0x3C	; 60
+     d94:	b5 4d       	sbci	r27, 0xD5	; 213
+     d96:	ae a3       	std	Y+38, r26	; 0x26
+     d98:	bf a3       	std	Y+39, r27	; 0x27
+     d9a:	fb 01       	movw	r30, r22
+     d9c:	ec 53       	subi	r30, 0x3C	; 60
+     d9e:	f6 4d       	sbci	r31, 0xD6	; 214
+     da0:	6f 01       	movw	r12, r30
+     da2:	ca 01       	movw	r24, r20
+     da4:	8c 53       	subi	r24, 0x3C	; 60
+     da6:	9b 4d       	sbci	r25, 0xDB	; 219
+     da8:	7c 01       	movw	r14, r24
+     daa:	89 01       	movw	r16, r18
+     dac:	0c 53       	subi	r16, 0x3C	; 60
+     dae:	14 4d       	sbci	r17, 0xD4	; 212
+     db0:	b5 01       	movw	r22, r10
+     db2:	6c 53       	subi	r22, 0x3C	; 60
+     db4:	76 4d       	sbci	r23, 0xD6	; 214
+     db6:	ae 89       	ldd	r26, Y+22	; 0x16
+     db8:	bf 89       	ldd	r27, Y+23	; 0x17
+     dba:	ac 53       	subi	r26, 0x3C	; 60
+     dbc:	b5 4d       	sbci	r27, 0xD5	; 213
+     dbe:	ae 8b       	std	Y+22, r26	; 0x16
+     dc0:	bf 8b       	std	Y+23, r27	; 0x17
+     dc2:	d2 01       	movw	r26, r4
+     dc4:	ac 53       	subi	r26, 0x3C	; 60
+     dc6:	ba 4d       	sbci	r27, 0xDA	; 218
+     dc8:	28 8d       	ldd	r18, Y+24	; 0x18
+     dca:	39 8d       	ldd	r19, Y+25	; 0x19
+     dcc:	2c 53       	subi	r18, 0x3C	; 60
+     dce:	38 4d       	sbci	r19, 0xD8	; 216
+     dd0:	8a a5       	ldd	r24, Y+42	; 0x2a
+     dd2:	9b a5       	ldd	r25, Y+43	; 0x2b
+     dd4:	8c 53       	subi	r24, 0x3C	; 60
+     dd6:	99 4d       	sbci	r25, 0xD9	; 217
+    {
+      maskCopy[j] = mask[j];
+    }
+    for(i=0;i<16;i++)
+    {
+        if(i==15)
+     dd8:	ef e0       	ldi	r30, 0x0F	; 15
+     dda:	3e 12       	cpse	r3, r30
+     ddc:	43 c0       	rjmp	.+134    	; 0xe64 <masked_kuznyechik_decrypto+0x1d6>
+        {
+            mask[i] = mult_mod_poly[4][maskCopy[1]] ^ mult_mod_poly[2][maskCopy[2]] ^ mult_mod_poly[3][maskCopy[3]] ^ mult_mod_poly[1][maskCopy[4]] ^ mult_mod_poly[6][maskCopy[5]] ^ mult_mod_poly[5][maskCopy[6]] ^ mult_mod_poly[0][maskCopy[7]] ^ mult_mod_poly[7][maskCopy[8]] ^ mult_mod_poly[0][maskCopy[9]] ^ mult_mod_poly[5][maskCopy[10]] ^ mult_mod_poly[6][maskCopy[11]] ^ mult_mod_poly[1][maskCopy[12]] ^ mult_mod_poly[3][maskCopy[13]] ^ mult_mod_poly[2][maskCopy[14]] ^ mult_mod_poly[4][maskCopy[15]] ^ mult_mod_poly[0][maskCopy[0]];
+     dde:	ee 8d       	ldd	r30, Y+30	; 0x1e
+     de0:	ff 8d       	ldd	r31, Y+31	; 0x1f
+     de2:	40 81       	ld	r20, Z
+     de4:	e8 a1       	ldd	r30, Y+32	; 0x20
+     de6:	f9 a1       	ldd	r31, Y+33	; 0x21
+     de8:	50 81       	ld	r21, Z
+     dea:	45 27       	eor	r20, r21
+     dec:	ea a1       	ldd	r30, Y+34	; 0x22
+     dee:	fb a1       	ldd	r31, Y+35	; 0x23
+     df0:	b0 80       	ld	r11, Z
+     df2:	b4 26       	eor	r11, r20
+     df4:	ec a1       	ldd	r30, Y+36	; 0x24
+     df6:	fd a1       	ldd	r31, Y+37	; 0x25
+     df8:	50 81       	ld	r21, Z
+     dfa:	b5 26       	eor	r11, r21
+     dfc:	ee a1       	ldd	r30, Y+38	; 0x26
+     dfe:	ff a1       	ldd	r31, Y+39	; 0x27
+     e00:	50 81       	ld	r21, Z
+     e02:	b5 26       	eor	r11, r21
+     e04:	f6 01       	movw	r30, r12
+     e06:	50 81       	ld	r21, Z
+     e08:	b5 26       	eor	r11, r21
+     e0a:	f7 01       	movw	r30, r14
+     e0c:	50 81       	ld	r21, Z
+     e0e:	b5 26       	eor	r11, r21
+     e10:	f8 01       	movw	r30, r16
+     e12:	40 81       	ld	r20, Z
+     e14:	b4 26       	eor	r11, r20
+     e16:	4b 89       	ldd	r20, Y+19	; 0x13
+     e18:	5c 89       	ldd	r21, Y+20	; 0x14
+     e1a:	4c 53       	subi	r20, 0x3C	; 60
+     e1c:	5b 4d       	sbci	r21, 0xDB	; 219
+     e1e:	fa 01       	movw	r30, r20
+     e20:	40 81       	ld	r20, Z
+     e22:	b4 26       	eor	r11, r20
+     e24:	fb 01       	movw	r30, r22
+     e26:	40 81       	ld	r20, Z
+     e28:	b4 26       	eor	r11, r20
+     e2a:	ee 89       	ldd	r30, Y+22	; 0x16
+     e2c:	ff 89       	ldd	r31, Y+23	; 0x17
+     e2e:	40 81       	ld	r20, Z
+     e30:	b4 26       	eor	r11, r20
+     e32:	4c 91       	ld	r20, X
+     e34:	b4 26       	eor	r11, r20
+     e36:	f9 01       	movw	r30, r18
+     e38:	40 81       	ld	r20, Z
+     e3a:	b4 26       	eor	r11, r20
+     e3c:	fc 01       	movw	r30, r24
+     e3e:	40 81       	ld	r20, Z
+     e40:	b4 26       	eor	r11, r20
+     e42:	4a 8d       	ldd	r20, Y+26	; 0x1a
+     e44:	5b 8d       	ldd	r21, Y+27	; 0x1b
+     e46:	4c 53       	subi	r20, 0x3C	; 60
+     e48:	57 4d       	sbci	r21, 0xD7	; 215
+     e4a:	fa 01       	movw	r30, r20
+     e4c:	40 81       	ld	r20, Z
+     e4e:	b4 26       	eor	r11, r20
+     e50:	4c 8d       	ldd	r20, Y+28	; 0x1c
+     e52:	5d 8d       	ldd	r21, Y+29	; 0x1d
+     e54:	4c 53       	subi	r20, 0x3C	; 60
+     e56:	5b 4d       	sbci	r21, 0xDB	; 219
+     e58:	fa 01       	movw	r30, r20
+     e5a:	40 81       	ld	r20, Z
+     e5c:	b4 26       	eor	r11, r20
+     e5e:	b0 92 05 31 	sts	0x3105, r11	; 0x803105 <mask+0xf>
+     e62:	04 c0       	rjmp	.+8      	; 0xe6c <masked_kuznyechik_decrypto+0x1de>
+        }
+        else
+        {
+            mask[i] = maskCopy[i+1];
+     e64:	f4 01       	movw	r30, r8
+     e66:	41 81       	ldd	r20, Z+1	; 0x01
+     e68:	f3 01       	movw	r30, r6
+     e6a:	40 83       	st	Z, r20
+    state_t maskCopy;
+    for(int j=0; j<16; j++)
+    {
+      maskCopy[j] = mask[j];
+    }
+    for(i=0;i<16;i++)
+     e6c:	33 94       	inc	r3
+     e6e:	ff ef       	ldi	r31, 0xFF	; 255
+     e70:	8f 1a       	sub	r8, r31
+     e72:	9f 0a       	sbc	r9, r31
+     e74:	4f ef       	ldi	r20, 0xFF	; 255
+     e76:	64 1a       	sub	r6, r20
+     e78:	74 0a       	sbc	r7, r20
+     e7a:	50 e1       	ldi	r21, 0x10	; 16
+     e7c:	35 12       	cpse	r3, r21
+     e7e:	ac cf       	rjmp	.-168    	; 0xdd8 <masked_kuznyechik_decrypto+0x14a>
+     e80:	2a 94       	dec	r2
+}
+
+static void mask_InvLstep(void)
+{
+    uint8_t i;
+    for(i=0;i<16;i++)
+     e82:	21 10       	cpse	r2, r1
+     e84:	2c cf       	rjmp	.-424    	; 0xcde <masked_kuznyechik_decrypto+0x50>
+  uint8_t round=0;
+
+  for(round=9;round>0;round--)
+  {
+    mask_InvLstep();
+    AddRoundKey(round);
+     e86:	8d 89       	ldd	r24, Y+21	; 0x15
+     e88:	0e 94 e7 01 	call	0x3ce	; 0x3ce <AddRoundKey>
+     e8c:	90 e1       	ldi	r25, 0x10	; 16
+     e8e:	29 2e       	mov	r2, r25
+{
+    uint8_t i;
+    state_t stateCopy;
+    for(int j=0; j<16; j++)
+    {
+      stateCopy[j] = (*state)[j];
+     e90:	60 90 16 31 	lds	r6, 0x3116	; 0x803116 <state>
+     e94:	70 90 17 31 	lds	r7, 0x3117	; 0x803117 <state+0x1>
+     e98:	43 01       	movw	r8, r6
+     e9a:	9e 01       	movw	r18, r28
+     e9c:	2f 5f       	subi	r18, 0xFF	; 255
+     e9e:	3f 4f       	sbci	r19, 0xFF	; 255
+     ea0:	29 01       	movw	r4, r18
+     ea2:	f9 01       	movw	r30, r18
+     ea4:	d3 01       	movw	r26, r6
+     ea6:	8d 91       	ld	r24, X+
+     ea8:	81 93       	st	Z+, r24
+
+static void InvRstep(void)
+{
+    uint8_t i;
+    state_t stateCopy;
+    for(int j=0; j<16; j++)
+     eaa:	a9 88       	ldd	r10, Y+17	; 0x11
+     eac:	ba 88       	ldd	r11, Y+18	; 0x12
+     eae:	ae 16       	cp	r10, r30
+     eb0:	bf 06       	cpc	r11, r31
+     eb2:	c9 f7       	brne	.-14     	; 0xea6 <masked_kuznyechik_decrypto+0x218>
+    }
+    for(i=0;i<16;i++)
+    {
+        if(i==15)
+        {
+            (*state)[i] = mult_mod_poly[4][stateCopy[1]] ^ mult_mod_poly[2][stateCopy[2]] ^ mult_mod_poly[3][stateCopy[3]] ^ mult_mod_poly[1][stateCopy[4]] ^ mult_mod_poly[6][stateCopy[5]] ^ mult_mod_poly[5][stateCopy[6]] ^ mult_mod_poly[0][stateCopy[7]] ^ mult_mod_poly[7][stateCopy[8]] ^ mult_mod_poly[0][stateCopy[9]] ^ mult_mod_poly[5][stateCopy[10]] ^ mult_mod_poly[6][stateCopy[11]] ^ mult_mod_poly[1][stateCopy[12]] ^ mult_mod_poly[3][stateCopy[13]] ^ mult_mod_poly[2][stateCopy[14]] ^ mult_mod_poly[4][stateCopy[15]] ^ mult_mod_poly[0][stateCopy[0]];
+     eb4:	ca 80       	ldd	r12, Y+2	; 0x02
+     eb6:	2c 2d       	mov	r18, r12
+     eb8:	30 e0       	ldi	r19, 0x00	; 0
+     eba:	2b 8b       	std	Y+19, r18	; 0x13
+     ebc:	3c 8b       	std	Y+20, r19	; 0x14
+     ebe:	eb 80       	ldd	r14, Y+3	; 0x03
+     ec0:	f1 2c       	mov	r15, r1
+     ec2:	0c 81       	ldd	r16, Y+4	; 0x04
+     ec4:	10 e0       	ldi	r17, 0x00	; 0
+     ec6:	ad 81       	ldd	r26, Y+5	; 0x05
+     ec8:	b0 e0       	ldi	r27, 0x00	; 0
+     eca:	ee 81       	ldd	r30, Y+6	; 0x06
+     ecc:	f0 e0       	ldi	r31, 0x00	; 0
+     ece:	6f 81       	ldd	r22, Y+7	; 0x07
+     ed0:	70 e0       	ldi	r23, 0x00	; 0
+     ed2:	a8 84       	ldd	r10, Y+8	; 0x08
+     ed4:	b1 2c       	mov	r11, r1
+     ed6:	89 85       	ldd	r24, Y+9	; 0x09
+     ed8:	48 2f       	mov	r20, r24
+     eda:	50 e0       	ldi	r21, 0x00	; 0
+     edc:	4e 8b       	std	Y+22, r20	; 0x16
+     ede:	5f 8b       	std	Y+23, r21	; 0x17
+     ee0:	8a 85       	ldd	r24, Y+10	; 0x0a
+     ee2:	c8 2e       	mov	r12, r24
+     ee4:	d1 2c       	mov	r13, r1
+     ee6:	c8 8e       	std	Y+24, r12	; 0x18
+     ee8:	d9 8e       	std	Y+25, r13	; 0x19
+     eea:	8b 85       	ldd	r24, Y+11	; 0x0b
+     eec:	28 2f       	mov	r18, r24
+     eee:	30 e0       	ldi	r19, 0x00	; 0
+     ef0:	2a 8f       	std	Y+26, r18	; 0x1a
+     ef2:	3b 8f       	std	Y+27, r19	; 0x1b
+     ef4:	8c 85       	ldd	r24, Y+12	; 0x0c
+     ef6:	48 2f       	mov	r20, r24
+     ef8:	50 e0       	ldi	r21, 0x00	; 0
+     efa:	4c 8f       	std	Y+28, r20	; 0x1c
+     efc:	5d 8f       	std	Y+29, r21	; 0x1d
+     efe:	4d 85       	ldd	r20, Y+13	; 0x0d
+     f00:	84 2f       	mov	r24, r20
+     f02:	90 e0       	ldi	r25, 0x00	; 0
+     f04:	8e a7       	std	Y+46, r24	; 0x2e
+     f06:	9f a7       	std	Y+47, r25	; 0x2f
+     f08:	8e 85       	ldd	r24, Y+14	; 0x0e
+     f0a:	90 e0       	ldi	r25, 0x00	; 0
+     f0c:	2f 85       	ldd	r18, Y+15	; 0x0f
+     f0e:	30 e0       	ldi	r19, 0x00	; 0
+     f10:	38 88       	ldd	r3, Y+16	; 0x10
+     f12:	c3 2c       	mov	r12, r3
+     f14:	d1 2c       	mov	r13, r1
+     f16:	ce 8e       	std	Y+30, r12	; 0x1e
+     f18:	df 8e       	std	Y+31, r13	; 0x1f
+     f1a:	39 80       	ldd	r3, Y+1	; 0x01
+     f1c:	43 2d       	mov	r20, r3
+     f1e:	50 e0       	ldi	r21, 0x00	; 0
+     f20:	48 a3       	std	Y+32, r20	; 0x20
+     f22:	59 a3       	std	Y+33, r21	; 0x21
+     f24:	63 01       	movw	r12, r6
+     f26:	31 2c       	mov	r3, r1
+     f28:	4b 89       	ldd	r20, Y+19	; 0x13
+     f2a:	5c 89       	ldd	r21, Y+20	; 0x14
+     f2c:	4c 53       	subi	r20, 0x3C	; 60
+     f2e:	57 4d       	sbci	r21, 0xD7	; 215
+     f30:	4b 8b       	std	Y+19, r20	; 0x13
+     f32:	5c 8b       	std	Y+20, r21	; 0x14
+     f34:	a7 01       	movw	r20, r14
+     f36:	4c 53       	subi	r20, 0x3C	; 60
+     f38:	59 4d       	sbci	r21, 0xD9	; 217
+     f3a:	4a a3       	std	Y+34, r20	; 0x22
+     f3c:	5b a3       	std	Y+35, r21	; 0x23
+     f3e:	a8 01       	movw	r20, r16
+     f40:	4c 53       	subi	r20, 0x3C	; 60
+     f42:	58 4d       	sbci	r21, 0xD8	; 216
+     f44:	4c a3       	std	Y+36, r20	; 0x24
+     f46:	5d a3       	std	Y+37, r21	; 0x25
+     f48:	ad 01       	movw	r20, r26
+     f4a:	4c 53       	subi	r20, 0x3C	; 60
+     f4c:	5a 4d       	sbci	r21, 0xDA	; 218
+     f4e:	4e a3       	std	Y+38, r20	; 0x26
+     f50:	5f a3       	std	Y+39, r21	; 0x27
+     f52:	df 01       	movw	r26, r30
+     f54:	ac 53       	subi	r26, 0x3C	; 60
+     f56:	b5 4d       	sbci	r27, 0xD5	; 213
+     f58:	aa a7       	std	Y+42, r26	; 0x2a
+     f5a:	bb a7       	std	Y+43, r27	; 0x2b
+     f5c:	fb 01       	movw	r30, r22
+     f5e:	ec 53       	subi	r30, 0x3C	; 60
+     f60:	f6 4d       	sbci	r31, 0xD6	; 214
+     f62:	ec a7       	std	Y+44, r30	; 0x2c
+     f64:	fd a7       	std	Y+45, r31	; 0x2d
+     f66:	a5 01       	movw	r20, r10
+     f68:	4c 53       	subi	r20, 0x3C	; 60
+     f6a:	5b 4d       	sbci	r21, 0xDB	; 219
+     f6c:	5a 01       	movw	r10, r20
+     f6e:	0e 89       	ldd	r16, Y+22	; 0x16
+     f70:	1f 89       	ldd	r17, Y+23	; 0x17
+     f72:	0c 53       	subi	r16, 0x3C	; 60
+     f74:	14 4d       	sbci	r17, 0xD4	; 212
+     f76:	6a 8d       	ldd	r22, Y+26	; 0x1a
+     f78:	7b 8d       	ldd	r23, Y+27	; 0x1b
+     f7a:	6c 53       	subi	r22, 0x3C	; 60
+     f7c:	76 4d       	sbci	r23, 0xD6	; 214
+     f7e:	ac 8d       	ldd	r26, Y+28	; 0x1c
+     f80:	bd 8d       	ldd	r27, Y+29	; 0x1d
+     f82:	ac 53       	subi	r26, 0x3C	; 60
+     f84:	b5 4d       	sbci	r27, 0xD5	; 213
+     f86:	4e a5       	ldd	r20, Y+46	; 0x2e
+     f88:	5f a5       	ldd	r21, Y+47	; 0x2f
+     f8a:	4c 53       	subi	r20, 0x3C	; 60
+     f8c:	5a 4d       	sbci	r21, 0xDA	; 218
+     f8e:	8c 53       	subi	r24, 0x3C	; 60
+     f90:	98 4d       	sbci	r25, 0xD8	; 216
+     f92:	2c 53       	subi	r18, 0x3C	; 60
+     f94:	39 4d       	sbci	r19, 0xD9	; 217
+    {
+      stateCopy[j] = (*state)[j];
+    }
+    for(i=0;i<16;i++)
+    {
+        if(i==15)
+     f96:	ef e0       	ldi	r30, 0x0F	; 15
+     f98:	3e 12       	cpse	r3, r30
+     f9a:	40 c0       	rjmp	.+128    	; 0x101c <masked_kuznyechik_decrypto+0x38e>
+        {
+            (*state)[i] = mult_mod_poly[4][stateCopy[1]] ^ mult_mod_poly[2][stateCopy[2]] ^ mult_mod_poly[3][stateCopy[3]] ^ mult_mod_poly[1][stateCopy[4]] ^ mult_mod_poly[6][stateCopy[5]] ^ mult_mod_poly[5][stateCopy[6]] ^ mult_mod_poly[0][stateCopy[7]] ^ mult_mod_poly[7][stateCopy[8]] ^ mult_mod_poly[0][stateCopy[9]] ^ mult_mod_poly[5][stateCopy[10]] ^ mult_mod_poly[6][stateCopy[11]] ^ mult_mod_poly[1][stateCopy[12]] ^ mult_mod_poly[3][stateCopy[13]] ^ mult_mod_poly[2][stateCopy[14]] ^ mult_mod_poly[4][stateCopy[15]] ^ mult_mod_poly[0][stateCopy[0]];
+     f9c:	eb 89       	ldd	r30, Y+19	; 0x13
+     f9e:	fc 89       	ldd	r31, Y+20	; 0x14
+     fa0:	f0 80       	ld	r15, Z
+     fa2:	ea a1       	ldd	r30, Y+34	; 0x22
+     fa4:	fb a1       	ldd	r31, Y+35	; 0x23
+     fa6:	e0 80       	ld	r14, Z
+     fa8:	ef 24       	eor	r14, r15
+     faa:	ec a1       	ldd	r30, Y+36	; 0x24
+     fac:	fd a1       	ldd	r31, Y+37	; 0x25
+     fae:	f0 80       	ld	r15, Z
+     fb0:	fe 24       	eor	r15, r14
+     fb2:	ee a1       	ldd	r30, Y+38	; 0x26
+     fb4:	ff a1       	ldd	r31, Y+39	; 0x27
+     fb6:	e0 80       	ld	r14, Z
+     fb8:	fe 24       	eor	r15, r14
+     fba:	ea a5       	ldd	r30, Y+42	; 0x2a
+     fbc:	fb a5       	ldd	r31, Y+43	; 0x2b
+     fbe:	e0 80       	ld	r14, Z
+     fc0:	fe 24       	eor	r15, r14
+     fc2:	ec a5       	ldd	r30, Y+44	; 0x2c
+     fc4:	fd a5       	ldd	r31, Y+45	; 0x2d
+     fc6:	e0 80       	ld	r14, Z
+     fc8:	fe 24       	eor	r15, r14
+     fca:	f5 01       	movw	r30, r10
+     fcc:	e0 80       	ld	r14, Z
+     fce:	fe 24       	eor	r15, r14
+     fd0:	f8 01       	movw	r30, r16
+     fd2:	e0 80       	ld	r14, Z
+     fd4:	fe 24       	eor	r15, r14
+     fd6:	e8 8d       	ldd	r30, Y+24	; 0x18
+     fd8:	f9 8d       	ldd	r31, Y+25	; 0x19
+     fda:	ec 53       	subi	r30, 0x3C	; 60
+     fdc:	fb 4d       	sbci	r31, 0xDB	; 219
+     fde:	e0 81       	ld	r30, Z
+     fe0:	fe 26       	eor	r15, r30
+     fe2:	fb 01       	movw	r30, r22
+     fe4:	e0 80       	ld	r14, Z
+     fe6:	fe 24       	eor	r15, r14
+     fe8:	ec 91       	ld	r30, X
+     fea:	fe 26       	eor	r15, r30
+     fec:	fa 01       	movw	r30, r20
+     fee:	e0 80       	ld	r14, Z
+     ff0:	fe 24       	eor	r15, r14
+     ff2:	fc 01       	movw	r30, r24
+     ff4:	e0 80       	ld	r14, Z
+     ff6:	fe 24       	eor	r15, r14
+     ff8:	f9 01       	movw	r30, r18
+     ffa:	e0 80       	ld	r14, Z
+     ffc:	fe 24       	eor	r15, r14
+     ffe:	ee 8d       	ldd	r30, Y+30	; 0x1e
+    1000:	ff 8d       	ldd	r31, Y+31	; 0x1f
+    1002:	ec 53       	subi	r30, 0x3C	; 60
+    1004:	f7 4d       	sbci	r31, 0xD7	; 215
+    1006:	e0 81       	ld	r30, Z
+    1008:	fe 26       	eor	r15, r30
+    100a:	e8 a1       	ldd	r30, Y+32	; 0x20
+    100c:	f9 a1       	ldd	r31, Y+33	; 0x21
+    100e:	ec 53       	subi	r30, 0x3C	; 60
+    1010:	fb 4d       	sbci	r31, 0xDB	; 219
+    1012:	e0 81       	ld	r30, Z
+    1014:	fe 26       	eor	r15, r30
+    1016:	f3 01       	movw	r30, r6
+    1018:	f7 86       	std	Z+15, r15	; 0x0f
+    101a:	04 c0       	rjmp	.+8      	; 0x1024 <masked_kuznyechik_decrypto+0x396>
+            
+        }
+        else
+        {
+            (*state)[i] = stateCopy[i+1];
+    101c:	f2 01       	movw	r30, r4
+    101e:	f1 80       	ldd	r15, Z+1	; 0x01
+    1020:	f6 01       	movw	r30, r12
+    1022:	f0 82       	st	Z, r15
+    state_t stateCopy;
+    for(int j=0; j<16; j++)
+    {
+      stateCopy[j] = (*state)[j];
+    }
+    for(i=0;i<16;i++)
+    1024:	33 94       	inc	r3
+    1026:	ff ef       	ldi	r31, 0xFF	; 255
+    1028:	4f 1a       	sub	r4, r31
+    102a:	5f 0a       	sbc	r5, r31
+    102c:	ef ef       	ldi	r30, 0xFF	; 255
+    102e:	ce 1a       	sub	r12, r30
+    1030:	de 0a       	sbc	r13, r30
+    1032:	f0 e1       	ldi	r31, 0x10	; 16
+    1034:	3f 12       	cpse	r3, r31
+    1036:	af cf       	rjmp	.-162    	; 0xf96 <masked_kuznyechik_decrypto+0x308>
+    1038:	2a 94       	dec	r2
+}
+
+static void InvLstep(void)
+{
+    uint8_t i;
+    for(i=0;i<16;i++)
+    103a:	21 10       	cpse	r2, r1
+    103c:	29 cf       	rjmp	.-430    	; 0xe90 <masked_kuznyechik_decrypto+0x202>
+    103e:	93 01       	movw	r18, r6
+    1040:	20 5f       	subi	r18, 0xF0	; 240
+    1042:	3f 4f       	sbci	r19, 0xFF	; 255
+static void masked_InvSstep(void)
+{
+  uint8_t i;
+  for(i = 0; i<16; ++i)
+  {
+    (*state)[i] = getMaskedSBoxInvert((*state)[i], mask[i]);
+    1044:	a8 a5       	ldd	r26, Y+40	; 0x28
+    1046:	b9 a5       	ldd	r27, Y+41	; 0x29
+    1048:	8d 91       	ld	r24, X+
+    104a:	a8 a7       	std	Y+40, r26	; 0x28
+    104c:	b9 a7       	std	Y+41, r27	; 0x29
+  return (sbox[num ^ mas] ^ mas);
+}
+
+static uint8_t getMaskedSBoxInvert(uint8_t num, uint8_t mas)
+{
+  return (rsbox[num ^ mas] ^ mas);
+    104e:	d4 01       	movw	r26, r8
+    1050:	ec 91       	ld	r30, X
+    1052:	e8 27       	eor	r30, r24
+    1054:	f0 e0       	ldi	r31, 0x00	; 0
+    1056:	e0 50       	subi	r30, 0x00	; 0
+    1058:	f0 4e       	sbci	r31, 0xE0	; 224
+static void masked_InvSstep(void)
+{
+  uint8_t i;
+  for(i = 0; i<16; ++i)
+  {
+    (*state)[i] = getMaskedSBoxInvert((*state)[i], mask[i]);
+    105a:	90 81       	ld	r25, Z
+    105c:	89 27       	eor	r24, r25
+    105e:	f4 01       	movw	r30, r8
+    1060:	81 93       	st	Z+, r24
+    1062:	4f 01       	movw	r8, r30
+}
+
+static void masked_InvSstep(void)
+{
+  uint8_t i;
+  for(i = 0; i<16; ++i)
+    1064:	2e 17       	cp	r18, r30
+    1066:	3f 07       	cpc	r19, r31
+    1068:	69 f7       	brne	.-38     	; 0x1044 <masked_kuznyechik_decrypto+0x3b6>
+    106a:	fd 89       	ldd	r31, Y+21	; 0x15
+    106c:	f1 50       	subi	r31, 0x01	; 1
+    106e:	fd 8b       	std	Y+21, r31	; 0x15
+
+static void InvCipher(void)
+{
+  uint8_t round=0;
+
+  for(round=9;round>0;round--)
+    1070:	f1 11       	cpse	r31, r1
+    1072:	33 ce       	rjmp	.-922    	; 0xcda <masked_kuznyechik_decrypto+0x4c>
+    mask_InvLstep();
+    AddRoundKey(round);
+    InvLstep();
+    masked_InvSstep();
+  }
+  AddRoundKey(0);
+    1074:	80 e0       	ldi	r24, 0x00	; 0
+    1076:	0e 94 e7 01 	call	0x3ce	; 0x3ce <AddRoundKey>
+  maskState();
+
+  InvCipher();
+
+  maskState();
+}
+    107a:	af 96       	adiw	r28, 0x2f	; 47
+    107c:	cd bf       	out	0x3d, r28	; 61
+    107e:	de bf       	out	0x3e, r29	; 62
+    1080:	df 91       	pop	r29
+    1082:	cf 91       	pop	r28
+    1084:	1f 91       	pop	r17
+    1086:	0f 91       	pop	r16
+    1088:	ff 90       	pop	r15
+    108a:	ef 90       	pop	r14
+    108c:	df 90       	pop	r13
+    108e:	cf 90       	pop	r12
+    1090:	bf 90       	pop	r11
+    1092:	af 90       	pop	r10
+    1094:	9f 90       	pop	r9
+    1096:	8f 90       	pop	r8
+    1098:	7f 90       	pop	r7
+    109a:	6f 90       	pop	r6
+    109c:	5f 90       	pop	r5
+    109e:	4f 90       	pop	r4
+    10a0:	3f 90       	pop	r3
+    10a2:	2f 90       	pop	r2
+
+  maskState();
+
+  InvCipher();
+
+  maskState();
+    10a4:	0c 94 d6 01 	jmp	0x3ac	; 0x3ac <maskState>
+
+000010a8 <check_version>:
+// Callback function for "v" command.
+// This can exist in v1.0 as long as we don't actually send back an ack ("z")
+uint8_t check_version(uint8_t* v)
+{
+	return 0x00;
+}
+    10a8:	80 e0       	ldi	r24, 0x00	; 0
+    10aa:	08 95       	ret
+
+000010ac <hex_decode>:
+	'0', '1', '2', '3', '4', '5', '6', '7',
+	'8', '9', 'A', 'B', 'C', 'D', 'E', 'F'
+};
+
+int hex_decode(int len, char* ascii_buf, uint8_t* data_buf)
+{
+    10ac:	db 01       	movw	r26, r22
+	for(int i = 0; i < len; i++)
+    10ae:	fa 01       	movw	r30, r20
+    10b0:	9f 01       	movw	r18, r30
+    10b2:	24 1b       	sub	r18, r20
+    10b4:	35 0b       	sbc	r19, r21
+    10b6:	28 17       	cp	r18, r24
+    10b8:	39 07       	cpc	r19, r25
+    10ba:	d4 f5       	brge	.+116    	; 0x1130 <hex_decode+0x84>
+	{
+		char n_hi = ascii_buf[2*i];
+    10bc:	2c 91       	ld	r18, X
+		char n_lo = ascii_buf[2*i+1];
+    10be:	11 96       	adiw	r26, 0x01	; 1
+    10c0:	3c 91       	ld	r19, X
+    10c2:	11 97       	sbiw	r26, 0x01	; 1
+
+		if(n_lo >= '0' && n_lo <= '9')
+    10c4:	60 ed       	ldi	r22, 0xD0	; 208
+    10c6:	63 0f       	add	r22, r19
+    10c8:	6a 30       	cpi	r22, 0x0A	; 10
+    10ca:	10 f4       	brcc	.+4      	; 0x10d0 <hex_decode+0x24>
+			data_buf[i] = n_lo - '0';
+    10cc:	60 83       	st	Z, r22
+    10ce:	0f c0       	rjmp	.+30     	; 0x10ee <hex_decode+0x42>
+		else if(n_lo >= 'A' && n_lo <= 'F')
+    10d0:	6f eb       	ldi	r22, 0xBF	; 191
+    10d2:	63 0f       	add	r22, r19
+    10d4:	66 30       	cpi	r22, 0x06	; 6
+    10d6:	10 f4       	brcc	.+4      	; 0x10dc <hex_decode+0x30>
+			data_buf[i] = n_lo - 'A' + 10;
+    10d8:	37 53       	subi	r19, 0x37	; 55
+    10da:	08 c0       	rjmp	.+16     	; 0x10ec <hex_decode+0x40>
+		else if(n_lo >= 'a' && n_lo <= 'f')
+    10dc:	6f e9       	ldi	r22, 0x9F	; 159
+    10de:	63 0f       	add	r22, r19
+    10e0:	66 30       	cpi	r22, 0x06	; 6
+    10e2:	18 f0       	brcs	.+6      	; 0x10ea <hex_decode+0x3e>
+			data_buf[i] = n_lo - 'a' + 10;
+		else
+			return 1;
+    10e4:	81 e0       	ldi	r24, 0x01	; 1
+    10e6:	90 e0       	ldi	r25, 0x00	; 0
+    10e8:	08 95       	ret
+		if(n_lo >= '0' && n_lo <= '9')
+			data_buf[i] = n_lo - '0';
+		else if(n_lo >= 'A' && n_lo <= 'F')
+			data_buf[i] = n_lo - 'A' + 10;
+		else if(n_lo >= 'a' && n_lo <= 'f')
+			data_buf[i] = n_lo - 'a' + 10;
+    10ea:	37 55       	subi	r19, 0x57	; 87
+    10ec:	30 83       	st	Z, r19
+		else
+			return 1;
+
+		if(n_hi >= '0' && n_hi <= '9')
+    10ee:	30 ed       	ldi	r19, 0xD0	; 208
+    10f0:	32 0f       	add	r19, r18
+    10f2:	3a 30       	cpi	r19, 0x0A	; 10
+    10f4:	18 f4       	brcc	.+6      	; 0x10fc <hex_decode+0x50>
+			data_buf[i] |= (n_hi - '0') << 4;
+    10f6:	22 95       	swap	r18
+    10f8:	20 7f       	andi	r18, 0xF0	; 240
+    10fa:	14 c0       	rjmp	.+40     	; 0x1124 <hex_decode+0x78>
+		else if(n_hi >= 'A' && n_hi <= 'F')
+    10fc:	3f eb       	ldi	r19, 0xBF	; 191
+    10fe:	32 0f       	add	r19, r18
+    1100:	36 30       	cpi	r19, 0x06	; 6
+    1102:	20 f4       	brcc	.+8      	; 0x110c <hex_decode+0x60>
+			data_buf[i] |= (n_hi - 'A' + 10) << 4;
+    1104:	30 e0       	ldi	r19, 0x00	; 0
+    1106:	27 53       	subi	r18, 0x37	; 55
+    1108:	31 09       	sbc	r19, r1
+    110a:	07 c0       	rjmp	.+14     	; 0x111a <hex_decode+0x6e>
+		else if(n_hi >= 'a' && n_hi <= 'f')
+    110c:	3f e9       	ldi	r19, 0x9F	; 159
+    110e:	32 0f       	add	r19, r18
+    1110:	36 30       	cpi	r19, 0x06	; 6
+    1112:	40 f7       	brcc	.-48     	; 0x10e4 <hex_decode+0x38>
+			data_buf[i] |= (n_hi - 'a' + 10) << 4;
+    1114:	30 e0       	ldi	r19, 0x00	; 0
+    1116:	27 55       	subi	r18, 0x57	; 87
+    1118:	31 09       	sbc	r19, r1
+    111a:	64 e0       	ldi	r22, 0x04	; 4
+    111c:	22 0f       	add	r18, r18
+    111e:	33 1f       	adc	r19, r19
+    1120:	6a 95       	dec	r22
+    1122:	e1 f7       	brne	.-8      	; 0x111c <hex_decode+0x70>
+    1124:	30 81       	ld	r19, Z
+    1126:	23 2b       	or	r18, r19
+    1128:	20 83       	st	Z, r18
+    112a:	31 96       	adiw	r30, 0x01	; 1
+    112c:	12 96       	adiw	r26, 0x02	; 2
+    112e:	c0 cf       	rjmp	.-128    	; 0x10b0 <hex_decode+0x4>
+		else
+			return 1;
+	}
+
+	return 0;
+    1130:	80 e0       	ldi	r24, 0x00	; 0
+    1132:	90 e0       	ldi	r25, 0x00	; 0
+}
+    1134:	08 95       	ret
+
+00001136 <simpleserial_addcmd>:
+	simpleserial_addcmd('v', 0, check_version);
+}
+
+int simpleserial_addcmd(char c, unsigned int len, uint8_t (*fp)(uint8_t*))
+{
+	if(num_commands >= MAX_SS_CMDS)
+    1136:	20 91 18 31 	lds	r18, 0x3118	; 0x803118 <num_commands>
+    113a:	30 91 19 31 	lds	r19, 0x3119	; 0x803119 <num_commands+0x1>
+    113e:	2a 30       	cpi	r18, 0x0A	; 10
+    1140:	31 05       	cpc	r19, r1
+    1142:	cc f4       	brge	.+50     	; 0x1176 <simpleserial_addcmd+0x40>
+		return 1;
+
+	if(len >= MAX_SS_LEN)
+    1144:	60 34       	cpi	r22, 0x40	; 64
+    1146:	71 05       	cpc	r23, r1
+    1148:	b0 f4       	brcc	.+44     	; 0x1176 <simpleserial_addcmd+0x40>
+		return 1;
+
+	commands[num_commands].c   = c;
+    114a:	95 e0       	ldi	r25, 0x05	; 5
+    114c:	92 9f       	mul	r25, r18
+    114e:	f0 01       	movw	r30, r0
+    1150:	93 9f       	mul	r25, r19
+    1152:	f0 0d       	add	r31, r0
+    1154:	11 24       	eor	r1, r1
+    1156:	e6 5e       	subi	r30, 0xE6	; 230
+    1158:	fe 4c       	sbci	r31, 0xCE	; 206
+    115a:	80 83       	st	Z, r24
+	commands[num_commands].len = len;
+    115c:	61 83       	std	Z+1, r22	; 0x01
+    115e:	72 83       	std	Z+2, r23	; 0x02
+	commands[num_commands].fp  = fp;
+    1160:	43 83       	std	Z+3, r20	; 0x03
+    1162:	54 83       	std	Z+4, r21	; 0x04
+	num_commands++;
+    1164:	2f 5f       	subi	r18, 0xFF	; 255
+    1166:	3f 4f       	sbci	r19, 0xFF	; 255
+    1168:	20 93 18 31 	sts	0x3118, r18	; 0x803118 <num_commands>
+    116c:	30 93 19 31 	sts	0x3119, r19	; 0x803119 <num_commands+0x1>
+
+	return 0;
+    1170:	80 e0       	ldi	r24, 0x00	; 0
+    1172:	90 e0       	ldi	r25, 0x00	; 0
+    1174:	08 95       	ret
+}
+
+int simpleserial_addcmd(char c, unsigned int len, uint8_t (*fp)(uint8_t*))
+{
+	if(num_commands >= MAX_SS_CMDS)
+		return 1;
+    1176:	81 e0       	ldi	r24, 0x01	; 1
+    1178:	90 e0       	ldi	r25, 0x00	; 0
+	commands[num_commands].len = len;
+	commands[num_commands].fp  = fp;
+	num_commands++;
+
+	return 0;
+}
+    117a:	08 95       	ret
+
+0000117c <simpleserial_init>:
+
+// Set up the SimpleSerial module by preparing internal commands
+// This just adds the "v" command for now...
+void simpleserial_init()
+{
+	simpleserial_addcmd('v', 0, check_version);
+    117c:	44 e5       	ldi	r20, 0x54	; 84
+    117e:	58 e0       	ldi	r21, 0x08	; 8
+    1180:	60 e0       	ldi	r22, 0x00	; 0
+    1182:	70 e0       	ldi	r23, 0x00	; 0
+    1184:	86 e7       	ldi	r24, 0x76	; 118
+    1186:	0c 94 9b 08 	jmp	0x1136	; 0x1136 <simpleserial_addcmd>
+
+0000118a <simpleserial_put>:
+	simpleserial_put('z', 1, ret);
+#endif
+}
+
+void simpleserial_put(char c, int size, uint8_t* output)
+{
+    118a:	cf 92       	push	r12
+    118c:	df 92       	push	r13
+    118e:	ef 92       	push	r14
+    1190:	ff 92       	push	r15
+    1192:	0f 93       	push	r16
+    1194:	1f 93       	push	r17
+    1196:	cf 93       	push	r28
+    1198:	df 93       	push	r29
+    119a:	8b 01       	movw	r16, r22
+    119c:	ea 01       	movw	r28, r20
+	// Write first character
+	putch(c);
+    119e:	0e 94 c4 09 	call	0x1388	; 0x1388 <output_ch_0>
+
+	// Write each byte as two nibbles
+	for(int i = 0; i < size; i++)
+    11a2:	7e 01       	movw	r14, r28
+    11a4:	c7 01       	movw	r24, r14
+    11a6:	8c 1b       	sub	r24, r28
+    11a8:	9d 0b       	sbc	r25, r29
+    11aa:	80 17       	cp	r24, r16
+    11ac:	91 07       	cpc	r25, r17
+    11ae:	b4 f4       	brge	.+44     	; 0x11dc <simpleserial_put+0x52>
+    11b0:	67 01       	movw	r12, r14
+	{
+		putch(hex_lookup[output[i] >> 4 ]);
+    11b2:	d7 01       	movw	r26, r14
+    11b4:	ed 91       	ld	r30, X+
+    11b6:	7d 01       	movw	r14, r26
+    11b8:	e2 95       	swap	r30
+    11ba:	ef 70       	andi	r30, 0x0F	; 15
+    11bc:	f0 e0       	ldi	r31, 0x00	; 0
+    11be:	ec 53       	subi	r30, 0x3C	; 60
+    11c0:	f3 4d       	sbci	r31, 0xD3	; 211
+    11c2:	80 81       	ld	r24, Z
+    11c4:	0e 94 c4 09 	call	0x1388	; 0x1388 <output_ch_0>
+		putch(hex_lookup[output[i] & 0xF]);
+    11c8:	d6 01       	movw	r26, r12
+    11ca:	ec 91       	ld	r30, X
+    11cc:	ef 70       	andi	r30, 0x0F	; 15
+    11ce:	f0 e0       	ldi	r31, 0x00	; 0
+    11d0:	ec 53       	subi	r30, 0x3C	; 60
+    11d2:	f3 4d       	sbci	r31, 0xD3	; 211
+    11d4:	80 81       	ld	r24, Z
+    11d6:	0e 94 c4 09 	call	0x1388	; 0x1388 <output_ch_0>
+    11da:	e4 cf       	rjmp	.-56     	; 0x11a4 <simpleserial_put+0x1a>
+	}
+
+	// Write trailing '\n'
+	putch('\n');
+    11dc:	8a e0       	ldi	r24, 0x0A	; 10
+}
+    11de:	df 91       	pop	r29
+    11e0:	cf 91       	pop	r28
+    11e2:	1f 91       	pop	r17
+    11e4:	0f 91       	pop	r16
+    11e6:	ff 90       	pop	r15
+    11e8:	ef 90       	pop	r14
+    11ea:	df 90       	pop	r13
+    11ec:	cf 90       	pop	r12
+		putch(hex_lookup[output[i] >> 4 ]);
+		putch(hex_lookup[output[i] & 0xF]);
+	}
+
+	// Write trailing '\n'
+	putch('\n');
+    11ee:	0c 94 c4 09 	jmp	0x1388	; 0x1388 <output_ch_0>
+
+000011f2 <simpleserial_get>:
+
+	return 0;
+}
+
+void simpleserial_get(void)
+{
+    11f2:	af 92       	push	r10
+    11f4:	bf 92       	push	r11
+    11f6:	cf 92       	push	r12
+    11f8:	df 92       	push	r13
+    11fa:	ef 92       	push	r14
+    11fc:	ff 92       	push	r15
+    11fe:	0f 93       	push	r16
+    1200:	1f 93       	push	r17
+    1202:	cf 93       	push	r28
+    1204:	df 93       	push	r29
+    1206:	cd b7       	in	r28, 0x3d	; 61
+    1208:	de b7       	in	r29, 0x3e	; 62
+    120a:	c1 5c       	subi	r28, 0xC1	; 193
+    120c:	d1 09       	sbc	r29, r1
+    120e:	cd bf       	out	0x3d, r28	; 61
+    1210:	de bf       	out	0x3e, r29	; 62
+	char ascii_buf[2*MAX_SS_LEN];
+	uint8_t data_buf[MAX_SS_LEN];
+	char c;
+
+	// Find which command we're receiving
+	c = getch();
+    1212:	0e 94 bd 09 	call	0x137a	; 0x137a <input_ch_0>
+
+	int cmd;
+	for(cmd = 0; cmd < num_commands; cmd++)
+    1216:	40 91 18 31 	lds	r20, 0x3118	; 0x803118 <num_commands>
+    121a:	50 91 19 31 	lds	r21, 0x3119	; 0x803119 <num_commands+0x1>
+    121e:	2a e1       	ldi	r18, 0x1A	; 26
+    1220:	31 e3       	ldi	r19, 0x31	; 49
+    1222:	00 e0       	ldi	r16, 0x00	; 0
+    1224:	10 e0       	ldi	r17, 0x00	; 0
+    1226:	04 17       	cp	r16, r20
+    1228:	15 07       	cpc	r17, r21
+    122a:	54 f4       	brge	.+20     	; 0x1240 <simpleserial_get+0x4e>
+    122c:	2b 5f       	subi	r18, 0xFB	; 251
+    122e:	3f 4f       	sbci	r19, 0xFF	; 255
+	{
+		if(commands[cmd].c == c)
+    1230:	f9 01       	movw	r30, r18
+    1232:	35 97       	sbiw	r30, 0x05	; 5
+    1234:	90 81       	ld	r25, Z
+    1236:	89 17       	cp	r24, r25
+    1238:	39 f0       	breq	.+14     	; 0x1248 <simpleserial_get+0x56>
+
+	// Find which command we're receiving
+	c = getch();
+
+	int cmd;
+	for(cmd = 0; cmd < num_commands; cmd++)
+    123a:	0f 5f       	subi	r16, 0xFF	; 255
+    123c:	1f 4f       	sbci	r17, 0xFF	; 255
+    123e:	f3 cf       	rjmp	.-26     	; 0x1226 <simpleserial_get+0x34>
+		if(commands[cmd].c == c)
+			break;
+	}
+
+	// If we didn't find a match, give up right away
+	if(cmd == num_commands)
+    1240:	04 17       	cp	r16, r20
+    1242:	15 07       	cpc	r17, r21
+    1244:	09 f4       	brne	.+2      	; 0x1248 <simpleserial_get+0x56>
+    1246:	54 c0       	rjmp	.+168    	; 0x12f0 <simpleserial_get+0xfe>
+    1248:	9e 01       	movw	r18, r28
+    124a:	2f 5f       	subi	r18, 0xFF	; 255
+    124c:	3f 4f       	sbci	r19, 0xFF	; 255
+    124e:	79 01       	movw	r14, r18
+
+	// Find which command we're receiving
+	c = getch();
+
+	int cmd;
+	for(cmd = 0; cmd < num_commands; cmd++)
+    1250:	69 01       	movw	r12, r18
+	// If we didn't find a match, give up right away
+	if(cmd == num_commands)
+		return;
+
+	// Receive characters until we fill the ASCII buffer
+	for(int i = 0; i < 2*commands[cmd].len; i++)
+    1252:	25 e0       	ldi	r18, 0x05	; 5
+    1254:	20 9f       	mul	r18, r16
+    1256:	c0 01       	movw	r24, r0
+    1258:	21 9f       	mul	r18, r17
+    125a:	90 0d       	add	r25, r0
+    125c:	11 24       	eor	r1, r1
+    125e:	dc 01       	movw	r26, r24
+    1260:	a5 5e       	subi	r26, 0xE5	; 229
+    1262:	be 4c       	sbci	r27, 0xCE	; 206
+    1264:	5d 01       	movw	r10, r26
+    1266:	d5 01       	movw	r26, r10
+    1268:	8d 91       	ld	r24, X+
+    126a:	9c 91       	ld	r25, X
+    126c:	88 0f       	add	r24, r24
+    126e:	99 1f       	adc	r25, r25
+    1270:	96 01       	movw	r18, r12
+    1272:	2e 19       	sub	r18, r14
+    1274:	3f 09       	sbc	r19, r15
+    1276:	28 17       	cp	r18, r24
+    1278:	39 07       	cpc	r19, r25
+    127a:	50 f4       	brcc	.+20     	; 0x1290 <simpleserial_get+0x9e>
+	{
+		c = getch();
+    127c:	0e 94 bd 09 	call	0x137a	; 0x137a <input_ch_0>
+
+		// Check for early \n
+		if(c == '\n' || c == '\r')
+    1280:	8a 30       	cpi	r24, 0x0A	; 10
+    1282:	b1 f1       	breq	.+108    	; 0x12f0 <simpleserial_get+0xfe>
+    1284:	8d 30       	cpi	r24, 0x0D	; 13
+    1286:	a1 f1       	breq	.+104    	; 0x12f0 <simpleserial_get+0xfe>
+			return;
+
+		ascii_buf[i] = c;
+    1288:	f6 01       	movw	r30, r12
+    128a:	81 93       	st	Z+, r24
+    128c:	6f 01       	movw	r12, r30
+    128e:	eb cf       	rjmp	.-42     	; 0x1266 <simpleserial_get+0x74>
+	}
+
+	// Assert that last character is \n or \r
+	c = getch();
+    1290:	0e 94 bd 09 	call	0x137a	; 0x137a <input_ch_0>
+	if(c != '\n' && c != '\r')
+    1294:	8a 30       	cpi	r24, 0x0A	; 10
+    1296:	11 f0       	breq	.+4      	; 0x129c <simpleserial_get+0xaa>
+    1298:	8d 30       	cpi	r24, 0x0D	; 13
+    129a:	51 f5       	brne	.+84     	; 0x12f0 <simpleserial_get+0xfe>
+		return;
+
+	// ASCII buffer is full: convert to bytes 
+	// Check for illegal characters here
+	if(hex_decode(commands[cmd].len, ascii_buf, data_buf))
+    129c:	25 e0       	ldi	r18, 0x05	; 5
+    129e:	20 9f       	mul	r18, r16
+    12a0:	c0 01       	movw	r24, r0
+    12a2:	21 9f       	mul	r18, r17
+    12a4:	90 0d       	add	r25, r0
+    12a6:	11 24       	eor	r1, r1
+    12a8:	8c 01       	movw	r16, r24
+    12aa:	06 5e       	subi	r16, 0xE6	; 230
+    12ac:	1e 4c       	sbci	r17, 0xCE	; 206
+    12ae:	ae 01       	movw	r20, r28
+    12b0:	4f 57       	subi	r20, 0x7F	; 127
+    12b2:	5f 4f       	sbci	r21, 0xFF	; 255
+    12b4:	b7 01       	movw	r22, r14
+    12b6:	f8 01       	movw	r30, r16
+    12b8:	81 81       	ldd	r24, Z+1	; 0x01
+    12ba:	92 81       	ldd	r25, Z+2	; 0x02
+    12bc:	0e 94 56 08 	call	0x10ac	; 0x10ac <hex_decode>
+    12c0:	89 2b       	or	r24, r25
+    12c2:	b1 f4       	brne	.+44     	; 0x12f0 <simpleserial_get+0xfe>
+		return;
+
+	// Callback
+	uint8_t ret[1];
+	ret[0] = commands[cmd].fp(data_buf);
+    12c4:	d8 01       	movw	r26, r16
+    12c6:	13 96       	adiw	r26, 0x03	; 3
+    12c8:	ed 91       	ld	r30, X+
+    12ca:	fc 91       	ld	r31, X
+    12cc:	14 97       	sbiw	r26, 0x04	; 4
+    12ce:	ce 01       	movw	r24, r28
+    12d0:	8f 57       	subi	r24, 0x7F	; 127
+    12d2:	9f 4f       	sbci	r25, 0xFF	; 255
+    12d4:	19 95       	eicall
+    12d6:	cf 53       	subi	r28, 0x3F	; 63
+    12d8:	df 4f       	sbci	r29, 0xFF	; 255
+    12da:	88 83       	st	Y, r24
+    12dc:	c1 5c       	subi	r28, 0xC1	; 193
+    12de:	d0 40       	sbci	r29, 0x00	; 0
+	
+	// Acknowledge (if version is 1.1)
+#if SS_VER == SS_VER_1_1
+	simpleserial_put('z', 1, ret);
+    12e0:	ae 01       	movw	r20, r28
+    12e2:	4f 53       	subi	r20, 0x3F	; 63
+    12e4:	5f 4f       	sbci	r21, 0xFF	; 255
+    12e6:	61 e0       	ldi	r22, 0x01	; 1
+    12e8:	70 e0       	ldi	r23, 0x00	; 0
+    12ea:	8a e7       	ldi	r24, 0x7A	; 122
+    12ec:	0e 94 c5 08 	call	0x118a	; 0x118a <simpleserial_put>
+#endif
+}
+    12f0:	cf 53       	subi	r28, 0x3F	; 63
+    12f2:	df 4f       	sbci	r29, 0xFF	; 255
+    12f4:	cd bf       	out	0x3d, r28	; 61
+    12f6:	de bf       	out	0x3e, r29	; 62
+    12f8:	df 91       	pop	r29
+    12fa:	cf 91       	pop	r28
+    12fc:	1f 91       	pop	r17
+    12fe:	0f 91       	pop	r16
+    1300:	ff 90       	pop	r15
+    1302:	ef 90       	pop	r14
+    1304:	df 90       	pop	r13
+    1306:	cf 90       	pop	r12
+    1308:	bf 90       	pop	r11
+    130a:	af 90       	pop	r10
+    130c:	08 95       	ret
+
+0000130e <init_uart0>:
+   )
+   {
+/* This PORT setting is only valid to USARTC0 if other USARTs is used a
+	 * different PORT and/or pins is used. */
+	/* PIN3 (TXD0) as output. */
+	PORTC.DIRSET = PIN3_bm;
+    130e:	e0 e4       	ldi	r30, 0x40	; 64
+    1310:	f6 e0       	ldi	r31, 0x06	; 6
+    1312:	88 e0       	ldi	r24, 0x08	; 8
+    1314:	81 83       	std	Z+1, r24	; 0x01
+
+	/* PC2 (RXD0) as input. */
+	PORTC.DIRCLR = PIN2_bm;
+    1316:	84 e0       	ldi	r24, 0x04	; 4
+    1318:	82 83       	std	Z+2, r24	; 0x02
+
+	/* USARTC0, 8 Data bits, No Parity, 1 Stop bit. */
+	USART_Format_Set(&USART, USART_CHSIZE_8BIT_gc, USART_PMODE_DISABLED_gc, false);
+    131a:	e0 ea       	ldi	r30, 0xA0	; 160
+    131c:	f8 e0       	ldi	r31, 0x08	; 8
+    131e:	83 e0       	ldi	r24, 0x03	; 3
+    1320:	85 83       	std	Z+5, r24	; 0x05
+	 * Do not use the baudrate scale factor
+	 *
+	 * Baudrate select = (1/(16*(((I/O clock frequency)/Baudrate)-1)
+	 *                 = 12
+	 */
+	USART_Baudrate_Set(&USART, 11, 0);
+    1322:	8b e0       	ldi	r24, 0x0B	; 11
+    1324:	86 83       	std	Z+6, r24	; 0x06
+    1326:	17 82       	std	Z+7, r1	; 0x07
+
+	/* Enable both RX and TX. */
+	USART_Rx_Enable(&USART);
+    1328:	84 81       	ldd	r24, Z+4	; 0x04
+    132a:	80 61       	ori	r24, 0x10	; 16
+    132c:	84 83       	std	Z+4, r24	; 0x04
+	USART_Tx_Enable(&USART);
+    132e:	84 81       	ldd	r24, Z+4	; 0x04
+    1330:	88 60       	ori	r24, 0x08	; 8
+    1332:	84 83       	std	Z+4, r24	; 0x04
+    1334:	08 95       	ret
+
+00001336 <input_ch_w_timeout_0>:
+unsigned char									input_ch_w_timeout_0
+	(
+   char *					 	data,
+   volatile unsigned int				timeout
+   )
+   {
+    1336:	cf 93       	push	r28
+    1338:	df 93       	push	r29
+    133a:	1f 92       	push	r1
+    133c:	1f 92       	push	r1
+    133e:	cd b7       	in	r28, 0x3d	; 61
+    1340:	de b7       	in	r29, 0x3e	; 62
+    1342:	69 83       	std	Y+1, r22	; 0x01
+    1344:	7a 83       	std	Y+2, r23	; 0x02
+   unsigned int				timeout_counter = 0;
+    1346:	20 e0       	ldi	r18, 0x00	; 0
+    1348:	30 e0       	ldi	r19, 0x00	; 0
+
+   
+   //check if a byte has been recieved or if the timeout has been excedded
+   while (timeout_counter != timeout)
+    134a:	49 81       	ldd	r20, Y+1	; 0x01
+    134c:	5a 81       	ldd	r21, Y+2	; 0x02
+    134e:	24 17       	cp	r18, r20
+    1350:	35 07       	cpc	r19, r21
+    1352:	69 f0       	breq	.+26     	; 0x136e <input_ch_w_timeout_0+0x38>
+		{	
+		if (USART_IsRXComplete(&USART))
+    1354:	40 91 a1 08 	lds	r20, 0x08A1	; 0x8008a1 <__TEXT_REGION_LENGTH__+0x7008a1>
+    1358:	47 ff       	sbrs	r20, 7
+    135a:	06 c0       	rjmp	.+12     	; 0x1368 <input_ch_w_timeout_0+0x32>
+			{
+			*data = USART_GetChar(&USART);
+    135c:	20 91 a0 08 	lds	r18, 0x08A0	; 0x8008a0 <__TEXT_REGION_LENGTH__+0x7008a0>
+    1360:	fc 01       	movw	r30, r24
+    1362:	20 83       	st	Z, r18
+			return BYTE_REC;
+    1364:	81 e0       	ldi	r24, 0x01	; 1
+    1366:	04 c0       	rjmp	.+8      	; 0x1370 <input_ch_w_timeout_0+0x3a>
+			}
+		timeout_counter++;
+    1368:	2f 5f       	subi	r18, 0xFF	; 255
+    136a:	3f 4f       	sbci	r19, 0xFF	; 255
+    136c:	ee cf       	rjmp	.-36     	; 0x134a <input_ch_w_timeout_0+0x14>
+		}
+		
+	return TIMEOUT;
+    136e:	80 e0       	ldi	r24, 0x00	; 0
+	}
+    1370:	0f 90       	pop	r0
+    1372:	0f 90       	pop	r0
+    1374:	df 91       	pop	r29
+    1376:	cf 91       	pop	r28
+    1378:	08 95       	ret
+
+0000137a <input_ch_0>:
+	(
+   void
+   )
+   {
+   //check if a byte has been recieved or if the timeout has been excedded
+   while (!USART_IsRXComplete(&USART))
+    137a:	80 91 a1 08 	lds	r24, 0x08A1	; 0x8008a1 <__TEXT_REGION_LENGTH__+0x7008a1>
+    137e:	87 ff       	sbrs	r24, 7
+    1380:	fc cf       	rjmp	.-8      	; 0x137a <input_ch_0>
+		{
+		continue;		
+		}		
+	return USART_GetChar(&USART);;
+    1382:	80 91 a0 08 	lds	r24, 0x08A0	; 0x8008a0 <__TEXT_REGION_LENGTH__+0x7008a0>
+	}
+    1386:	08 95       	ret
+
+00001388 <output_ch_0>:
+void												output_ch_0
+	(
+	char							data
+	)
+	{
+	while(!USART_IsTXDataRegisterEmpty(&USART));
+    1388:	90 91 a1 08 	lds	r25, 0x08A1	; 0x8008a1 <__TEXT_REGION_LENGTH__+0x7008a1>
+    138c:	95 ff       	sbrs	r25, 5
+    138e:	fc cf       	rjmp	.-8      	; 0x1388 <output_ch_0>
+	USART_PutChar(&USART, data);
+    1390:	80 93 a0 08 	sts	0x08A0, r24	; 0x8008a0 <__TEXT_REGION_LENGTH__+0x7008a0>
+    1394:	08 95       	ret
+
+00001396 <USART_InterruptDriver_Initialize>:
+ *  \param dreIntLevel          Data register empty interrupt level.
+ */
+void USART_InterruptDriver_Initialize(USART_data_t * usart_data,
+                                      USART_t * usart,
+                                      USART_DREINTLVL_t dreIntLevel)
+{
+    1396:	fc 01       	movw	r30, r24
+	usart_data->usart = usart;
+    1398:	60 83       	st	Z, r22
+    139a:	71 83       	std	Z+1, r23	; 0x01
+	usart_data->dreIntLevel = dreIntLevel;
+    139c:	42 83       	std	Z+2, r20	; 0x02
+
+	usart_data->buffer.RX_Tail = 0;
+    139e:	14 86       	std	Z+12, r1	; 0x0c
+	usart_data->buffer.RX_Head = 0;
+    13a0:	13 86       	std	Z+11, r1	; 0x0b
+	usart_data->buffer.TX_Tail = 0;
+    13a2:	16 86       	std	Z+14, r1	; 0x0e
+	usart_data->buffer.TX_Head = 0;
+    13a4:	15 86       	std	Z+13, r1	; 0x0d
+    13a6:	08 95       	ret
+
+000013a8 <USART_InterruptDriver_DreInterruptLevel_Set>:
+ *  \param dreIntLevel        Interrupt level of the DRE interrupt.
+ */
+void USART_InterruptDriver_DreInterruptLevel_Set(USART_data_t * usart_data,
+                                                 USART_DREINTLVL_t dreIntLevel)
+{
+	usart_data->dreIntLevel = dreIntLevel;
+    13a8:	fc 01       	movw	r30, r24
+    13aa:	62 83       	std	Z+2, r22	; 0x02
+    13ac:	08 95       	ret
+
+000013ae <USART_TXBuffer_FreeSpace>:
+ *
+ *  \retval true      There is data in the receive buffer.
+ *  \retval false     The receive buffer is empty.
+ */
+bool USART_TXBuffer_FreeSpace(USART_data_t * usart_data)
+{
+    13ae:	fc 01       	movw	r30, r24
+	/* Make copies to make sure that volatile access is specified. */
+	uint8_t tempHead = (usart_data->buffer.TX_Head + 1) & USART_TX_BUFFER_MASK;
+    13b0:	95 85       	ldd	r25, Z+13	; 0x0d
+	uint8_t tempTail = usart_data->buffer.TX_Tail;
+    13b2:	26 85       	ldd	r18, Z+14	; 0x0e
+
+	/* There are data left in the buffer unless Head and Tail are equal. */
+	return (tempHead != tempTail);
+    13b4:	9f 5f       	subi	r25, 0xFF	; 255
+    13b6:	93 70       	andi	r25, 0x03	; 3
+    13b8:	81 e0       	ldi	r24, 0x01	; 1
+    13ba:	92 13       	cpse	r25, r18
+    13bc:	01 c0       	rjmp	.+2      	; 0x13c0 <USART_TXBuffer_FreeSpace+0x12>
+    13be:	80 e0       	ldi	r24, 0x00	; 0
+}
+    13c0:	08 95       	ret
+
+000013c2 <USART_TXBuffer_PutByte>:
+ *
+ *  \param usart_data The USART_data_t struct instance.
+ *  \param data       The data to send.
+ */
+bool USART_TXBuffer_PutByte(USART_data_t * usart_data, uint8_t data)
+{
+    13c2:	1f 93       	push	r17
+    13c4:	cf 93       	push	r28
+    13c6:	df 93       	push	r29
+    13c8:	ec 01       	movw	r28, r24
+    13ca:	16 2f       	mov	r17, r22
+	uint8_t tempTX_Head;
+	bool TXBuffer_FreeSpace;
+	USART_Buffer_t * TXbufPtr;
+
+	TXbufPtr = &usart_data->buffer;
+	TXBuffer_FreeSpace = USART_TXBuffer_FreeSpace(usart_data);
+    13cc:	0e 94 d7 09 	call	0x13ae	; 0x13ae <USART_TXBuffer_FreeSpace>
+
+
+	if(TXBuffer_FreeSpace)
+    13d0:	88 23       	and	r24, r24
+    13d2:	79 f0       	breq	.+30     	; 0x13f2 <USART_TXBuffer_PutByte+0x30>
+	{
+	  	tempTX_Head = TXbufPtr->TX_Head;
+    13d4:	9d 85       	ldd	r25, Y+13	; 0x0d
+	  	TXbufPtr->TX[tempTX_Head]= data;
+    13d6:	fe 01       	movw	r30, r28
+    13d8:	e9 0f       	add	r30, r25
+    13da:	f1 1d       	adc	r31, r1
+    13dc:	17 83       	std	Z+7, r17	; 0x07
+		/* Advance buffer head. */
+		TXbufPtr->TX_Head = (tempTX_Head + 1) & USART_TX_BUFFER_MASK;
+    13de:	9f 5f       	subi	r25, 0xFF	; 255
+    13e0:	93 70       	andi	r25, 0x03	; 3
+    13e2:	9d 87       	std	Y+13, r25	; 0x0d
+
+		/* Enable DRE interrupt. */
+		tempCTRLA = usart_data->usart->CTRLA;
+    13e4:	e8 81       	ld	r30, Y
+    13e6:	f9 81       	ldd	r31, Y+1	; 0x01
+    13e8:	93 81       	ldd	r25, Z+3	; 0x03
+		tempCTRLA = (tempCTRLA & ~USART_DREINTLVL_gm) | usart_data->dreIntLevel;
+    13ea:	9c 7f       	andi	r25, 0xFC	; 252
+    13ec:	2a 81       	ldd	r18, Y+2	; 0x02
+    13ee:	92 2b       	or	r25, r18
+		usart_data->usart->CTRLA = tempCTRLA;
+    13f0:	93 83       	std	Z+3, r25	; 0x03
+	}
+	return TXBuffer_FreeSpace;
+}
+    13f2:	df 91       	pop	r29
+    13f4:	cf 91       	pop	r28
+    13f6:	1f 91       	pop	r17
+    13f8:	08 95       	ret
+
+000013fa <USART_RXBufferData_Available>:
+ *  \retval false     The receive buffer is empty.
+ */
+bool USART_RXBufferData_Available(USART_data_t * usart_data)
+{
+	/* Make copies to make sure that volatile access is specified. */
+	uint8_t tempHead = usart_data->buffer.RX_Head;
+    13fa:	fc 01       	movw	r30, r24
+    13fc:	23 85       	ldd	r18, Z+11	; 0x0b
+	uint8_t tempTail = usart_data->buffer.RX_Tail;
+    13fe:	94 85       	ldd	r25, Z+12	; 0x0c
+
+	/* There are data left in the buffer unless Head and Tail are equal. */
+	return (tempHead != tempTail);
+    1400:	81 e0       	ldi	r24, 0x01	; 1
+    1402:	29 13       	cpse	r18, r25
+    1404:	01 c0       	rjmp	.+2      	; 0x1408 <USART_RXBufferData_Available+0xe>
+    1406:	80 e0       	ldi	r24, 0x00	; 0
+}
+    1408:	08 95       	ret
+
+0000140a <USART_RXBuffer_GetByte>:
+ *  \param usart_data       The USART_data_t struct instance.
+ *
+ *  \return         Received data.
+ */
+uint8_t USART_RXBuffer_GetByte(USART_data_t * usart_data)
+{
+    140a:	fc 01       	movw	r30, r24
+	USART_Buffer_t * bufPtr;
+	uint8_t ans;
+
+	bufPtr = &usart_data->buffer;
+	ans = (bufPtr->RX[bufPtr->RX_Tail]);
+    140c:	84 85       	ldd	r24, Z+12	; 0x0c
+    140e:	df 01       	movw	r26, r30
+    1410:	a8 0f       	add	r26, r24
+    1412:	b1 1d       	adc	r27, r1
+    1414:	13 96       	adiw	r26, 0x03	; 3
+    1416:	8c 91       	ld	r24, X
+
+	/* Advance buffer tail. */
+	bufPtr->RX_Tail = (bufPtr->RX_Tail + 1) & USART_RX_BUFFER_MASK;
+    1418:	94 85       	ldd	r25, Z+12	; 0x0c
+    141a:	9f 5f       	subi	r25, 0xFF	; 255
+    141c:	93 70       	andi	r25, 0x03	; 3
+    141e:	94 87       	std	Z+12, r25	; 0x0c
+
+	return ans;
+}
+    1420:	08 95       	ret
+
+00001422 <USART_RXComplete>:
+ *  Stores received data in RX software buffer.
+ *
+ *  \param usart_data      The USART_data_t struct instance.
+ */
+bool USART_RXComplete(USART_data_t * usart_data)
+{
+    1422:	fc 01       	movw	r30, r24
+	USART_Buffer_t * bufPtr;
+	bool ans;
+
+	bufPtr = &usart_data->buffer;
+	/* Advance buffer head. */
+	uint8_t tempRX_Head = (bufPtr->RX_Head + 1) & USART_RX_BUFFER_MASK;
+    1424:	83 85       	ldd	r24, Z+11	; 0x0b
+    1426:	8f 5f       	subi	r24, 0xFF	; 255
+    1428:	83 70       	andi	r24, 0x03	; 3
+
+	/* Check for overflow. */
+	uint8_t tempRX_Tail = bufPtr->RX_Tail;
+    142a:	24 85       	ldd	r18, Z+12	; 0x0c
+	uint8_t data = usart_data->usart->DATA;
+    142c:	a0 81       	ld	r26, Z
+    142e:	b1 81       	ldd	r27, Z+1	; 0x01
+    1430:	9c 91       	ld	r25, X
+
+	if (tempRX_Head == tempRX_Tail) {
+    1432:	82 17       	cp	r24, r18
+    1434:	49 f0       	breq	.+18     	; 0x1448 <USART_RXComplete+0x26>
+	  	ans = false;
+	}else{
+		ans = true;
+		usart_data->buffer.RX[usart_data->buffer.RX_Head] = data;
+    1436:	23 85       	ldd	r18, Z+11	; 0x0b
+    1438:	df 01       	movw	r26, r30
+    143a:	a2 0f       	add	r26, r18
+    143c:	b1 1d       	adc	r27, r1
+    143e:	13 96       	adiw	r26, 0x03	; 3
+    1440:	9c 93       	st	X, r25
+		usart_data->buffer.RX_Head = tempRX_Head;
+    1442:	83 87       	std	Z+11, r24	; 0x0b
+	uint8_t data = usart_data->usart->DATA;
+
+	if (tempRX_Head == tempRX_Tail) {
+	  	ans = false;
+	}else{
+		ans = true;
+    1444:	81 e0       	ldi	r24, 0x01	; 1
+    1446:	08 95       	ret
+	/* Check for overflow. */
+	uint8_t tempRX_Tail = bufPtr->RX_Tail;
+	uint8_t data = usart_data->usart->DATA;
+
+	if (tempRX_Head == tempRX_Tail) {
+	  	ans = false;
+    1448:	80 e0       	ldi	r24, 0x00	; 0
+		ans = true;
+		usart_data->buffer.RX[usart_data->buffer.RX_Head] = data;
+		usart_data->buffer.RX_Head = tempRX_Head;
+	}
+	return ans;
+}
+    144a:	08 95       	ret
+
+0000144c <USART_DataRegEmpty>:
+ *  is empty. Argument is pointer to USART (USART_data_t).
+ *
+ *  \param usart_data      The USART_data_t struct instance.
+ */
+void USART_DataRegEmpty(USART_data_t * usart_data)
+{
+    144c:	cf 93       	push	r28
+    144e:	df 93       	push	r29
+    1450:	fc 01       	movw	r30, r24
+	USART_Buffer_t * bufPtr;
+	bufPtr = &usart_data->buffer;
+
+	/* Check if all data is transmitted. */
+	uint8_t tempTX_Tail = usart_data->buffer.TX_Tail;
+    1452:	96 85       	ldd	r25, Z+14	; 0x0e
+	if (bufPtr->TX_Head == tempTX_Tail){
+    1454:	85 85       	ldd	r24, Z+13	; 0x0d
+    1456:	a0 81       	ld	r26, Z
+    1458:	b1 81       	ldd	r27, Z+1	; 0x01
+    145a:	98 13       	cpse	r25, r24
+    145c:	07 c0       	rjmp	.+14     	; 0x146c <USART_DataRegEmpty+0x20>
+	    /* Disable DRE interrupts. */
+		uint8_t tempCTRLA = usart_data->usart->CTRLA;
+    145e:	13 96       	adiw	r26, 0x03	; 3
+    1460:	8c 91       	ld	r24, X
+    1462:	13 97       	sbiw	r26, 0x03	; 3
+		tempCTRLA = (tempCTRLA & ~USART_DREINTLVL_gm) | USART_DREINTLVL_OFF_gc;
+    1464:	8c 7f       	andi	r24, 0xFC	; 252
+		usart_data->usart->CTRLA = tempCTRLA;
+    1466:	13 96       	adiw	r26, 0x03	; 3
+    1468:	8c 93       	st	X, r24
+    146a:	0a c0       	rjmp	.+20     	; 0x1480 <USART_DataRegEmpty+0x34>
+
+	}else{
+		/* Start transmitting. */
+		uint8_t data = bufPtr->TX[usart_data->buffer.TX_Tail];
+    146c:	86 85       	ldd	r24, Z+14	; 0x0e
+    146e:	ef 01       	movw	r28, r30
+    1470:	c8 0f       	add	r28, r24
+    1472:	d1 1d       	adc	r29, r1
+    1474:	8f 81       	ldd	r24, Y+7	; 0x07
+		usart_data->usart->DATA = data;
+    1476:	8c 93       	st	X, r24
+
+		/* Advance buffer tail. */
+		bufPtr->TX_Tail = (bufPtr->TX_Tail + 1) & USART_TX_BUFFER_MASK;
+    1478:	86 85       	ldd	r24, Z+14	; 0x0e
+    147a:	8f 5f       	subi	r24, 0xFF	; 255
+    147c:	83 70       	andi	r24, 0x03	; 3
+    147e:	86 87       	std	Z+14, r24	; 0x0e
+	}
+}
+    1480:	df 91       	pop	r29
+    1482:	cf 91       	pop	r28
+    1484:	08 95       	ret
+
+00001486 <USART_NineBits_PutChar>:
+ *
+ *  \param usart      The USART module.
+ *  \param data       The data to send.
+ */
+void USART_NineBits_PutChar(USART_t * usart, uint16_t data)
+{
+    1486:	fc 01       	movw	r30, r24
+	if(data & 0x0100) {
+		usart->CTRLB |= USART_TXB8_bm;
+    1488:	84 81       	ldd	r24, Z+4	; 0x04
+ *  \param usart      The USART module.
+ *  \param data       The data to send.
+ */
+void USART_NineBits_PutChar(USART_t * usart, uint16_t data)
+{
+	if(data & 0x0100) {
+    148a:	70 ff       	sbrs	r23, 0
+    148c:	02 c0       	rjmp	.+4      	; 0x1492 <USART_NineBits_PutChar+0xc>
+		usart->CTRLB |= USART_TXB8_bm;
+    148e:	81 60       	ori	r24, 0x01	; 1
+    1490:	01 c0       	rjmp	.+2      	; 0x1494 <USART_NineBits_PutChar+0xe>
+	}else {
+		usart->CTRLB &= ~USART_TXB8_bm;
+    1492:	8e 7f       	andi	r24, 0xFE	; 254
+    1494:	84 83       	std	Z+4, r24	; 0x04
+	}
+
+	usart->DATA = (data & 0x00FF);
+    1496:	60 83       	st	Z, r22
+    1498:	08 95       	ret
+
+0000149a <USART_NineBits_GetChar>:
+ *  \param usart      The USART module.
+ *
+ *  \retval           Received data.
+ */
+uint16_t USART_NineBits_GetChar(USART_t * usart)
+{
+    149a:	fc 01       	movw	r30, r24
+	if(usart->CTRLB & USART_RXB8_bm) {
+    149c:	84 81       	ldd	r24, Z+4	; 0x04
+    149e:	80 ff       	sbrs	r24, 0
+    14a0:	04 c0       	rjmp	.+8      	; 0x14aa <USART_NineBits_GetChar+0x10>
+		return(0x0100 | usart->DATA);
+    14a2:	80 81       	ld	r24, Z
+    14a4:	90 e0       	ldi	r25, 0x00	; 0
+    14a6:	91 60       	ori	r25, 0x01	; 1
+    14a8:	08 95       	ret
+	}else {
+		return(usart->DATA);
+    14aa:	80 81       	ld	r24, Z
+    14ac:	90 e0       	ldi	r25, 0x00	; 0
+	}
+}
+    14ae:	08 95       	ret
+
+000014b0 <platform_init>:
+#include "hal.h"
+#include "xmega_hal.h"
+
+void platform_init(void)
+{  
+    OSC.XOSCCTRL = 0x00;
+    14b0:	10 92 52 00 	sts	0x0052, r1	; 0x800052 <__TEXT_REGION_LENGTH__+0x700052>
+    OSC.PLLCTRL = 0x00;
+    14b4:	10 92 55 00 	sts	0x0055, r1	; 0x800055 <__TEXT_REGION_LENGTH__+0x700055>
+    OSC.CTRL |= OSC_XOSCEN_bm;
+    14b8:	80 91 50 00 	lds	r24, 0x0050	; 0x800050 <__TEXT_REGION_LENGTH__+0x700050>
+    14bc:	88 60       	ori	r24, 0x08	; 8
+    14be:	80 93 50 00 	sts	0x0050, r24	; 0x800050 <__TEXT_REGION_LENGTH__+0x700050>
+    
+    //wait for clock
+    while((OSC.STATUS & OSC_XOSCRDY_bm) == 0);
+    14c2:	80 91 51 00 	lds	r24, 0x0051	; 0x800051 <__TEXT_REGION_LENGTH__+0x700051>
+    14c6:	83 ff       	sbrs	r24, 3
+    14c8:	fc cf       	rjmp	.-8      	; 0x14c2 <platform_init+0x12>
+    
+    //Switch clock source
+    CCP = CCP_IOREG_gc;
+    14ca:	88 ed       	ldi	r24, 0xD8	; 216
+    14cc:	84 bf       	out	0x34, r24	; 52
+    CLK.CTRL = CLK_SCLKSEL_XOSC_gc;    
+    14ce:	83 e0       	ldi	r24, 0x03	; 3
+    14d0:	80 93 40 00 	sts	0x0040, r24	; 0x800040 <__TEXT_REGION_LENGTH__+0x700040>
+    
+    //Turn off other sources besides external    
+    OSC.CTRL = OSC_XOSCEN_bm;
+    14d4:	88 e0       	ldi	r24, 0x08	; 8
+    14d6:	80 93 50 00 	sts	0x0050, r24	; 0x800050 <__TEXT_REGION_LENGTH__+0x700050>
+    
+ #if PLATFORM == CW303
+    PORTA.DIRSET = PIN5_bm | PIN6_bm;
+    14da:	80 e6       	ldi	r24, 0x60	; 96
+    14dc:	80 93 01 06 	sts	0x0601, r24	; 0x800601 <__TEXT_REGION_LENGTH__+0x700601>
+    PORTA.OUTSET = PIN5_bm | PIN6_bm;
+    14e0:	80 93 05 06 	sts	0x0605, r24	; 0x800605 <__TEXT_REGION_LENGTH__+0x700605>
+    14e4:	08 95       	ret
+
+000014e6 <aes_indep_init>:
+#include "aes_keyschedule.h"
+
+aes128_ctx_t ctx;
+
+void aes_indep_init(void)
+{
+    14e6:	08 95       	ret
+
+000014e8 <aes_indep_key>:
+	;
+}
+
+void aes_indep_key(uint8_t * key)
+{
+	aes128_init(key, &ctx);
+    14e8:	6c e4       	ldi	r22, 0x4C	; 76
+    14ea:	71 e3       	ldi	r23, 0x31	; 49
+    14ec:	0c 94 73 0c 	jmp	0x18e6	; 0x18e6 <aes128_init>
+
+000014f0 <aes_indep_enc>:
+}
+
+void aes_indep_enc(uint8_t * pt)
+{
+	aes128_enc(pt, &ctx); /* encrypting the data block */
+    14f0:	6c e4       	ldi	r22, 0x4C	; 76
+    14f2:	71 e3       	ldi	r23, 0x31	; 49
+    14f4:	0c 94 82 0c 	jmp	0x1904	; 0x1904 <aes128_enc>
+
+000014f8 <aes_indep_mask>:
+}
+
+void aes_indep_mask(uint8_t * m)
+{
+    14f8:	08 95       	ret
+
+000014fa <aes_shiftcol>:
+#include "gf256mul.h"
+#include "aes_sbox.h"
+#include "aes_enc.h"
+#include <avr/pgmspace.h>
+
+void aes_shiftcol(void* data, uint8_t shift){
+    14fa:	cf 93       	push	r28
+    14fc:	df 93       	push	r29
+    14fe:	00 d0       	rcall	.+0      	; 0x1500 <aes_shiftcol+0x6>
+    1500:	1f 92       	push	r1
+    1502:	cd b7       	in	r28, 0x3d	; 61
+    1504:	de b7       	in	r29, 0x3e	; 62
+    1506:	dc 01       	movw	r26, r24
+	uint8_t tmp[4];
+	tmp[0] = ((uint8_t*)data)[ 0];
+    1508:	8c 91       	ld	r24, X
+    150a:	89 83       	std	Y+1, r24	; 0x01
+	tmp[1] = ((uint8_t*)data)[ 4];
+    150c:	14 96       	adiw	r26, 0x04	; 4
+    150e:	8c 91       	ld	r24, X
+    1510:	14 97       	sbiw	r26, 0x04	; 4
+    1512:	8a 83       	std	Y+2, r24	; 0x02
+	tmp[2] = ((uint8_t*)data)[ 8];
+    1514:	18 96       	adiw	r26, 0x08	; 8
+    1516:	8c 91       	ld	r24, X
+    1518:	18 97       	sbiw	r26, 0x08	; 8
+    151a:	8b 83       	std	Y+3, r24	; 0x03
+	tmp[3] = ((uint8_t*)data)[12];
+    151c:	1c 96       	adiw	r26, 0x0c	; 12
+    151e:	8c 91       	ld	r24, X
+    1520:	1c 97       	sbiw	r26, 0x0c	; 12
+    1522:	8c 83       	std	Y+4, r24	; 0x04
+	((uint8_t*)data)[ 0] = tmp[(shift+0)&3];
+    1524:	86 2f       	mov	r24, r22
+    1526:	83 70       	andi	r24, 0x03	; 3
+    1528:	e1 e0       	ldi	r30, 0x01	; 1
+    152a:	f0 e0       	ldi	r31, 0x00	; 0
+    152c:	ec 0f       	add	r30, r28
+    152e:	fd 1f       	adc	r31, r29
+    1530:	e8 0f       	add	r30, r24
+    1532:	f1 1d       	adc	r31, r1
+    1534:	80 81       	ld	r24, Z
+    1536:	8c 93       	st	X, r24
+	((uint8_t*)data)[ 4] = tmp[(shift+1)&3];
+    1538:	70 e0       	ldi	r23, 0x00	; 0
+    153a:	fb 01       	movw	r30, r22
+    153c:	31 96       	adiw	r30, 0x01	; 1
+    153e:	e3 70       	andi	r30, 0x03	; 3
+    1540:	ff 27       	eor	r31, r31
+    1542:	81 e0       	ldi	r24, 0x01	; 1
+    1544:	90 e0       	ldi	r25, 0x00	; 0
+    1546:	8c 0f       	add	r24, r28
+    1548:	9d 1f       	adc	r25, r29
+    154a:	e8 0f       	add	r30, r24
+    154c:	f9 1f       	adc	r31, r25
+    154e:	80 81       	ld	r24, Z
+    1550:	14 96       	adiw	r26, 0x04	; 4
+    1552:	8c 93       	st	X, r24
+    1554:	14 97       	sbiw	r26, 0x04	; 4
+	((uint8_t*)data)[ 8] = tmp[(shift+2)&3];
+    1556:	fb 01       	movw	r30, r22
+    1558:	32 96       	adiw	r30, 0x02	; 2
+    155a:	e3 70       	andi	r30, 0x03	; 3
+    155c:	ff 27       	eor	r31, r31
+    155e:	81 e0       	ldi	r24, 0x01	; 1
+    1560:	90 e0       	ldi	r25, 0x00	; 0
+    1562:	8c 0f       	add	r24, r28
+    1564:	9d 1f       	adc	r25, r29
+    1566:	e8 0f       	add	r30, r24
+    1568:	f9 1f       	adc	r31, r25
+    156a:	80 81       	ld	r24, Z
+    156c:	18 96       	adiw	r26, 0x08	; 8
+    156e:	8c 93       	st	X, r24
+    1570:	18 97       	sbiw	r26, 0x08	; 8
+	((uint8_t*)data)[12] = tmp[(shift+3)&3];
+    1572:	fb 01       	movw	r30, r22
+    1574:	33 96       	adiw	r30, 0x03	; 3
+    1576:	e3 70       	andi	r30, 0x03	; 3
+    1578:	ff 27       	eor	r31, r31
+    157a:	81 e0       	ldi	r24, 0x01	; 1
+    157c:	90 e0       	ldi	r25, 0x00	; 0
+    157e:	8c 0f       	add	r24, r28
+    1580:	9d 1f       	adc	r25, r29
+    1582:	e8 0f       	add	r30, r24
+    1584:	f9 1f       	adc	r31, r25
+    1586:	80 81       	ld	r24, Z
+    1588:	1c 96       	adiw	r26, 0x0c	; 12
+    158a:	8c 93       	st	X, r24
+}
+    158c:	24 96       	adiw	r28, 0x04	; 4
+    158e:	cd bf       	out	0x3d, r28	; 61
+    1590:	de bf       	out	0x3e, r29	; 62
+    1592:	df 91       	pop	r29
+    1594:	cf 91       	pop	r28
+    1596:	08 95       	ret
+
+00001598 <aes_encrypt_core>:
+	for(i=0; i<16; ++i){
+		state->s[i] ^= k->ks[i];
+	}
+}
+
+void aes_encrypt_core(aes_cipher_state_t* state, const aes_genctx_t* ks, uint8_t rounds){
+    1598:	2f 92       	push	r2
+    159a:	3f 92       	push	r3
+    159c:	4f 92       	push	r4
+    159e:	5f 92       	push	r5
+    15a0:	6f 92       	push	r6
+    15a2:	7f 92       	push	r7
+    15a4:	8f 92       	push	r8
+    15a6:	9f 92       	push	r9
+    15a8:	af 92       	push	r10
+    15aa:	bf 92       	push	r11
+    15ac:	cf 92       	push	r12
+    15ae:	df 92       	push	r13
+    15b0:	ef 92       	push	r14
+    15b2:	ff 92       	push	r15
+    15b4:	0f 93       	push	r16
+    15b6:	1f 93       	push	r17
+    15b8:	cf 93       	push	r28
+    15ba:	df 93       	push	r29
+    15bc:	cd b7       	in	r28, 0x3d	; 61
+    15be:	de b7       	in	r29, 0x3e	; 62
+    15c0:	63 97       	sbiw	r28, 0x13	; 19
+    15c2:	cd bf       	out	0x3d, r28	; 61
+    15c4:	de bf       	out	0x3e, r29	; 62
+    15c6:	7c 01       	movw	r14, r24
+    15c8:	5b 01       	movw	r10, r22
+    15ca:	24 2e       	mov	r2, r20
+    15cc:	db 01       	movw	r26, r22
+    15ce:	8a 8b       	std	Y+18, r24	; 0x12
+    15d0:	9b 8b       	std	Y+19, r25	; 0x13
+    15d2:	2c 01       	movw	r4, r24
+    15d4:	20 e1       	ldi	r18, 0x10	; 16
+    15d6:	42 0e       	add	r4, r18
+    15d8:	51 1c       	adc	r5, r1
+    15da:	fc 01       	movw	r30, r24
+	uint8_t i;
+	for(i=0; i<16; ++i){
+		state->s[i] ^= ks->key[0].ks[i];
+    15dc:	8d 91       	ld	r24, X+
+    15de:	90 81       	ld	r25, Z
+    15e0:	89 27       	eor	r24, r25
+    15e2:	81 93       	st	Z+, r24
+	}
+}
+
+void aes_encrypt_core(aes_cipher_state_t* state, const aes_genctx_t* ks, uint8_t rounds){
+	uint8_t i;
+	for(i=0; i<16; ++i){
+    15e4:	e4 15       	cp	r30, r4
+    15e6:	f5 05       	cpc	r31, r5
+    15e8:	c9 f7       	brne	.-14     	; 0x15dc <aes_encrypt_core+0x44>
+    15ea:	45 01       	movw	r8, r10
+    15ec:	30 e1       	ldi	r19, 0x10	; 16
+    15ee:	83 0e       	add	r8, r19
+    15f0:	91 1c       	adc	r9, r1
+    15f2:	81 e0       	ldi	r24, 0x01	; 1
+    15f4:	89 8b       	std	Y+17, r24	; 0x11
+    15f6:	3e 01       	movw	r6, r28
+    15f8:	a1 e1       	ldi	r26, 0x11	; 17
+    15fa:	6a 0e       	add	r6, r26
+    15fc:	71 1c       	adc	r7, r1
+		state->s[i] ^= ks->key[0].ks[i];
+	}
+	i=1;
+	for(;rounds>1;--rounds){
+    15fe:	21 e0       	ldi	r18, 0x01	; 1
+    1600:	22 15       	cp	r18, r2
+    1602:	08 f0       	brcs	.+2      	; 0x1606 <aes_encrypt_core+0x6e>
+    1604:	81 c0       	rjmp	.+258    	; 0x1708 <aes_encrypt_core+0x170>
+    1606:	8e 01       	movw	r16, r28
+    1608:	0f 5f       	subi	r16, 0xFF	; 255
+    160a:	1f 4f       	sbci	r17, 0xFF	; 255
+    160c:	d8 01       	movw	r26, r16
+    160e:	c7 01       	movw	r24, r14
+void aes_enc_round(aes_cipher_state_t* state, const aes_roundkey_t* k){
+	uint8_t tmp[16], t;
+	uint8_t i;
+	/* subBytes */
+	for(i=0; i<16; ++i){
+		tmp[i] = pgm_read_byte(aes_sbox+state->s[i]);
+    1610:	fc 01       	movw	r30, r24
+    1612:	21 91       	ld	r18, Z+
+    1614:	cf 01       	movw	r24, r30
+    1616:	e2 2f       	mov	r30, r18
+    1618:	f0 e0       	ldi	r31, 0x00	; 0
+    161a:	ea 51       	subi	r30, 0x1A	; 26
+    161c:	fe 4f       	sbci	r31, 0xFE	; 254
+    161e:	e4 91       	lpm	r30, Z
+    1620:	ed 93       	st	X+, r30
+static
+void aes_enc_round(aes_cipher_state_t* state, const aes_roundkey_t* k){
+	uint8_t tmp[16], t;
+	uint8_t i;
+	/* subBytes */
+	for(i=0; i<16; ++i){
+    1622:	a6 15       	cp	r26, r6
+    1624:	b7 05       	cpc	r27, r7
+    1626:	a1 f7       	brne	.-24     	; 0x1610 <aes_encrypt_core+0x78>
+		tmp[i] = pgm_read_byte(aes_sbox+state->s[i]);
+	}
+	/* shiftRows */
+	aes_shiftcol(tmp+1, 1);
+    1628:	61 e0       	ldi	r22, 0x01	; 1
+    162a:	ce 01       	movw	r24, r28
+    162c:	02 96       	adiw	r24, 0x02	; 2
+    162e:	0e 94 7d 0a 	call	0x14fa	; 0x14fa <aes_shiftcol>
+	aes_shiftcol(tmp+2, 2);
+    1632:	62 e0       	ldi	r22, 0x02	; 2
+    1634:	ce 01       	movw	r24, r28
+    1636:	03 96       	adiw	r24, 0x03	; 3
+    1638:	0e 94 7d 0a 	call	0x14fa	; 0x14fa <aes_shiftcol>
+	aes_shiftcol(tmp+3, 3);
+    163c:	63 e0       	ldi	r22, 0x03	; 3
+    163e:	ce 01       	movw	r24, r28
+    1640:	04 96       	adiw	r24, 0x04	; 4
+    1642:	0e 94 7d 0a 	call	0x14fa	; 0x14fa <aes_shiftcol>
+    1646:	67 01       	movw	r12, r14
+	/* mixColums */
+	for(i=0; i<4; ++i){
+		t = tmp[4*i+0] ^ tmp[4*i+1] ^ tmp[4*i+2] ^ tmp[4*i+3];
+    1648:	d8 01       	movw	r26, r16
+    164a:	6c 91       	ld	r22, X
+    164c:	11 96       	adiw	r26, 0x01	; 1
+    164e:	8c 91       	ld	r24, X
+    1650:	11 97       	sbiw	r26, 0x01	; 1
+    1652:	68 27       	eor	r22, r24
+    1654:	12 96       	adiw	r26, 0x02	; 2
+    1656:	3c 90       	ld	r3, X
+    1658:	12 97       	sbiw	r26, 0x02	; 2
+    165a:	13 96       	adiw	r26, 0x03	; 3
+    165c:	8c 91       	ld	r24, X
+    165e:	38 26       	eor	r3, r24
+    1660:	36 26       	eor	r3, r22
+		state->s[4*i+0] =
+			  GF256MUL_2(tmp[4*i+0]^tmp[4*i+1])
+    1662:	4b e1       	ldi	r20, 0x1B	; 27
+    1664:	82 e0       	ldi	r24, 0x02	; 2
+    1666:	0e 94 85 0c 	call	0x190a	; 0x190a <gf256mul>
+	aes_shiftcol(tmp+2, 2);
+	aes_shiftcol(tmp+3, 3);
+	/* mixColums */
+	for(i=0; i<4; ++i){
+		t = tmp[4*i+0] ^ tmp[4*i+1] ^ tmp[4*i+2] ^ tmp[4*i+3];
+		state->s[4*i+0] =
+    166a:	f8 01       	movw	r30, r16
+    166c:	90 81       	ld	r25, Z
+    166e:	89 27       	eor	r24, r25
+    1670:	83 25       	eor	r24, r3
+    1672:	d6 01       	movw	r26, r12
+    1674:	8c 93       	st	X, r24
+			  GF256MUL_2(tmp[4*i+0]^tmp[4*i+1])
+			^ tmp[4*i+0]
+			^ t;
+		state->s[4*i+1] =
+			  GF256MUL_2(tmp[4*i+1]^tmp[4*i+2])
+    1676:	61 81       	ldd	r22, Z+1	; 0x01
+    1678:	82 81       	ldd	r24, Z+2	; 0x02
+    167a:	68 27       	eor	r22, r24
+    167c:	4b e1       	ldi	r20, 0x1B	; 27
+    167e:	82 e0       	ldi	r24, 0x02	; 2
+    1680:	0e 94 85 0c 	call	0x190a	; 0x190a <gf256mul>
+		t = tmp[4*i+0] ^ tmp[4*i+1] ^ tmp[4*i+2] ^ tmp[4*i+3];
+		state->s[4*i+0] =
+			  GF256MUL_2(tmp[4*i+0]^tmp[4*i+1])
+			^ tmp[4*i+0]
+			^ t;
+		state->s[4*i+1] =
+    1684:	f8 01       	movw	r30, r16
+    1686:	91 81       	ldd	r25, Z+1	; 0x01
+    1688:	89 27       	eor	r24, r25
+    168a:	83 25       	eor	r24, r3
+    168c:	d6 01       	movw	r26, r12
+    168e:	11 96       	adiw	r26, 0x01	; 1
+    1690:	8c 93       	st	X, r24
+			  GF256MUL_2(tmp[4*i+1]^tmp[4*i+2])
+			^ tmp[4*i+1]
+			^ t;
+		state->s[4*i+2] =
+			  GF256MUL_2(tmp[4*i+2]^tmp[4*i+3])
+    1692:	62 81       	ldd	r22, Z+2	; 0x02
+    1694:	83 81       	ldd	r24, Z+3	; 0x03
+    1696:	68 27       	eor	r22, r24
+    1698:	4b e1       	ldi	r20, 0x1B	; 27
+    169a:	82 e0       	ldi	r24, 0x02	; 2
+    169c:	0e 94 85 0c 	call	0x190a	; 0x190a <gf256mul>
+			^ t;
+		state->s[4*i+1] =
+			  GF256MUL_2(tmp[4*i+1]^tmp[4*i+2])
+			^ tmp[4*i+1]
+			^ t;
+		state->s[4*i+2] =
+    16a0:	f8 01       	movw	r30, r16
+    16a2:	92 81       	ldd	r25, Z+2	; 0x02
+    16a4:	89 27       	eor	r24, r25
+    16a6:	83 25       	eor	r24, r3
+    16a8:	d6 01       	movw	r26, r12
+    16aa:	12 96       	adiw	r26, 0x02	; 2
+    16ac:	8c 93       	st	X, r24
+			  GF256MUL_2(tmp[4*i+2]^tmp[4*i+3])
+			^ tmp[4*i+2]
+			^ t;
+		state->s[4*i+3] =
+			  GF256MUL_2(tmp[4*i+3]^tmp[4*i+0])
+    16ae:	63 81       	ldd	r22, Z+3	; 0x03
+    16b0:	80 81       	ld	r24, Z
+    16b2:	68 27       	eor	r22, r24
+    16b4:	4b e1       	ldi	r20, 0x1B	; 27
+    16b6:	82 e0       	ldi	r24, 0x02	; 2
+    16b8:	0e 94 85 0c 	call	0x190a	; 0x190a <gf256mul>
+			^ t;
+		state->s[4*i+2] =
+			  GF256MUL_2(tmp[4*i+2]^tmp[4*i+3])
+			^ tmp[4*i+2]
+			^ t;
+		state->s[4*i+3] =
+    16bc:	f8 01       	movw	r30, r16
+    16be:	93 81       	ldd	r25, Z+3	; 0x03
+    16c0:	89 27       	eor	r24, r25
+    16c2:	38 26       	eor	r3, r24
+    16c4:	d6 01       	movw	r26, r12
+    16c6:	13 96       	adiw	r26, 0x03	; 3
+    16c8:	3c 92       	st	X, r3
+    16ca:	0c 5f       	subi	r16, 0xFC	; 252
+    16cc:	1f 4f       	sbci	r17, 0xFF	; 255
+    16ce:	b4 e0       	ldi	r27, 0x04	; 4
+    16d0:	cb 0e       	add	r12, r27
+    16d2:	d1 1c       	adc	r13, r1
+	/* shiftRows */
+	aes_shiftcol(tmp+1, 1);
+	aes_shiftcol(tmp+2, 2);
+	aes_shiftcol(tmp+3, 3);
+	/* mixColums */
+	for(i=0; i<4; ++i){
+    16d4:	06 15       	cp	r16, r6
+    16d6:	17 05       	cpc	r17, r7
+    16d8:	09 f0       	breq	.+2      	; 0x16dc <aes_encrypt_core+0x144>
+    16da:	b6 cf       	rjmp	.-148    	; 0x1648 <aes_encrypt_core+0xb0>
+    16dc:	f7 01       	movw	r30, r14
+    16de:	80 e0       	ldi	r24, 0x00	; 0
+    16e0:	90 e0       	ldi	r25, 0x00	; 0
+			^ t;
+	}
+
+	/* addKey */
+	for(i=0; i<16; ++i){
+		state->s[i] ^= k->ks[i];
+    16e2:	d4 01       	movw	r26, r8
+    16e4:	a8 0f       	add	r26, r24
+    16e6:	b9 1f       	adc	r27, r25
+    16e8:	30 81       	ld	r19, Z
+    16ea:	2c 91       	ld	r18, X
+    16ec:	23 27       	eor	r18, r19
+    16ee:	21 93       	st	Z+, r18
+    16f0:	01 96       	adiw	r24, 0x01	; 1
+			^ tmp[4*i+3]
+			^ t;
+	}
+
+	/* addKey */
+	for(i=0; i<16; ++i){
+    16f2:	80 31       	cpi	r24, 0x10	; 16
+    16f4:	91 05       	cpc	r25, r1
+    16f6:	a9 f7       	brne	.-22     	; 0x16e2 <aes_encrypt_core+0x14a>
+		state->s[i] ^= ks->key[0].ks[i];
+	}
+	i=1;
+	for(;rounds>1;--rounds){
+		aes_enc_round(state, &(ks->key[i]));
+		++i;
+    16f8:	e9 89       	ldd	r30, Y+17	; 0x11
+    16fa:	ef 5f       	subi	r30, 0xFF	; 255
+    16fc:	e9 8b       	std	Y+17, r30	; 0x11
+	uint8_t i;
+	for(i=0; i<16; ++i){
+		state->s[i] ^= ks->key[0].ks[i];
+	}
+	i=1;
+	for(;rounds>1;--rounds){
+    16fe:	2a 94       	dec	r2
+    1700:	f0 e1       	ldi	r31, 0x10	; 16
+    1702:	8f 0e       	add	r8, r31
+    1704:	91 1c       	adc	r9, r1
+    1706:	7b cf       	rjmp	.-266    	; 0x15fe <aes_encrypt_core+0x66>
+		aes_enc_round(state, &(ks->key[i]));
+		++i;
+	}
+	aes_enc_lastround(state, &(ks->key[i]));
+    1708:	d7 01       	movw	r26, r14
+static
+void aes_enc_lastround(aes_cipher_state_t* state,const aes_roundkey_t* k){
+	uint8_t i;
+	/* subBytes */
+	for(i=0; i<16; ++i){
+		state->s[i] = pgm_read_byte(aes_sbox+state->s[i]);
+    170a:	ec 91       	ld	r30, X
+    170c:	f0 e0       	ldi	r31, 0x00	; 0
+    170e:	ea 51       	subi	r30, 0x1A	; 26
+    1710:	fe 4f       	sbci	r31, 0xFE	; 254
+    1712:	e4 91       	lpm	r30, Z
+    1714:	ed 93       	st	X+, r30
+
+static
+void aes_enc_lastround(aes_cipher_state_t* state,const aes_roundkey_t* k){
+	uint8_t i;
+	/* subBytes */
+	for(i=0; i<16; ++i){
+    1716:	a4 15       	cp	r26, r4
+    1718:	b5 05       	cpc	r27, r5
+    171a:	b9 f7       	brne	.-18     	; 0x170a <aes_encrypt_core+0x172>
+		state->s[i] = pgm_read_byte(aes_sbox+state->s[i]);
+	}
+	/* shiftRows */
+	aes_shiftcol(state->s+1, 1);
+    171c:	61 e0       	ldi	r22, 0x01	; 1
+    171e:	c7 01       	movw	r24, r14
+    1720:	01 96       	adiw	r24, 0x01	; 1
+    1722:	0e 94 7d 0a 	call	0x14fa	; 0x14fa <aes_shiftcol>
+	aes_shiftcol(state->s+2, 2);
+    1726:	62 e0       	ldi	r22, 0x02	; 2
+    1728:	c7 01       	movw	r24, r14
+    172a:	02 96       	adiw	r24, 0x02	; 2
+    172c:	0e 94 7d 0a 	call	0x14fa	; 0x14fa <aes_shiftcol>
+	aes_shiftcol(state->s+3, 3);
+    1730:	63 e0       	ldi	r22, 0x03	; 3
+    1732:	c7 01       	movw	r24, r14
+    1734:	03 96       	adiw	r24, 0x03	; 3
+    1736:	0e 94 7d 0a 	call	0x14fa	; 0x14fa <aes_shiftcol>
+    173a:	a9 89       	ldd	r26, Y+17	; 0x11
+    173c:	30 e1       	ldi	r19, 0x10	; 16
+    173e:	a3 9f       	mul	r26, r19
+    1740:	c0 01       	movw	r24, r0
+    1742:	11 24       	eor	r1, r1
+    1744:	20 e0       	ldi	r18, 0x00	; 0
+    1746:	30 e0       	ldi	r19, 0x00	; 0
+	/* keyAdd */
+	for(i=0; i<16; ++i){
+		state->s[i] ^= k->ks[i];
+    1748:	fc 01       	movw	r30, r24
+    174a:	e2 0f       	add	r30, r18
+    174c:	f3 1f       	adc	r31, r19
+    174e:	ea 0d       	add	r30, r10
+    1750:	fb 1d       	adc	r31, r11
+    1752:	aa 89       	ldd	r26, Y+18	; 0x12
+    1754:	bb 89       	ldd	r27, Y+19	; 0x13
+    1756:	5c 91       	ld	r21, X
+    1758:	40 81       	ld	r20, Z
+    175a:	45 27       	eor	r20, r21
+    175c:	4d 93       	st	X+, r20
+    175e:	aa 8b       	std	Y+18, r26	; 0x12
+    1760:	bb 8b       	std	Y+19, r27	; 0x13
+    1762:	2f 5f       	subi	r18, 0xFF	; 255
+    1764:	3f 4f       	sbci	r19, 0xFF	; 255
+	/* shiftRows */
+	aes_shiftcol(state->s+1, 1);
+	aes_shiftcol(state->s+2, 2);
+	aes_shiftcol(state->s+3, 3);
+	/* keyAdd */
+	for(i=0; i<16; ++i){
+    1766:	20 31       	cpi	r18, 0x10	; 16
+    1768:	31 05       	cpc	r19, r1
+    176a:	71 f7       	brne	.-36     	; 0x1748 <aes_encrypt_core+0x1b0>
+	for(;rounds>1;--rounds){
+		aes_enc_round(state, &(ks->key[i]));
+		++i;
+	}
+	aes_enc_lastround(state, &(ks->key[i]));
+}
+    176c:	63 96       	adiw	r28, 0x13	; 19
+    176e:	cd bf       	out	0x3d, r28	; 61
+    1770:	de bf       	out	0x3e, r29	; 62
+    1772:	df 91       	pop	r29
+    1774:	cf 91       	pop	r28
+    1776:	1f 91       	pop	r17
+    1778:	0f 91       	pop	r16
+    177a:	ff 90       	pop	r15
+    177c:	ef 90       	pop	r14
+    177e:	df 90       	pop	r13
+    1780:	cf 90       	pop	r12
+    1782:	bf 90       	pop	r11
+    1784:	af 90       	pop	r10
+    1786:	9f 90       	pop	r9
+    1788:	8f 90       	pop	r8
+    178a:	7f 90       	pop	r7
+    178c:	6f 90       	pop	r6
+    178e:	5f 90       	pop	r5
+    1790:	4f 90       	pop	r4
+    1792:	3f 90       	pop	r3
+    1794:	2f 90       	pop	r2
+    1796:	08 95       	ret
+
+00001798 <aes_init>:
+
+const uint8_t rc_tab[] PROGMEM = { 0x01, 0x02, 0x04, 0x08,
+                             0x10, 0x20, 0x40, 0x80,
+                             0x1b, 0x36 };
+
+void aes_init(const void* key, uint16_t keysize_b, aes_genctx_t* ctx){
+    1798:	8f 92       	push	r8
+    179a:	9f 92       	push	r9
+    179c:	af 92       	push	r10
+    179e:	bf 92       	push	r11
+    17a0:	cf 92       	push	r12
+    17a2:	df 92       	push	r13
+    17a4:	ef 92       	push	r14
+    17a6:	ff 92       	push	r15
+    17a8:	0f 93       	push	r16
+    17aa:	1f 93       	push	r17
+    17ac:	cf 93       	push	r28
+    17ae:	df 93       	push	r29
+    17b0:	ea 01       	movw	r28, r20
+	uint8_t rc=0;
+	union {
+		uint32_t v32;
+		uint8_t  v8[4];
+	} tmp;
+	nk=keysize_b>>5; /* 4, 6, 8 */
+    17b2:	6b 01       	movw	r12, r22
+    17b4:	f5 e0       	ldi	r31, 0x05	; 5
+    17b6:	d6 94       	lsr	r13
+    17b8:	c7 94       	ror	r12
+    17ba:	fa 95       	dec	r31
+    17bc:	e1 f7       	brne	.-8      	; 0x17b6 <aes_init+0x1e>
+    17be:	ec 2c       	mov	r14, r12
+	hi=4*(nk+6+1);
+    17c0:	86 01       	movw	r16, r12
+    17c2:	11 27       	eor	r17, r17
+    17c4:	98 01       	movw	r18, r16
+    17c6:	29 5f       	subi	r18, 0xF9	; 249
+    17c8:	3f 4f       	sbci	r19, 0xFF	; 255
+    17ca:	f2 2e       	mov	r15, r18
+    17cc:	ff 0c       	add	r15, r15
+    17ce:	ff 0c       	add	r15, r15
+	memcpy(ctx, key, keysize_b/8);
+    17d0:	ab 01       	movw	r20, r22
+    17d2:	a3 e0       	ldi	r26, 0x03	; 3
+    17d4:	56 95       	lsr	r21
+    17d6:	47 95       	ror	r20
+    17d8:	aa 95       	dec	r26
+    17da:	e1 f7       	brne	.-8      	; 0x17d4 <aes_init+0x3c>
+    17dc:	bc 01       	movw	r22, r24
+    17de:	ce 01       	movw	r24, r28
+    17e0:	0e 94 3a 0d 	call	0x1a74	; 0x1a74 <memcpy>
+	next_nk = nk;
+    17e4:	dc 2c       	mov	r13, r12
+	for(i=nk;i<hi;++i){
+    17e6:	2c 2d       	mov	r18, r12
+                             0x10, 0x20, 0x40, 0x80,
+                             0x1b, 0x36 };
+
+void aes_init(const void* key, uint16_t keysize_b, aes_genctx_t* ctx){
+	uint8_t hi,i,nk, next_nk;
+	uint8_t rc=0;
+    17e8:	30 e0       	ldi	r19, 0x00	; 0
+	} tmp;
+	nk=keysize_b>>5; /* 4, 6, 8 */
+	hi=4*(nk+6+1);
+	memcpy(ctx, key, keysize_b/8);
+	next_nk = nk;
+	for(i=nk;i<hi;++i){
+    17ea:	2f 15       	cp	r18, r15
+    17ec:	08 f0       	brcs	.+2      	; 0x17f0 <aes_init+0x58>
+    17ee:	6e c0       	rjmp	.+220    	; 0x18cc <aes_init+0x134>
+		tmp.v32 = ((uint32_t*)(ctx->key[0].ks))[i-1];
+    17f0:	62 2f       	mov	r22, r18
+    17f2:	70 e0       	ldi	r23, 0x00	; 0
+    17f4:	ab 01       	movw	r20, r22
+    17f6:	41 50       	subi	r20, 0x01	; 1
+    17f8:	50 4c       	sbci	r21, 0xC0	; 192
+    17fa:	44 0f       	add	r20, r20
+    17fc:	55 1f       	adc	r21, r21
+    17fe:	44 0f       	add	r20, r20
+    1800:	55 1f       	adc	r21, r21
+    1802:	4c 0f       	add	r20, r28
+    1804:	5d 1f       	adc	r21, r29
+    1806:	fa 01       	movw	r30, r20
+    1808:	80 81       	ld	r24, Z
+    180a:	91 81       	ldd	r25, Z+1	; 0x01
+    180c:	a2 81       	ldd	r26, Z+2	; 0x02
+    180e:	b3 81       	ldd	r27, Z+3	; 0x03
+		if(i!=next_nk){
+    1810:	2d 15       	cp	r18, r13
+    1812:	09 f1       	breq	.+66     	; 0x1856 <aes_init+0xbe>
+			if(nk==8 && i%8==4){
+    1814:	f8 e0       	ldi	r31, 0x08	; 8
+    1816:	ef 12       	cpse	r14, r31
+    1818:	41 c0       	rjmp	.+130    	; 0x189c <aes_init+0x104>
+    181a:	e2 2f       	mov	r30, r18
+    181c:	e7 70       	andi	r30, 0x07	; 7
+    181e:	e4 30       	cpi	r30, 0x04	; 4
+    1820:	09 f0       	breq	.+2      	; 0x1824 <aes_init+0x8c>
+    1822:	3c c0       	rjmp	.+120    	; 0x189c <aes_init+0x104>
+				tmp.v8[0] = pgm_read_byte(aes_sbox+tmp.v8[0]);
+    1824:	e8 2f       	mov	r30, r24
+    1826:	f0 e0       	ldi	r31, 0x00	; 0
+    1828:	ea 51       	subi	r30, 0x1A	; 26
+    182a:	fe 4f       	sbci	r31, 0xFE	; 254
+    182c:	e4 91       	lpm	r30, Z
+    182e:	8e 2f       	mov	r24, r30
+				tmp.v8[1] = pgm_read_byte(aes_sbox+tmp.v8[1]);
+    1830:	e9 2f       	mov	r30, r25
+    1832:	f0 e0       	ldi	r31, 0x00	; 0
+    1834:	ea 51       	subi	r30, 0x1A	; 26
+    1836:	fe 4f       	sbci	r31, 0xFE	; 254
+    1838:	e4 91       	lpm	r30, Z
+    183a:	9e 2f       	mov	r25, r30
+				tmp.v8[2] = pgm_read_byte(aes_sbox+tmp.v8[2]);
+    183c:	ea 2f       	mov	r30, r26
+    183e:	f0 e0       	ldi	r31, 0x00	; 0
+    1840:	ea 51       	subi	r30, 0x1A	; 26
+    1842:	fe 4f       	sbci	r31, 0xFE	; 254
+    1844:	e4 91       	lpm	r30, Z
+    1846:	ae 2f       	mov	r26, r30
+				tmp.v8[3] = pgm_read_byte(aes_sbox+tmp.v8[3]);
+    1848:	eb 2f       	mov	r30, r27
+    184a:	f0 e0       	ldi	r31, 0x00	; 0
+    184c:	ea 51       	subi	r30, 0x1A	; 26
+    184e:	fe 4f       	sbci	r31, 0xFE	; 254
+    1850:	e4 91       	lpm	r30, Z
+    1852:	be 2f       	mov	r27, r30
+    1854:	23 c0       	rjmp	.+70     	; 0x189c <aes_init+0x104>
+			}
+		} else {
+			next_nk += nk;
+    1856:	d2 2e       	mov	r13, r18
+    1858:	de 0c       	add	r13, r14
+#include <avr/pgmspace.h>
+
+static
+void aes_rotword(void* a){
+	uint8_t t;
+	t=((uint8_t*)a)[0];
+    185a:	c8 2e       	mov	r12, r24
+	((uint8_t*)a)[0] = ((uint8_t*)a)[1];
+	((uint8_t*)a)[1] = ((uint8_t*)a)[2];
+	((uint8_t*)a)[2] = ((uint8_t*)a)[3];
+    185c:	ab 2e       	mov	r10, r27
+				tmp.v8[3] = pgm_read_byte(aes_sbox+tmp.v8[3]);
+			}
+		} else {
+			next_nk += nk;
+			aes_rotword(&(tmp.v32));
+			tmp.v8[0] = pgm_read_byte(aes_sbox+tmp.v8[0]);
+    185e:	e9 2f       	mov	r30, r25
+    1860:	f0 e0       	ldi	r31, 0x00	; 0
+    1862:	ea 51       	subi	r30, 0x1A	; 26
+    1864:	fe 4f       	sbci	r31, 0xFE	; 254
+    1866:	b4 90       	lpm	r11, Z
+			tmp.v8[1] = pgm_read_byte(aes_sbox+tmp.v8[1]);
+    1868:	ea 2f       	mov	r30, r26
+    186a:	f0 e0       	ldi	r31, 0x00	; 0
+    186c:	ea 51       	subi	r30, 0x1A	; 26
+    186e:	fe 4f       	sbci	r31, 0xFE	; 254
+    1870:	e4 91       	lpm	r30, Z
+    1872:	9e 2f       	mov	r25, r30
+			tmp.v8[2] = pgm_read_byte(aes_sbox+tmp.v8[2]);
+    1874:	ea 2d       	mov	r30, r10
+    1876:	f0 e0       	ldi	r31, 0x00	; 0
+    1878:	ea 51       	subi	r30, 0x1A	; 26
+    187a:	fe 4f       	sbci	r31, 0xFE	; 254
+    187c:	e4 91       	lpm	r30, Z
+    187e:	ae 2f       	mov	r26, r30
+			tmp.v8[3] = pgm_read_byte(aes_sbox+tmp.v8[3]);
+    1880:	ec 2d       	mov	r30, r12
+    1882:	f0 e0       	ldi	r31, 0x00	; 0
+    1884:	ea 51       	subi	r30, 0x1A	; 26
+    1886:	fe 4f       	sbci	r31, 0xFE	; 254
+    1888:	e4 91       	lpm	r30, Z
+    188a:	be 2f       	mov	r27, r30
+			tmp.v8[0] ^= pgm_read_byte(rc_tab+rc);
+    188c:	e3 2f       	mov	r30, r19
+    188e:	f0 e0       	ldi	r31, 0x00	; 0
+    1890:	e4 52       	subi	r30, 0x24	; 36
+    1892:	fe 4f       	sbci	r31, 0xFE	; 254
+    1894:	e4 91       	lpm	r30, Z
+    1896:	8b 2d       	mov	r24, r11
+    1898:	8e 27       	eor	r24, r30
+			rc++;
+    189a:	3f 5f       	subi	r19, 0xFF	; 255
+		}
+		((uint32_t*)(ctx->key[0].ks))[i] = ((uint32_t*)(ctx->key[0].ks))[i-nk]
+    189c:	fb 01       	movw	r30, r22
+    189e:	e0 1b       	sub	r30, r16
+    18a0:	f1 0b       	sbc	r31, r17
+    18a2:	ee 0f       	add	r30, r30
+    18a4:	ff 1f       	adc	r31, r31
+    18a6:	ee 0f       	add	r30, r30
+    18a8:	ff 1f       	adc	r31, r31
+    18aa:	ec 0f       	add	r30, r28
+    18ac:	fd 1f       	adc	r31, r29
+    18ae:	80 80       	ld	r8, Z
+    18b0:	91 80       	ldd	r9, Z+1	; 0x01
+    18b2:	a2 80       	ldd	r10, Z+2	; 0x02
+    18b4:	b3 80       	ldd	r11, Z+3	; 0x03
+    18b6:	88 25       	eor	r24, r8
+    18b8:	99 25       	eor	r25, r9
+    18ba:	aa 25       	eor	r26, r10
+    18bc:	bb 25       	eor	r27, r11
+    18be:	fa 01       	movw	r30, r20
+    18c0:	84 83       	std	Z+4, r24	; 0x04
+    18c2:	95 83       	std	Z+5, r25	; 0x05
+    18c4:	a6 83       	std	Z+6, r26	; 0x06
+    18c6:	b7 83       	std	Z+7, r27	; 0x07
+	} tmp;
+	nk=keysize_b>>5; /* 4, 6, 8 */
+	hi=4*(nk+6+1);
+	memcpy(ctx, key, keysize_b/8);
+	next_nk = nk;
+	for(i=nk;i<hi;++i){
+    18c8:	2f 5f       	subi	r18, 0xFF	; 255
+    18ca:	8f cf       	rjmp	.-226    	; 0x17ea <aes_init+0x52>
+			rc++;
+		}
+		((uint32_t*)(ctx->key[0].ks))[i] = ((uint32_t*)(ctx->key[0].ks))[i-nk]
+		                                   ^ tmp.v32;
+	}
+}
+    18cc:	df 91       	pop	r29
+    18ce:	cf 91       	pop	r28
+    18d0:	1f 91       	pop	r17
+    18d2:	0f 91       	pop	r16
+    18d4:	ff 90       	pop	r15
+    18d6:	ef 90       	pop	r14
+    18d8:	df 90       	pop	r13
+    18da:	cf 90       	pop	r12
+    18dc:	bf 90       	pop	r11
+    18de:	af 90       	pop	r10
+    18e0:	9f 90       	pop	r9
+    18e2:	8f 90       	pop	r8
+    18e4:	08 95       	ret
+
+000018e6 <aes128_init>:
+
+void aes128_init(const void* key, aes128_ctx_t* ctx){
+    18e6:	ab 01       	movw	r20, r22
+	aes_init(key, 128, (aes_genctx_t*)ctx);
+    18e8:	60 e8       	ldi	r22, 0x80	; 128
+    18ea:	70 e0       	ldi	r23, 0x00	; 0
+    18ec:	0c 94 cc 0b 	jmp	0x1798	; 0x1798 <aes_init>
+
+000018f0 <aes192_init>:
+}
+
+void aes192_init(const void* key, aes192_ctx_t* ctx){
+    18f0:	ab 01       	movw	r20, r22
+	aes_init(key, 192, (aes_genctx_t*)ctx);
+    18f2:	60 ec       	ldi	r22, 0xC0	; 192
+    18f4:	70 e0       	ldi	r23, 0x00	; 0
+    18f6:	0c 94 cc 0b 	jmp	0x1798	; 0x1798 <aes_init>
+
+000018fa <aes256_init>:
+}
+
+void aes256_init(const void* key, aes256_ctx_t* ctx){
+    18fa:	ab 01       	movw	r20, r22
+	aes_init(key, 256, (aes_genctx_t*)ctx);
+    18fc:	60 e0       	ldi	r22, 0x00	; 0
+    18fe:	71 e0       	ldi	r23, 0x01	; 1
+    1900:	0c 94 cc 0b 	jmp	0x1798	; 0x1798 <aes_init>
+
+00001904 <aes128_enc>:
+
+#include "aes.h"
+#include "aes_enc.h"
+
+void aes128_enc(void* buffer, aes128_ctx_t* ctx){
+	aes_encrypt_core(buffer, (aes_genctx_t*)ctx, 10);
+    1904:	4a e0       	ldi	r20, 0x0A	; 10
+    1906:	0c 94 cc 0a 	jmp	0x1598	; 0x1598 <aes_encrypt_core>
+
+0000190a <gf256mul>:
+P = 24
+.global gf256mul
+
+#ifdef OPTIMIZE_SMALL_A
+gf256mul:
+	mov A, r24
+    190a:	78 2f       	mov	r23, r24
+	clr r24
+    190c:	88 27       	eor	r24, r24
+1:	
+	lsr A
+    190e:	76 95       	lsr	r23
+	breq 4f
+    1910:	31 f0       	breq	.+12     	; 0x191e <gf256mul+0x14>
+	brcc 2f
+    1912:	08 f4       	brcc	.+2      	; 0x1916 <gf256mul+0xc>
+	eor P, B
+    1914:	86 27       	eor	r24, r22
+2:
+	lsl B
+    1916:	66 0f       	add	r22, r22
+	brcc 3f
+    1918:	08 f4       	brcc	.+2      	; 0x191c <gf256mul+0x12>
+	eor B, r20	
+    191a:	64 27       	eor	r22, r20
+3:
+	rjmp 1b
+    191c:	f8 cf       	rjmp	.-16     	; 0x190e <gf256mul+0x4>
+4:
+	brcc 2f
+    191e:	08 f4       	brcc	.+2      	; 0x1922 <gf256mul+0x18>
+	eor P, B
+    1920:	86 27       	eor	r24, r22
+2:
+	ret
+    1922:	08 95       	ret
+
+00001924 <main>:
+    // Reset key here if needed
+	return 0x00;
+}
+
+int main(void)
+{
+    1924:	cf 93       	push	r28
+    1926:	df 93       	push	r29
+    1928:	cd b7       	in	r28, 0x3d	; 61
+    192a:	de b7       	in	r29, 0x3e	; 62
+    192c:	a0 97       	sbiw	r28, 0x20	; 32
+    192e:	cd bf       	out	0x3d, r28	; 61
+    1930:	de bf       	out	0x3e, r29	; 62
+	uint8_t tmp[32] = {0x88, 0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff, 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0xfe, 0xdc, 0xba, 0x98, 0x76, 0x54, 0x32, 0x10, 0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef}; //Default key
+    1932:	80 e2       	ldi	r24, 0x20	; 32
+    1934:	e4 ea       	ldi	r30, 0xA4	; 164
+    1936:	f2 e2       	ldi	r31, 0x22	; 34
+    1938:	de 01       	movw	r26, r28
+    193a:	11 96       	adiw	r26, 0x01	; 1
+    193c:	01 90       	ld	r0, Z+
+    193e:	0d 92       	st	X+, r0
+    1940:	8a 95       	dec	r24
+    1942:	e1 f7       	brne	.-8      	; 0x193c <main+0x18>
+
+    platform_init();
+    1944:	0e 94 58 0a 	call	0x14b0	; 0x14b0 <platform_init>
+    init_uart();
+    1948:	0e 94 87 09 	call	0x130e	; 0x130e <init_uart0>
+    trigger_setup();
+    194c:	81 e0       	ldi	r24, 0x01	; 1
+    194e:	80 93 01 06 	sts	0x0601, r24	; 0x800601 <__TEXT_REGION_LENGTH__+0x700601>
+
+	kuznyechik_setkey((uint8_t*) tmp);
+    1952:	ce 01       	movw	r24, r28
+    1954:	01 96       	adiw	r24, 0x01	; 1
+    1956:	0e 94 1a 02 	call	0x434	; 0x434 <kuznyechik_setkey>
+
+    /* Uncomment this to get a HELLO message for debug */
+    
+    putch('h');
+    195a:	88 e6       	ldi	r24, 0x68	; 104
+    195c:	0e 94 c4 09 	call	0x1388	; 0x1388 <output_ch_0>
+    putch('e');
+    1960:	85 e6       	ldi	r24, 0x65	; 101
+    1962:	0e 94 c4 09 	call	0x1388	; 0x1388 <output_ch_0>
+    putch('l');
+    1966:	8c e6       	ldi	r24, 0x6C	; 108
+    1968:	0e 94 c4 09 	call	0x1388	; 0x1388 <output_ch_0>
+    putch('l');
+    196c:	8c e6       	ldi	r24, 0x6C	; 108
+    196e:	0e 94 c4 09 	call	0x1388	; 0x1388 <output_ch_0>
+    putch('o');
+    1972:	8f e6       	ldi	r24, 0x6F	; 111
+    1974:	0e 94 c4 09 	call	0x1388	; 0x1388 <output_ch_0>
+    putch('\n');
+    1978:	8a e0       	ldi	r24, 0x0A	; 10
+    197a:	0e 94 c4 09 	call	0x1388	; 0x1388 <output_ch_0>
+    
+	
+    simpleserial_init();
+    197e:	0e 94 be 08 	call	0x117c	; 0x117c <simpleserial_init>
+    simpleserial_addcmd('k', 32, get_key);
+    1982:	48 e9       	ldi	r20, 0x98	; 152
+    1984:	51 e0       	ldi	r21, 0x01	; 1
+    1986:	60 e2       	ldi	r22, 0x20	; 32
+    1988:	70 e0       	ldi	r23, 0x00	; 0
+    198a:	8b e6       	ldi	r24, 0x6B	; 107
+    198c:	0e 94 9b 08 	call	0x1136	; 0x1136 <simpleserial_addcmd>
+    simpleserial_addcmd('p', 16,  get_pt);
+    1990:	4c e9       	ldi	r20, 0x9C	; 156
+    1992:	51 e0       	ldi	r21, 0x01	; 1
+    1994:	60 e1       	ldi	r22, 0x10	; 16
+    1996:	70 e0       	ldi	r23, 0x00	; 0
+    1998:	80 e7       	ldi	r24, 0x70	; 112
+    199a:	0e 94 9b 08 	call	0x1136	; 0x1136 <simpleserial_addcmd>
+    simpleserial_addcmd('d', 16,  get_dc);
+    199e:	49 eb       	ldi	r20, 0xB9	; 185
+    19a0:	51 e0       	ldi	r21, 0x01	; 1
+    19a2:	60 e1       	ldi	r22, 0x10	; 16
+    19a4:	70 e0       	ldi	r23, 0x00	; 0
+    19a6:	84 e6       	ldi	r24, 0x64	; 100
+    19a8:	0e 94 9b 08 	call	0x1136	; 0x1136 <simpleserial_addcmd>
+    simpleserial_addcmd('x',  0,   reset);
+    19ac:	46 e9       	ldi	r20, 0x96	; 150
+    19ae:	51 e0       	ldi	r21, 0x01	; 1
+    19b0:	60 e0       	ldi	r22, 0x00	; 0
+    19b2:	70 e0       	ldi	r23, 0x00	; 0
+    19b4:	88 e7       	ldi	r24, 0x78	; 120
+    19b6:	0e 94 9b 08 	call	0x1136	; 0x1136 <simpleserial_addcmd>
+    //simpleserial_addcmd('m', 18, get_mask);
+    while(1)
+        simpleserial_get();
+    19ba:	0e 94 f9 08 	call	0x11f2	; 0x11f2 <simpleserial_get>
+    19be:	fd cf       	rjmp	.-6      	; 0x19ba <main+0x96>
+
+000019c0 <do_rand>:
+    19c0:	8f 92       	push	r8
+    19c2:	9f 92       	push	r9
+    19c4:	af 92       	push	r10
+    19c6:	bf 92       	push	r11
+    19c8:	cf 92       	push	r12
+    19ca:	df 92       	push	r13
+    19cc:	ef 92       	push	r14
+    19ce:	ff 92       	push	r15
+    19d0:	cf 93       	push	r28
+    19d2:	df 93       	push	r29
+    19d4:	ec 01       	movw	r28, r24
+    19d6:	68 81       	ld	r22, Y
+    19d8:	79 81       	ldd	r23, Y+1	; 0x01
+    19da:	8a 81       	ldd	r24, Y+2	; 0x02
+    19dc:	9b 81       	ldd	r25, Y+3	; 0x03
+    19de:	61 15       	cp	r22, r1
+    19e0:	71 05       	cpc	r23, r1
+    19e2:	81 05       	cpc	r24, r1
+    19e4:	91 05       	cpc	r25, r1
+    19e6:	21 f4       	brne	.+8      	; 0x19f0 <do_rand+0x30>
+    19e8:	64 e2       	ldi	r22, 0x24	; 36
+    19ea:	79 ed       	ldi	r23, 0xD9	; 217
+    19ec:	8b e5       	ldi	r24, 0x5B	; 91
+    19ee:	97 e0       	ldi	r25, 0x07	; 7
+    19f0:	2d e1       	ldi	r18, 0x1D	; 29
+    19f2:	33 ef       	ldi	r19, 0xF3	; 243
+    19f4:	41 e0       	ldi	r20, 0x01	; 1
+    19f6:	50 e0       	ldi	r21, 0x00	; 0
+    19f8:	0e 94 43 0d 	call	0x1a86	; 0x1a86 <__divmodsi4>
+    19fc:	49 01       	movw	r8, r18
+    19fe:	5a 01       	movw	r10, r20
+    1a00:	9b 01       	movw	r18, r22
+    1a02:	ac 01       	movw	r20, r24
+    1a04:	a7 ea       	ldi	r26, 0xA7	; 167
+    1a06:	b1 e4       	ldi	r27, 0x41	; 65
+    1a08:	0e 94 62 0d 	call	0x1ac4	; 0x1ac4 <__muluhisi3>
+    1a0c:	6b 01       	movw	r12, r22
+    1a0e:	7c 01       	movw	r14, r24
+    1a10:	ac ee       	ldi	r26, 0xEC	; 236
+    1a12:	b4 ef       	ldi	r27, 0xF4	; 244
+    1a14:	a5 01       	movw	r20, r10
+    1a16:	94 01       	movw	r18, r8
+    1a18:	0e 94 70 0d 	call	0x1ae0	; 0x1ae0 <__mulohisi3>
+    1a1c:	dc 01       	movw	r26, r24
+    1a1e:	cb 01       	movw	r24, r22
+    1a20:	8c 0d       	add	r24, r12
+    1a22:	9d 1d       	adc	r25, r13
+    1a24:	ae 1d       	adc	r26, r14
+    1a26:	bf 1d       	adc	r27, r15
+    1a28:	b7 ff       	sbrs	r27, 7
+    1a2a:	03 c0       	rjmp	.+6      	; 0x1a32 <do_rand+0x72>
+    1a2c:	01 97       	sbiw	r24, 0x01	; 1
+    1a2e:	a1 09       	sbc	r26, r1
+    1a30:	b0 48       	sbci	r27, 0x80	; 128
+    1a32:	88 83       	st	Y, r24
+    1a34:	99 83       	std	Y+1, r25	; 0x01
+    1a36:	aa 83       	std	Y+2, r26	; 0x02
+    1a38:	bb 83       	std	Y+3, r27	; 0x03
+    1a3a:	9f 77       	andi	r25, 0x7F	; 127
+    1a3c:	df 91       	pop	r29
+    1a3e:	cf 91       	pop	r28
+    1a40:	ff 90       	pop	r15
+    1a42:	ef 90       	pop	r14
+    1a44:	df 90       	pop	r13
+    1a46:	cf 90       	pop	r12
+    1a48:	bf 90       	pop	r11
+    1a4a:	af 90       	pop	r10
+    1a4c:	9f 90       	pop	r9
+    1a4e:	8f 90       	pop	r8
+    1a50:	08 95       	ret
+
+00001a52 <rand_r>:
+    1a52:	0c 94 e0 0c 	jmp	0x19c0	; 0x19c0 <do_rand>
+
+00001a56 <rand>:
+    1a56:	80 ea       	ldi	r24, 0xA0	; 160
+    1a58:	92 e2       	ldi	r25, 0x22	; 34
+    1a5a:	0c 94 e0 0c 	jmp	0x19c0	; 0x19c0 <do_rand>
+
+00001a5e <srand>:
+    1a5e:	a0 e0       	ldi	r26, 0x00	; 0
+    1a60:	b0 e0       	ldi	r27, 0x00	; 0
+    1a62:	80 93 a0 22 	sts	0x22A0, r24	; 0x8022a0 <next>
+    1a66:	90 93 a1 22 	sts	0x22A1, r25	; 0x8022a1 <next+0x1>
+    1a6a:	a0 93 a2 22 	sts	0x22A2, r26	; 0x8022a2 <next+0x2>
+    1a6e:	b0 93 a3 22 	sts	0x22A3, r27	; 0x8022a3 <next+0x3>
+    1a72:	08 95       	ret
+
+00001a74 <memcpy>:
+    1a74:	fb 01       	movw	r30, r22
+    1a76:	dc 01       	movw	r26, r24
+    1a78:	02 c0       	rjmp	.+4      	; 0x1a7e <memcpy+0xa>
+    1a7a:	01 90       	ld	r0, Z+
+    1a7c:	0d 92       	st	X+, r0
+    1a7e:	41 50       	subi	r20, 0x01	; 1
+    1a80:	50 40       	sbci	r21, 0x00	; 0
+    1a82:	d8 f7       	brcc	.-10     	; 0x1a7a <memcpy+0x6>
+    1a84:	08 95       	ret
+
+00001a86 <__divmodsi4>:
+    1a86:	05 2e       	mov	r0, r21
+    1a88:	97 fb       	bst	r25, 7
+    1a8a:	1e f4       	brtc	.+6      	; 0x1a92 <__divmodsi4+0xc>
+    1a8c:	00 94       	com	r0
+    1a8e:	0e 94 5a 0d 	call	0x1ab4	; 0x1ab4 <__negsi2>
+    1a92:	57 fd       	sbrc	r21, 7
+    1a94:	07 d0       	rcall	.+14     	; 0x1aa4 <__divmodsi4_neg2>
+    1a96:	0e 94 75 0d 	call	0x1aea	; 0x1aea <__udivmodsi4>
+    1a9a:	07 fc       	sbrc	r0, 7
+    1a9c:	03 d0       	rcall	.+6      	; 0x1aa4 <__divmodsi4_neg2>
+    1a9e:	4e f4       	brtc	.+18     	; 0x1ab2 <__divmodsi4_exit>
+    1aa0:	0c 94 5a 0d 	jmp	0x1ab4	; 0x1ab4 <__negsi2>
+
+00001aa4 <__divmodsi4_neg2>:
+    1aa4:	50 95       	com	r21
+    1aa6:	40 95       	com	r20
+    1aa8:	30 95       	com	r19
+    1aaa:	21 95       	neg	r18
+    1aac:	3f 4f       	sbci	r19, 0xFF	; 255
+    1aae:	4f 4f       	sbci	r20, 0xFF	; 255
+    1ab0:	5f 4f       	sbci	r21, 0xFF	; 255
+
+00001ab2 <__divmodsi4_exit>:
+    1ab2:	08 95       	ret
+
+00001ab4 <__negsi2>:
+    1ab4:	90 95       	com	r25
+    1ab6:	80 95       	com	r24
+    1ab8:	70 95       	com	r23
+    1aba:	61 95       	neg	r22
+    1abc:	7f 4f       	sbci	r23, 0xFF	; 255
+    1abe:	8f 4f       	sbci	r24, 0xFF	; 255
+    1ac0:	9f 4f       	sbci	r25, 0xFF	; 255
+    1ac2:	08 95       	ret
+
+00001ac4 <__muluhisi3>:
+    1ac4:	0e 94 97 0d 	call	0x1b2e	; 0x1b2e <__umulhisi3>
+    1ac8:	a5 9f       	mul	r26, r21
+    1aca:	90 0d       	add	r25, r0
+    1acc:	b4 9f       	mul	r27, r20
+    1ace:	90 0d       	add	r25, r0
+    1ad0:	a4 9f       	mul	r26, r20
+    1ad2:	80 0d       	add	r24, r0
+    1ad4:	91 1d       	adc	r25, r1
+    1ad6:	11 24       	eor	r1, r1
+    1ad8:	08 95       	ret
+
+00001ada <__mulshisi3>:
+    1ada:	b7 ff       	sbrs	r27, 7
+    1adc:	0c 94 62 0d 	jmp	0x1ac4	; 0x1ac4 <__muluhisi3>
+
+00001ae0 <__mulohisi3>:
+    1ae0:	0e 94 62 0d 	call	0x1ac4	; 0x1ac4 <__muluhisi3>
+    1ae4:	82 1b       	sub	r24, r18
+    1ae6:	93 0b       	sbc	r25, r19
+    1ae8:	08 95       	ret
+
+00001aea <__udivmodsi4>:
+    1aea:	a1 e2       	ldi	r26, 0x21	; 33
+    1aec:	1a 2e       	mov	r1, r26
+    1aee:	aa 1b       	sub	r26, r26
+    1af0:	bb 1b       	sub	r27, r27
+    1af2:	fd 01       	movw	r30, r26
+    1af4:	0d c0       	rjmp	.+26     	; 0x1b10 <__udivmodsi4_ep>
+
+00001af6 <__udivmodsi4_loop>:
+    1af6:	aa 1f       	adc	r26, r26
+    1af8:	bb 1f       	adc	r27, r27
+    1afa:	ee 1f       	adc	r30, r30
+    1afc:	ff 1f       	adc	r31, r31
+    1afe:	a2 17       	cp	r26, r18
+    1b00:	b3 07       	cpc	r27, r19
+    1b02:	e4 07       	cpc	r30, r20
+    1b04:	f5 07       	cpc	r31, r21
+    1b06:	20 f0       	brcs	.+8      	; 0x1b10 <__udivmodsi4_ep>
+    1b08:	a2 1b       	sub	r26, r18
+    1b0a:	b3 0b       	sbc	r27, r19
+    1b0c:	e4 0b       	sbc	r30, r20
+    1b0e:	f5 0b       	sbc	r31, r21
+
+00001b10 <__udivmodsi4_ep>:
+    1b10:	66 1f       	adc	r22, r22
+    1b12:	77 1f       	adc	r23, r23
+    1b14:	88 1f       	adc	r24, r24
+    1b16:	99 1f       	adc	r25, r25
+    1b18:	1a 94       	dec	r1
+    1b1a:	69 f7       	brne	.-38     	; 0x1af6 <__udivmodsi4_loop>
+    1b1c:	60 95       	com	r22
+    1b1e:	70 95       	com	r23
+    1b20:	80 95       	com	r24
+    1b22:	90 95       	com	r25
+    1b24:	9b 01       	movw	r18, r22
+    1b26:	ac 01       	movw	r20, r24
+    1b28:	bd 01       	movw	r22, r26
+    1b2a:	cf 01       	movw	r24, r30
+    1b2c:	08 95       	ret
+
+00001b2e <__umulhisi3>:
+    1b2e:	a2 9f       	mul	r26, r18
+    1b30:	b0 01       	movw	r22, r0
+    1b32:	b3 9f       	mul	r27, r19
+    1b34:	c0 01       	movw	r24, r0
+    1b36:	a3 9f       	mul	r26, r19
+    1b38:	70 0d       	add	r23, r0
+    1b3a:	81 1d       	adc	r24, r1
+    1b3c:	11 24       	eor	r1, r1
+    1b3e:	91 1d       	adc	r25, r1
+    1b40:	b2 9f       	mul	r27, r18
+    1b42:	70 0d       	add	r23, r0
+    1b44:	81 1d       	adc	r24, r1
+    1b46:	11 24       	eor	r1, r1
+    1b48:	91 1d       	adc	r25, r1
+    1b4a:	08 95       	ret
+
+00001b4c <_exit>:
+    1b4c:	f8 94       	cli
+
+00001b4e <__stop_program>:
+    1b4e:	ff cf       	rjmp	.-2      	; 0x1b4e <__stop_program>
