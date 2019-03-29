@@ -1,0 +1,23 @@
+   1               		.file	"XMEGA_AES_driver.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__CCP__ = 0x34
+   7               	__tmp_reg__ = 0
+   8               	__zero_reg__ = 1
+   9               		.text
+  10               	.Ltext0:
+  11               		.cfi_sections	.debug_frame
+  12               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 XMEGA_AES_driver.c
+C:\Users\alexx\AppData\Local\Temp\ccuW8Gxe.s:2      *ABS*:0000003e __SP_H__
+C:\Users\alexx\AppData\Local\Temp\ccuW8Gxe.s:3      *ABS*:0000003d __SP_L__
+C:\Users\alexx\AppData\Local\Temp\ccuW8Gxe.s:4      *ABS*:0000003f __SREG__
+C:\Users\alexx\AppData\Local\Temp\ccuW8Gxe.s:5      *ABS*:0000003b __RAMPZ__
+C:\Users\alexx\AppData\Local\Temp\ccuW8Gxe.s:6      *ABS*:00000034 __CCP__
+C:\Users\alexx\AppData\Local\Temp\ccuW8Gxe.s:7      *ABS*:00000000 __tmp_reg__
+C:\Users\alexx\AppData\Local\Temp\ccuW8Gxe.s:8      *ABS*:00000001 __zero_reg__
+
+NO UNDEFINED SYMBOLS

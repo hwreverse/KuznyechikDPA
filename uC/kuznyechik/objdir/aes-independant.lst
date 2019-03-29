@@ -1,0 +1,162 @@
+   1               		.file	"aes-independant.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__CCP__ = 0x34
+   7               	__tmp_reg__ = 0
+   8               	__zero_reg__ = 1
+   9               		.text
+  10               	.Ltext0:
+  11               		.cfi_sections	.debug_frame
+  12               	.global	aes_indep_init
+  14               	aes_indep_init:
+  15               	.LFB11:
+  16               		.file 1 ".././crypto/aes-independant.c"
+   1:.././crypto/aes-independant.c **** /*
+   2:.././crypto/aes-independant.c ****     This file is part of the AESExplorer Example Targets
+   3:.././crypto/aes-independant.c ****     Copyright (C) 2012 Colin O'Flynn <coflynn@newae.com>
+   4:.././crypto/aes-independant.c **** 
+   5:.././crypto/aes-independant.c ****     This program is free software: you can redistribute it and/or modify
+   6:.././crypto/aes-independant.c ****     it under the terms of the GNU General Public License as published by
+   7:.././crypto/aes-independant.c ****     the Free Software Foundation, either version 3 of the License, or
+   8:.././crypto/aes-independant.c ****     (at your option) any later version.
+   9:.././crypto/aes-independant.c **** 
+  10:.././crypto/aes-independant.c ****     This program is distributed in the hope that it will be useful,
+  11:.././crypto/aes-independant.c ****     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  12:.././crypto/aes-independant.c ****     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  13:.././crypto/aes-independant.c ****     GNU General Public License for more details.
+  14:.././crypto/aes-independant.c **** 
+  15:.././crypto/aes-independant.c ****     You should have received a copy of the GNU General Public License
+  16:.././crypto/aes-independant.c ****     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  17:.././crypto/aes-independant.c **** */
+  18:.././crypto/aes-independant.c **** 
+  19:.././crypto/aes-independant.c **** #include "aes-independant.h"
+  20:.././crypto/aes-independant.c **** #include "hal.h"
+  21:.././crypto/aes-independant.c **** 
+  22:.././crypto/aes-independant.c **** #if HWCRYPTO
+  23:.././crypto/aes-independant.c **** 
+  24:.././crypto/aes-independant.c **** void aes_indep_init(void)
+  25:.././crypto/aes-independant.c **** {
+  26:.././crypto/aes-independant.c ****     HW_AES128_Init();
+  27:.././crypto/aes-independant.c **** 	
+  28:.././crypto/aes-independant.c **** }
+  29:.././crypto/aes-independant.c **** 
+  30:.././crypto/aes-independant.c **** void aes_indep_key(uint8_t * key)
+  31:.././crypto/aes-independant.c **** {
+  32:.././crypto/aes-independant.c ****     HW_AES128_LoadKey(key);
+  33:.././crypto/aes-independant.c **** }
+  34:.././crypto/aes-independant.c **** 
+  35:.././crypto/aes-independant.c **** void aes_indep_enc(uint8_t * pt)
+  36:.././crypto/aes-independant.c **** {
+  37:.././crypto/aes-independant.c ****     HW_AES128_Enc(pt);
+  38:.././crypto/aes-independant.c **** }
+  39:.././crypto/aes-independant.c **** 
+  40:.././crypto/aes-independant.c **** void aes_indep_mask(uint8_t * m)
+  41:.././crypto/aes-independant.c **** {
+  42:.././crypto/aes-independant.c **** }
+  43:.././crypto/aes-independant.c **** 
+  44:.././crypto/aes-independant.c **** #elif defined(AVRCRYPTOLIB)
+  45:.././crypto/aes-independant.c **** #include "aes128_enc.h"
+  46:.././crypto/aes-independant.c **** #include "aes_keyschedule.h"
+  47:.././crypto/aes-independant.c **** 
+  48:.././crypto/aes-independant.c **** aes128_ctx_t ctx;
+  49:.././crypto/aes-independant.c **** 
+  50:.././crypto/aes-independant.c **** void aes_indep_init(void)
+  51:.././crypto/aes-independant.c **** {
+  17               		.loc 1 51 0
+  18               		.cfi_startproc
+  19               	/* prologue: function */
+  20               	/* frame size = 0 */
+  21               	/* stack size = 0 */
+  22               	.L__stack_usage = 0
+  23 0000 0895      		ret
+  24               		.cfi_endproc
+  25               	.LFE11:
+  27               	.global	aes_indep_key
+  29               	aes_indep_key:
+  30               	.LFB12:
+  52:.././crypto/aes-independant.c **** 	;
+  53:.././crypto/aes-independant.c **** }
+  54:.././crypto/aes-independant.c **** 
+  55:.././crypto/aes-independant.c **** void aes_indep_key(uint8_t * key)
+  56:.././crypto/aes-independant.c **** {
+  31               		.loc 1 56 0
+  32               		.cfi_startproc
+  33               	.LVL0:
+  34               	/* prologue: function */
+  35               	/* frame size = 0 */
+  36               	/* stack size = 0 */
+  37               	.L__stack_usage = 0
+  57:.././crypto/aes-independant.c **** 	aes128_init(key, &ctx);
+  38               		.loc 1 57 0
+  39 0002 60E0      		ldi r22,lo8(ctx)
+  40 0004 70E0      		ldi r23,hi8(ctx)
+  41 0006 0C94 0000 		jmp aes128_init
+  42               	.LVL1:
+  43               		.cfi_endproc
+  44               	.LFE12:
+  46               	.global	aes_indep_enc
+  48               	aes_indep_enc:
+  49               	.LFB13:
+  58:.././crypto/aes-independant.c **** }
+  59:.././crypto/aes-independant.c **** 
+  60:.././crypto/aes-independant.c **** void aes_indep_enc(uint8_t * pt)
+  61:.././crypto/aes-independant.c **** {
+  50               		.loc 1 61 0
+  51               		.cfi_startproc
+  52               	.LVL2:
+  53               	/* prologue: function */
+  54               	/* frame size = 0 */
+  55               	/* stack size = 0 */
+  56               	.L__stack_usage = 0
+  62:.././crypto/aes-independant.c **** 	aes128_enc(pt, &ctx); /* encrypting the data block */
+  57               		.loc 1 62 0
+  58 000a 60E0      		ldi r22,lo8(ctx)
+  59 000c 70E0      		ldi r23,hi8(ctx)
+  60 000e 0C94 0000 		jmp aes128_enc
+  61               	.LVL3:
+  62               		.cfi_endproc
+  63               	.LFE13:
+  65               	.global	aes_indep_mask
+  67               	aes_indep_mask:
+  68               	.LFB14:
+  63:.././crypto/aes-independant.c **** }
+  64:.././crypto/aes-independant.c **** 
+  65:.././crypto/aes-independant.c **** void aes_indep_mask(uint8_t * m)
+  66:.././crypto/aes-independant.c **** {
+  69               		.loc 1 66 0
+  70               		.cfi_startproc
+  71               	.LVL4:
+  72               	/* prologue: function */
+  73               	/* frame size = 0 */
+  74               	/* stack size = 0 */
+  75               	.L__stack_usage = 0
+  76 0012 0895      		ret
+  77               		.cfi_endproc
+  78               	.LFE14:
+  80               		.comm	ctx,176,1
+  81               	.Letext0:
+  82               		.file 2 "o:\\avr8\\avr\\include\\stdint.h"
+  83               		.file 3 ".././crypto/avrcryptolib//aes/aes_types.h"
+  84               		.file 4 ".././crypto/avrcryptolib//aes/aes_keyschedule.h"
+  85               		.file 5 ".././crypto/avrcryptolib//aes/aes128_enc.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 aes-independant.c
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:2      *ABS*:0000003e __SP_H__
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:3      *ABS*:0000003d __SP_L__
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:4      *ABS*:0000003f __SREG__
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:5      *ABS*:0000003b __RAMPZ__
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:6      *ABS*:00000034 __CCP__
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:7      *ABS*:00000000 __tmp_reg__
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:8      *ABS*:00000001 __zero_reg__
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:14     .text:00000000 aes_indep_init
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:29     .text:00000002 aes_indep_key
+                            *COM*:000000b0 ctx
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:48     .text:0000000a aes_indep_enc
+C:\Users\alexx\AppData\Local\Temp\cca59gWm.s:67     .text:00000012 aes_indep_mask
+
+UNDEFINED SYMBOLS
+aes128_init
+aes128_enc
+__do_clear_bss

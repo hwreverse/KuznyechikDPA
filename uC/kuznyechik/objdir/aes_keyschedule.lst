@@ -1,0 +1,560 @@
+   1               		.file	"aes_keyschedule.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__CCP__ = 0x34
+   7               	__tmp_reg__ = 0
+   8               	__zero_reg__ = 1
+   9               		.text
+  10               	.Ltext0:
+  11               		.cfi_sections	.debug_frame
+  12               	.global	aes_init
+  14               	aes_init:
+  15               	.LFB2:
+  16               		.file 1 ".././crypto/avrcryptolib//aes/aes_keyschedule.c"
+   1:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** /* aes_keyschedule.c */
+   2:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** /*
+   3:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     This file is part of the AVR-Crypto-Lib.
+   4:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     Copyright (C) 2008, 2009  Daniel Otte (daniel.otte@rub.de)
+   5:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+   6:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     This program is free software: you can redistribute it and/or modify
+   7:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     it under the terms of the GNU General Public License as published by
+   8:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     the Free Software Foundation, either version 3 of the License, or
+   9:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     (at your option) any later version.
+  10:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+  11:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     This program is distributed in the hope that it will be useful,
+  12:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     GNU General Public License for more details.
+  15:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+  16:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     You should have received a copy of the GNU General Public License
+  17:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  18:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** */
+  19:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** /**
+  20:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****  * \file     aes_keyschedule.c
+  21:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****  * \email    daniel.otte@rub.de
+  22:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****  * \author   Daniel Otte
+  23:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****  * \date     2008-12-30
+  24:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****  * \license  GPLv3 or later
+  25:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****  *
+  26:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****  */
+  27:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+  28:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** #include <stdint.h>
+  29:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** #include "aes.h"
+  30:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** #include "aes_keyschedule.h"
+  31:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** #include "aes_sbox.h"
+  32:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** #include <string.h>
+  33:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** #include <avr/pgmspace.h>
+  34:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+  35:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** static
+  36:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** void aes_rotword(void* a){
+  37:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	uint8_t t;
+  38:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	t=((uint8_t*)a)[0];
+  39:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	((uint8_t*)a)[0] = ((uint8_t*)a)[1];
+  40:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	((uint8_t*)a)[1] = ((uint8_t*)a)[2];
+  41:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	((uint8_t*)a)[2] = ((uint8_t*)a)[3];
+  42:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	((uint8_t*)a)[3] = t;
+  43:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** }
+  44:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+  45:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** const uint8_t rc_tab[] PROGMEM = { 0x01, 0x02, 0x04, 0x08,
+  46:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****                              0x10, 0x20, 0x40, 0x80,
+  47:.././crypto/avrcryptolib//aes/aes_keyschedule.c ****                              0x1b, 0x36 };
+  48:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+  49:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** void aes_init(const void* key, uint16_t keysize_b, aes_genctx_t* ctx){
+  17               		.loc 1 49 0
+  18               		.cfi_startproc
+  19               	.LVL0:
+  20 0000 8F92      		push r8
+  21               	.LCFI0:
+  22               		.cfi_def_cfa_offset 4
+  23               		.cfi_offset 8, -3
+  24 0002 9F92      		push r9
+  25               	.LCFI1:
+  26               		.cfi_def_cfa_offset 5
+  27               		.cfi_offset 9, -4
+  28 0004 AF92      		push r10
+  29               	.LCFI2:
+  30               		.cfi_def_cfa_offset 6
+  31               		.cfi_offset 10, -5
+  32 0006 BF92      		push r11
+  33               	.LCFI3:
+  34               		.cfi_def_cfa_offset 7
+  35               		.cfi_offset 11, -6
+  36 0008 CF92      		push r12
+  37               	.LCFI4:
+  38               		.cfi_def_cfa_offset 8
+  39               		.cfi_offset 12, -7
+  40 000a DF92      		push r13
+  41               	.LCFI5:
+  42               		.cfi_def_cfa_offset 9
+  43               		.cfi_offset 13, -8
+  44 000c EF92      		push r14
+  45               	.LCFI6:
+  46               		.cfi_def_cfa_offset 10
+  47               		.cfi_offset 14, -9
+  48 000e FF92      		push r15
+  49               	.LCFI7:
+  50               		.cfi_def_cfa_offset 11
+  51               		.cfi_offset 15, -10
+  52 0010 0F93      		push r16
+  53               	.LCFI8:
+  54               		.cfi_def_cfa_offset 12
+  55               		.cfi_offset 16, -11
+  56 0012 1F93      		push r17
+  57               	.LCFI9:
+  58               		.cfi_def_cfa_offset 13
+  59               		.cfi_offset 17, -12
+  60 0014 CF93      		push r28
+  61               	.LCFI10:
+  62               		.cfi_def_cfa_offset 14
+  63               		.cfi_offset 28, -13
+  64 0016 DF93      		push r29
+  65               	.LCFI11:
+  66               		.cfi_def_cfa_offset 15
+  67               		.cfi_offset 29, -14
+  68               	/* prologue: function */
+  69               	/* frame size = 0 */
+  70               	/* stack size = 12 */
+  71               	.L__stack_usage = 12
+  72 0018 EA01      		movw r28,r20
+  73               	.LVL1:
+  50:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	uint8_t hi,i,nk, next_nk;
+  51:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	uint8_t rc=0;
+  52:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	union {
+  53:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 		uint32_t v32;
+  54:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 		uint8_t  v8[4];
+  55:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	} tmp;
+  56:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	nk=keysize_b>>5; /* 4, 6, 8 */
+  74               		.loc 1 56 0
+  75 001a 6B01      		movw r12,r22
+  76 001c F5E0      		ldi r31,5
+  77               		1:
+  78 001e D694      		lsr r13
+  79 0020 C794      		ror r12
+  80 0022 FA95      		dec r31
+  81 0024 01F4      		brne 1b
+  82 0026 EC2C      		mov r14,r12
+  83               	.LVL2:
+  57:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	hi=4*(nk+6+1);
+  84               		.loc 1 57 0
+  85 0028 8601      		movw r16,r12
+  86 002a 1127      		clr r17
+  87 002c 9801      		movw r18,r16
+  88 002e 295F      		subi r18,-7
+  89 0030 3F4F      		sbci r19,-1
+  90 0032 F22E      		mov r15,r18
+  91 0034 FF0C      		lsl r15
+  92 0036 FF0C      		lsl r15
+  93               	.LVL3:
+  58:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	memcpy(ctx, key, keysize_b/8);
+  94               		.loc 1 58 0
+  95 0038 AB01      		movw r20,r22
+  96               	.LVL4:
+  97 003a A3E0      		ldi r26,3
+  98               		1:
+  99 003c 5695      		lsr r21
+ 100 003e 4795      		ror r20
+ 101 0040 AA95      		dec r26
+ 102 0042 01F4      		brne 1b
+ 103 0044 BC01      		movw r22,r24
+ 104               	.LVL5:
+ 105 0046 CE01      		movw r24,r28
+ 106               	.LVL6:
+ 107 0048 0E94 0000 		call memcpy
+ 108               	.LVL7:
+  59:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	next_nk = nk;
+ 109               		.loc 1 59 0
+ 110 004c DC2C      		mov r13,r12
+  60:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	for(i=nk;i<hi;++i){
+ 111               		.loc 1 60 0
+ 112 004e 2C2D      		mov r18,r12
+  51:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	union {
+ 113               		.loc 1 51 0
+ 114 0050 30E0      		ldi r19,0
+ 115               	.LVL8:
+ 116               	.L2:
+ 117               		.loc 1 60 0 discriminator 1
+ 118 0052 2F15      		cp r18,r15
+ 119 0054 00F0      		brlo .+2
+ 120 0056 00C0      		rjmp .L7
+  61:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 		tmp.v32 = ((uint32_t*)(ctx->key[0].ks))[i-1];
+ 121               		.loc 1 61 0
+ 122 0058 622F      		mov r22,r18
+ 123 005a 70E0      		ldi r23,0
+ 124 005c AB01      		movw r20,r22
+ 125 005e 4150      		subi r20,1
+ 126 0060 504C      		sbci r21,-64
+ 127 0062 440F      		lsl r20
+ 128 0064 551F      		rol r21
+ 129 0066 440F      		lsl r20
+ 130 0068 551F      		rol r21
+ 131 006a 4C0F      		add r20,r28
+ 132 006c 5D1F      		adc r21,r29
+ 133 006e FA01      		movw r30,r20
+ 134 0070 8081      		ld r24,Z
+ 135 0072 9181      		ldd r25,Z+1
+ 136 0074 A281      		ldd r26,Z+2
+ 137 0076 B381      		ldd r27,Z+3
+ 138               	.LVL9:
+  62:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 		if(i!=next_nk){
+ 139               		.loc 1 62 0
+ 140 0078 2D15      		cp r18,r13
+ 141 007a 01F0      		breq .L3
+  63:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			if(nk==8 && i%8==4){
+ 142               		.loc 1 63 0
+ 143 007c F8E0      		ldi r31,lo8(8)
+ 144 007e EF12      		cpse r14,r31
+ 145 0080 00C0      		rjmp .L4
+ 146               		.loc 1 63 0 is_stmt 0 discriminator 1
+ 147 0082 E22F      		mov r30,r18
+ 148 0084 E770      		andi r30,lo8(7)
+ 149 0086 E430      		cpi r30,lo8(4)
+ 150 0088 01F0      		breq .+2
+ 151 008a 00C0      		rjmp .L4
+ 152               	.LVL10:
+ 153               	.LBB13:
+  64:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 				tmp.v8[0] = pgm_read_byte(aes_sbox+tmp.v8[0]);
+ 154               		.loc 1 64 0 is_stmt 1
+ 155 008c E82F      		mov r30,r24
+ 156 008e F0E0      		ldi r31,0
+ 157 0090 E050      		subi r30,lo8(-(aes_sbox))
+ 158 0092 F040      		sbci r31,hi8(-(aes_sbox))
+ 159               	/* #APP */
+ 160               	 ;  64 ".././crypto/avrcryptolib//aes/aes_keyschedule.c" 1
+ 161 0094 E491      		lpm r30, Z
+ 162               		
+ 163               	 ;  0 "" 2
+ 164               	.LVL11:
+ 165               	/* #NOAPP */
+ 166               	.LBE13:
+ 167 0096 8E2F      		mov r24,r30
+ 168               	.LVL12:
+ 169               	.LBB14:
+  65:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 				tmp.v8[1] = pgm_read_byte(aes_sbox+tmp.v8[1]);
+ 170               		.loc 1 65 0
+ 171 0098 E92F      		mov r30,r25
+ 172               	.LVL13:
+ 173 009a F0E0      		ldi r31,0
+ 174 009c E050      		subi r30,lo8(-(aes_sbox))
+ 175 009e F040      		sbci r31,hi8(-(aes_sbox))
+ 176               	/* #APP */
+ 177               	 ;  65 ".././crypto/avrcryptolib//aes/aes_keyschedule.c" 1
+ 178 00a0 E491      		lpm r30, Z
+ 179               		
+ 180               	 ;  0 "" 2
+ 181               	.LVL14:
+ 182               	/* #NOAPP */
+ 183               	.LBE14:
+ 184 00a2 9E2F      		mov r25,r30
+ 185               	.LVL15:
+ 186               	.LBB15:
+  66:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 				tmp.v8[2] = pgm_read_byte(aes_sbox+tmp.v8[2]);
+ 187               		.loc 1 66 0
+ 188 00a4 EA2F      		mov r30,r26
+ 189               	.LVL16:
+ 190 00a6 F0E0      		ldi r31,0
+ 191 00a8 E050      		subi r30,lo8(-(aes_sbox))
+ 192 00aa F040      		sbci r31,hi8(-(aes_sbox))
+ 193               	/* #APP */
+ 194               	 ;  66 ".././crypto/avrcryptolib//aes/aes_keyschedule.c" 1
+ 195 00ac E491      		lpm r30, Z
+ 196               		
+ 197               	 ;  0 "" 2
+ 198               	.LVL17:
+ 199               	/* #NOAPP */
+ 200               	.LBE15:
+ 201 00ae AE2F      		mov r26,r30
+ 202               	.LVL18:
+ 203               	.LBB16:
+  67:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 				tmp.v8[3] = pgm_read_byte(aes_sbox+tmp.v8[3]);
+ 204               		.loc 1 67 0
+ 205 00b0 EB2F      		mov r30,r27
+ 206               	.LVL19:
+ 207 00b2 F0E0      		ldi r31,0
+ 208 00b4 E050      		subi r30,lo8(-(aes_sbox))
+ 209 00b6 F040      		sbci r31,hi8(-(aes_sbox))
+ 210               	/* #APP */
+ 211               	 ;  67 ".././crypto/avrcryptolib//aes/aes_keyschedule.c" 1
+ 212 00b8 E491      		lpm r30, Z
+ 213               		
+ 214               	 ;  0 "" 2
+ 215               	.LVL20:
+ 216               	/* #NOAPP */
+ 217               	.LBE16:
+ 218 00ba BE2F      		mov r27,r30
+ 219 00bc 00C0      		rjmp .L4
+ 220               	.LVL21:
+ 221               	.L3:
+  68:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			}
+  69:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 		} else {
+  70:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			next_nk += nk;
+ 222               		.loc 1 70 0
+ 223 00be D22E      		mov r13,r18
+ 224               	.LVL22:
+ 225 00c0 DE0C      		add r13,r14
+ 226               	.LVL23:
+ 227               	.LBB17:
+ 228               	.LBB18:
+  38:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	((uint8_t*)a)[0] = ((uint8_t*)a)[1];
+ 229               		.loc 1 38 0
+ 230 00c2 C82E      		mov r12,r24
+ 231               	.LVL24:
+  41:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	((uint8_t*)a)[3] = t;
+ 232               		.loc 1 41 0
+ 233 00c4 AB2E      		mov r10,r27
+ 234               	.LVL25:
+ 235               	.LBE18:
+ 236               	.LBE17:
+ 237               	.LBB19:
+  71:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			aes_rotword(&(tmp.v32));
+  72:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			tmp.v8[0] = pgm_read_byte(aes_sbox+tmp.v8[0]);
+ 238               		.loc 1 72 0
+ 239 00c6 E92F      		mov r30,r25
+ 240 00c8 F0E0      		ldi r31,0
+ 241 00ca E050      		subi r30,lo8(-(aes_sbox))
+ 242 00cc F040      		sbci r31,hi8(-(aes_sbox))
+ 243               	/* #APP */
+ 244               	 ;  72 ".././crypto/avrcryptolib//aes/aes_keyschedule.c" 1
+ 245 00ce B490      		lpm r11, Z
+ 246               		
+ 247               	 ;  0 "" 2
+ 248               	.LVL26:
+ 249               	/* #NOAPP */
+ 250               	.LBE19:
+ 251               	.LBB20:
+  73:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			tmp.v8[1] = pgm_read_byte(aes_sbox+tmp.v8[1]);
+ 252               		.loc 1 73 0
+ 253 00d0 EA2F      		mov r30,r26
+ 254 00d2 F0E0      		ldi r31,0
+ 255 00d4 E050      		subi r30,lo8(-(aes_sbox))
+ 256 00d6 F040      		sbci r31,hi8(-(aes_sbox))
+ 257               	/* #APP */
+ 258               	 ;  73 ".././crypto/avrcryptolib//aes/aes_keyschedule.c" 1
+ 259 00d8 E491      		lpm r30, Z
+ 260               		
+ 261               	 ;  0 "" 2
+ 262               	.LVL27:
+ 263               	/* #NOAPP */
+ 264               	.LBE20:
+ 265 00da 9E2F      		mov r25,r30
+ 266               	.LVL28:
+ 267               	.LBB21:
+  74:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			tmp.v8[2] = pgm_read_byte(aes_sbox+tmp.v8[2]);
+ 268               		.loc 1 74 0
+ 269 00dc EA2D      		mov r30,r10
+ 270               	.LVL29:
+ 271 00de F0E0      		ldi r31,0
+ 272 00e0 E050      		subi r30,lo8(-(aes_sbox))
+ 273 00e2 F040      		sbci r31,hi8(-(aes_sbox))
+ 274               	/* #APP */
+ 275               	 ;  74 ".././crypto/avrcryptolib//aes/aes_keyschedule.c" 1
+ 276 00e4 E491      		lpm r30, Z
+ 277               		
+ 278               	 ;  0 "" 2
+ 279               	.LVL30:
+ 280               	/* #NOAPP */
+ 281               	.LBE21:
+ 282 00e6 AE2F      		mov r26,r30
+ 283               	.LVL31:
+ 284               	.LBB22:
+  75:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			tmp.v8[3] = pgm_read_byte(aes_sbox+tmp.v8[3]);
+ 285               		.loc 1 75 0
+ 286 00e8 EC2D      		mov r30,r12
+ 287               	.LVL32:
+ 288 00ea F0E0      		ldi r31,0
+ 289 00ec E050      		subi r30,lo8(-(aes_sbox))
+ 290 00ee F040      		sbci r31,hi8(-(aes_sbox))
+ 291               	/* #APP */
+ 292               	 ;  75 ".././crypto/avrcryptolib//aes/aes_keyschedule.c" 1
+ 293 00f0 E491      		lpm r30, Z
+ 294               		
+ 295               	 ;  0 "" 2
+ 296               	.LVL33:
+ 297               	/* #NOAPP */
+ 298               	.LBE22:
+ 299 00f2 BE2F      		mov r27,r30
+ 300               	.LVL34:
+ 301               	.LBB23:
+  76:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			tmp.v8[0] ^= pgm_read_byte(rc_tab+rc);
+ 302               		.loc 1 76 0
+ 303 00f4 E32F      		mov r30,r19
+ 304               	.LVL35:
+ 305 00f6 F0E0      		ldi r31,0
+ 306 00f8 E050      		subi r30,lo8(-(rc_tab))
+ 307 00fa F040      		sbci r31,hi8(-(rc_tab))
+ 308               	/* #APP */
+ 309               	 ;  76 ".././crypto/avrcryptolib//aes/aes_keyschedule.c" 1
+ 310 00fc E491      		lpm r30, Z
+ 311               		
+ 312               	 ;  0 "" 2
+ 313               	.LVL36:
+ 314               	/* #NOAPP */
+ 315               	.LBE23:
+ 316 00fe 8B2D      		mov r24,r11
+ 317               	.LVL37:
+ 318 0100 8E27      		eor r24,r30
+  77:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 			rc++;
+ 319               		.loc 1 77 0
+ 320 0102 3F5F      		subi r19,lo8(-(1))
+ 321               	.LVL38:
+ 322               	.L4:
+  78:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 		}
+  79:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 		((uint32_t*)(ctx->key[0].ks))[i] = ((uint32_t*)(ctx->key[0].ks))[i-nk]
+ 323               		.loc 1 79 0 discriminator 2
+ 324 0104 FB01      		movw r30,r22
+ 325 0106 E01B      		sub r30,r16
+ 326 0108 F10B      		sbc r31,r17
+ 327 010a EE0F      		lsl r30
+ 328 010c FF1F      		rol r31
+ 329 010e EE0F      		lsl r30
+ 330 0110 FF1F      		rol r31
+ 331 0112 EC0F      		add r30,r28
+ 332 0114 FD1F      		adc r31,r29
+ 333 0116 8080      		ld r8,Z
+ 334 0118 9180      		ldd r9,Z+1
+ 335 011a A280      		ldd r10,Z+2
+ 336 011c B380      		ldd r11,Z+3
+ 337 011e 8825      		eor r24,r8
+ 338 0120 9925      		eor r25,r9
+ 339 0122 AA25      		eor r26,r10
+ 340 0124 BB25      		eor r27,r11
+ 341               	.LVL39:
+ 342 0126 FA01      		movw r30,r20
+ 343 0128 8483      		std Z+4,r24
+ 344 012a 9583      		std Z+5,r25
+ 345 012c A683      		std Z+6,r26
+ 346 012e B783      		std Z+7,r27
+  60:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 		tmp.v32 = ((uint32_t*)(ctx->key[0].ks))[i-1];
+ 347               		.loc 1 60 0 discriminator 2
+ 348 0130 2F5F      		subi r18,lo8(-(1))
+ 349               	.LVL40:
+ 350 0132 00C0      		rjmp .L2
+ 351               	.L7:
+ 352               	/* epilogue start */
+  80:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 		                                   ^ tmp.v32;
+  81:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	}
+  82:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** }
+ 353               		.loc 1 82 0
+ 354 0134 DF91      		pop r29
+ 355 0136 CF91      		pop r28
+ 356               	.LVL41:
+ 357 0138 1F91      		pop r17
+ 358 013a 0F91      		pop r16
+ 359 013c FF90      		pop r15
+ 360               	.LVL42:
+ 361 013e EF90      		pop r14
+ 362 0140 DF90      		pop r13
+ 363               	.LVL43:
+ 364 0142 CF90      		pop r12
+ 365 0144 BF90      		pop r11
+ 366 0146 AF90      		pop r10
+ 367 0148 9F90      		pop r9
+ 368 014a 8F90      		pop r8
+ 369 014c 0895      		ret
+ 370               		.cfi_endproc
+ 371               	.LFE2:
+ 373               	.global	aes128_init
+ 375               	aes128_init:
+ 376               	.LFB3:
+  83:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+  84:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** void aes128_init(const void* key, aes128_ctx_t* ctx){
+ 377               		.loc 1 84 0
+ 378               		.cfi_startproc
+ 379               	.LVL44:
+ 380               	/* prologue: function */
+ 381               	/* frame size = 0 */
+ 382               	/* stack size = 0 */
+ 383               	.L__stack_usage = 0
+ 384 014e AB01      		movw r20,r22
+  85:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	aes_init(key, 128, (aes_genctx_t*)ctx);
+ 385               		.loc 1 85 0
+ 386 0150 60E8      		ldi r22,lo8(-128)
+ 387 0152 70E0      		ldi r23,0
+ 388               	.LVL45:
+ 389 0154 0C94 0000 		jmp aes_init
+ 390               	.LVL46:
+ 391               		.cfi_endproc
+ 392               	.LFE3:
+ 394               	.global	aes192_init
+ 396               	aes192_init:
+ 397               	.LFB4:
+  86:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** }
+  87:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+  88:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** void aes192_init(const void* key, aes192_ctx_t* ctx){
+ 398               		.loc 1 88 0
+ 399               		.cfi_startproc
+ 400               	.LVL47:
+ 401               	/* prologue: function */
+ 402               	/* frame size = 0 */
+ 403               	/* stack size = 0 */
+ 404               	.L__stack_usage = 0
+ 405 0158 AB01      		movw r20,r22
+  89:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	aes_init(key, 192, (aes_genctx_t*)ctx);
+ 406               		.loc 1 89 0
+ 407 015a 60EC      		ldi r22,lo8(-64)
+ 408 015c 70E0      		ldi r23,0
+ 409               	.LVL48:
+ 410 015e 0C94 0000 		jmp aes_init
+ 411               	.LVL49:
+ 412               		.cfi_endproc
+ 413               	.LFE4:
+ 415               	.global	aes256_init
+ 417               	aes256_init:
+ 418               	.LFB5:
+  90:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** }
+  91:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 
+  92:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** void aes256_init(const void* key, aes256_ctx_t* ctx){
+ 419               		.loc 1 92 0
+ 420               		.cfi_startproc
+ 421               	.LVL50:
+ 422               	/* prologue: function */
+ 423               	/* frame size = 0 */
+ 424               	/* stack size = 0 */
+ 425               	.L__stack_usage = 0
+ 426 0162 AB01      		movw r20,r22
+  93:.././crypto/avrcryptolib//aes/aes_keyschedule.c **** 	aes_init(key, 256, (aes_genctx_t*)ctx);
+ 427               		.loc 1 93 0
+ 428 0164 60E0      		ldi r22,0
+ 429 0166 71E0      		ldi r23,lo8(1)
+ 430               	.LVL51:
+ 431 0168 0C94 0000 		jmp aes_init
+ 432               	.LVL52:
+ 433               		.cfi_endproc
+ 434               	.LFE5:
+ 436               	.global	rc_tab
+ 437               		.section	.progmem.data,"a",@progbits
+ 440               	rc_tab:
+ 441 0000 01        		.byte	1
+ 442 0001 02        		.byte	2
+ 443 0002 04        		.byte	4
+ 444 0003 08        		.byte	8
+ 445 0004 10        		.byte	16
+ 446 0005 20        		.byte	32
+ 447 0006 40        		.byte	64
+ 448 0007 80        		.byte	-128
+ 449 0008 1B        		.byte	27
+ 450 0009 36        		.byte	54
+ 451               		.text
+ 452               	.Letext0:
+ 453               		.file 2 "o:\\avr8\\avr\\include\\stdint.h"
+ 454               		.file 3 ".././crypto/avrcryptolib//aes/aes_types.h"
+ 455               		.file 4 ".././crypto/avrcryptolib//aes/aes_sbox.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 aes_keyschedule.c
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:2      *ABS*:0000003e __SP_H__
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:3      *ABS*:0000003d __SP_L__
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:4      *ABS*:0000003f __SREG__
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:5      *ABS*:0000003b __RAMPZ__
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:6      *ABS*:00000034 __CCP__
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:7      *ABS*:00000000 __tmp_reg__
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:8      *ABS*:00000001 __zero_reg__
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:14     .text:00000000 aes_init
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:440    .progmem.data:00000000 rc_tab
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:375    .text:0000014e aes128_init
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:396    .text:00000158 aes192_init
+C:\Users\alexx\AppData\Local\Temp\ccYKyQR5.s:417    .text:00000162 aes256_init
+
+UNDEFINED SYMBOLS
+memcpy
+aes_sbox
